@@ -11,8 +11,8 @@ export default function PageHome() {
   return (
     <div className="min-h-screen bg-black text-white relative">
 
-      
-<Navbar />
+
+      <Navbar />
 
       <Header title="A Testa in Su" subtitle="Hair & Makeup Studio" />
 
@@ -21,21 +21,24 @@ export default function PageHome() {
 
 
         {/* Overlay scuro */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-neutral-700"  />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-neutral-700" />
 
         {/* Contenuto */}
-        <div className="relative z-10 flex min-h-screen flex-col items-center justify-center text-center px-6">
+        <div className="relative z-10 flex min-h-screen flex-col items-center justify-evenly text-center px-6">
 
-          <h2 className="text-4xl md:text-5xl font-light tracking-widest uppercase">
-            Stile che parla di te
-          </h2>
+          <div>
 
-          <p className="mt-6 text-gray-300 max-w-md">
-            Taglio uomo e donna in un ambiente elegante e minimale.
-          </p>
+            <h2 className="text-4xl md:text-5xl font-light tracking-widest uppercase">
+              Stile che parla di te
+            </h2>
+
+            <p className="mt-6 text-gray-300 max-w-md">
+              Taglio uomo e donna in un ambiente elegante e minimale.
+            </p>
+          </div>
 
           <div className="mt-10">
-            <Link href="/servicesPage">
+            <Link href="/calendarPage">
               <ButtonPrimary label="Prenota ora" />
             </Link>
           </div>
@@ -45,6 +48,13 @@ export default function PageHome() {
 
       {/* ====== SERVIZI ====== */}
       <section className="px-6 py-20 bg-neutral-700">
+        
+        <div className="flex justify-center  mb-10">
+        <span className="text-4xl md:text-5xl font-light tracking-widest uppercase text-center p-2 bg-black rounded-xl">
+          I Nostri Servizi
+        </span>
+        </div>
+
         <div className="max-w-6xl mx-auto grid gap-5 md:grid-cols-4">
 
           <CardService
