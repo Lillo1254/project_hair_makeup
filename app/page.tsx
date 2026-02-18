@@ -50,9 +50,11 @@ export default function PageHome() {
       <section className="px-6 py-20 bg-neutral-700">
         
         <div className="flex justify-center  mb-10">
-        <span className="text-4xl md:text-5xl font-light tracking-widest uppercase text-center p-2 bg-black rounded-xl">
+          <Link href="/servicesPage" className="text-4xl md:text-5xl font-light tracking-widest uppercase text-center p-2 bg-black rounded-xl">
+       
           I Nostri Servizi
-        </span>
+        
+          </Link>
         </div>
 
         <div className="max-w-6xl mx-auto grid gap-5 md:grid-cols-4">

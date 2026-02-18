@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+.bg_uomo{
+    background-image: url("/sketchuom.png");
+    background-size: 200px;
+background-position: center;
+    background-repeat: no-repeat;
+     filter: invert(0) brightness(2);
+}
+.bg_donn{
+    background-image: url("/sketchdonn.png");
+   background-size: 200px;
+background-position: center;
+    background-repeat: no-repeat;
+     filter: invert(1) brightness(2);
+}
+
+.bg_toghether{
+    background-image: url("/sketchuom.png") , url("/sketchdonn.png");
+    background-position: left center, right center;
+    background-size: 200px;
+    background-repeat: no-repeat, no-repeat;
+    filter: invert(0) brightness(2);
+}

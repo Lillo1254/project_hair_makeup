@@ -1,77 +1,74 @@
-import ButtonBack from "../components/buttons/buttonBack";
-import CardService from "../components/cards/CardService";
+
+import Footer from "../components/Footer";
 import ButtonPrimary from "../components/buttons/ButtonPrimary";
+import ButtonBack from "../components/buttons/buttonBack";
+import servizi from "./servizi.json";
 
-export default function ServicesPage() {
-    
+export default function PageServices() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white bg_toghether">
 
-      {/* ===== HEADER PAGINA ===== */}
-      <section className="relative py-20 text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-light tracking-widest uppercase">
-            I Nostri Servizi
-          </h1>
-          <p className="mt-6 text-gray-400">
-            Professionalità, stile e cura dei dettagli per ogni esigenza.
+      <div className="text-center pt-15 relative overflow-hidden">
+
+        <h3>
+          I Nostri Servizi
+        </h3>
+        <h6>
+          Qualità, stile e professionalità
+        </h6>
+
+      
+      </div>
+
+
+      {/* HERO */}
+      <section className="px-6 py-20 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-light tracking-widest uppercase mb-6">
+            Listino Servizi
+          </h2>
+          <p className="text-gray-400">
+            Scopri tutti i trattamenti disponibili nel nostro salone.
           </p>
-
-          <div className="mt-8 flex justify-center">
-            <ButtonBack
-              label="Indietro"
-              className="bg-neutral-700 hover:bg-neutral-600 text-white px-6 py-2 rounded transition"
-            />
-          </div>
         </div>
       </section>
 
-      {/* ===== LISTA SERVIZI ===== */}
-      <section className="px-6 pb-20 bg-neutral-700">
-        <div className="max-w-6xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-4 pt-12">
+      {/* LISTA SERVIZI */}
+      <section className="px-6 pb-20">
+        <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2">
 
-          <CardService
-            title="Donna"
-            description="Taglio, piega, colore, balayage e trattamenti personalizzati."
-            image="https://picsum.photos/400?1"
-          />
+          {servizi.servizi.map((servizio, index) => (
+            <div
+              key={index}
+              className="border border-neutral-800 p-8 hover:border-white transition duration-300"
+            >
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-light uppercase tracking-wide">
+                  {servizio.nome}
+                </h3>
+                <span className="text-lg font-semibold">
+                  €{servizio.prezzo}
+                </span>
+              </div>
 
-          <CardService
-            title="Uomo"
-            description="Taglio moderno o classico, barba e styling su misura."
-            image="https://picsum.photos/400?2"
-          />
+              <p className="text-gray-400 mb-6">
+                {servizio.descrizione}
+              </p>
 
-          <CardService
-            title="Bambino"
-            description="Tagli pratici e alla moda in un ambiente accogliente."
-            image="https://picsum.photos/400?4"
-          />
+              <ButtonPrimary label="Prenota" />
+            </div>
+          ))}
 
-          <CardService
-            title="Make-up"
-            description="Make-up naturale, cerimonia e shooting fotografici."
-            image="https://picsum.photos/400?3"
-          />
-
+        </div>
+        <div className="flex justify-center">
+          <ButtonBack label="Indietro" className="bg-red-400 " />
         </div>
       </section>
 
-      {/* ===== CTA PRENOTAZIONE ===== */}
-      <section className="py-20 text-center">
-        <h2 className="text-3xl font-light tracking-wide">
-          Pronto a rinnovare il tuo stile?
-        </h2>
-
-        <p className="mt-4 text-gray-400">
-          Prenota ora il tuo appuntamento.
-        </p>
-
-        <div className="mt-8 flex justify-center">
-          <ButtonPrimary label="Prenota ora" />
-        </div>
-      </section>
-
+      <Footer
+        name="A Testa in Su — Hair & Makeup Studio"
+        address="Via Roma · Piccola Cittadina"
+      />
     </div>
   );
 }
