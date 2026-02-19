@@ -11,25 +11,36 @@ export default function AdminPageLogin() {
 
   const router = useRouter();
 
-  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
 
     if (!email || !password) {
-      setError("⚠️ Inserisci email e password.");
+      setError("Inserisci email e password.");
       return;
     }
 
     setLoading(true);
 
-    // 🔐 Credenziali temporanee (SOLO FRONTEND - NON SICURO)
-    const ADMIN_EMAIL = "admin@salone.it";
-    const ADMIN_PASSWORD = "Mafe2026";
+    try {
+      const res = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
 
-    if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
-      router.push("/admin/dashboard"); // pagina protetta
-    } else {
-      setError("❌ Credenziali non valide.");
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Errore login");
+      }
+
+      router.push("/admin/dashboard");
+
+    } catch (err: any) {
+      setError(err.message);
     }
 
     setLoading(false);
