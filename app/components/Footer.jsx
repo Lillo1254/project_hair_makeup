@@ -1,4 +1,4 @@
-import { Facebook, Images, Instagram, Layers2, MessageCircleMore } from "lucide-react";
+import { Facebook, Images, Instagram, Layers2, MessageCircleMore, MessageCircle } from "lucide-react";
 
 export default function Footer({ name, address }) {
     return (
@@ -22,8 +22,8 @@ export default function Footer({ name, address }) {
                     </h4>
                     <ul className="mt-4 space-y-2 text-gray-400 text-sm">
                         <li>{address}</li>
-                        <li><a href="tel:+39 000 000 0000" className="text-indigo-400">Tel: +39 000 000 0000</a></li>
-                        <li><a href="mailto:atestainsu@gmail.com" className="text-indigo-400">Email: info@atestainsu.it</a></li>
+                        <li><a href="tel:+39  0774 366676" className="text-indigo-400">Tel: +39  0774 366676</a></li>
+                        <li><a href="mailto:atestainsustyle@gmail.com" className="text-indigo-400">Email: atestainsustyle@gmail.com</a></li>
                     </ul>
                 </div>
 
@@ -48,6 +48,10 @@ export default function Footer({ name, address }) {
                         <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer">
                             <MessageCircleMore className="w-4 h-4" />
                             <span>Prenotazioni</span>
+                            
+                        </li>
+                        <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer">
+                            <a href="https://wa.me/3298492353?text=Salve%20ti%20contatto%20dal%20sito" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-green-600 hover:text-green-700" > <MessageCircle size={20} /> Scrivimi su WhatsApp </a>
                         </li>
 
                     </ul>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import ButtonBack from "../components/buttons/buttonBack";
+import { MessageCircle } from "lucide-react";
 
 export default function CalendarPage() {
   const [gender, setGender] = useState("");
@@ -240,7 +241,9 @@ export default function CalendarPage() {
           </button>
         </form>
       </div>
-<div className="flex justify-center">
+<div className="flex flex-col items-center gap-2 items-center mt-5">
+
+<a href="https://wa.me/3298492353?text=Salve%20ti%20contatto%20dal%20sito" target="_blank" rel="noopener noreferrer" className="flex gap-2 text-green-600 hover:text-green-700" > <MessageCircle size={20} /> oppure Scrivici su WA </a>
 
       <ButtonBack label="Indietro" className="bg-red-400 mt-10 p-3 rounded-xl" />
 </div>
