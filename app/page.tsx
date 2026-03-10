@@ -62,25 +62,25 @@ export default function PageHome() {
           <CardService
             title="Donna"
             description="Tagli personalizzati e colore su misura."
-            image="https://picsum.photos/400?1"
+            image="/imghair/redwoman.webp"
           />
 
           <CardService
             title="Uomo"
             description="Stile moderno e classico curato nei dettagli."
-            image="https://picsum.photos/400?2"
+            image="/imghair/man.webp"
           />
 
           <CardService
             title="Bambino"
             description="Stile moderno e classico curato nei dettagli."
-            image="https://picsum.photos/400?2"
+            image="/imghair/childhair.webp"
           />
 
           <CardService
             title="Make-up"
             description="Eleganza naturale per ogni occasione."
-            image="https://picsum.photos/400?3"
+            image="/imghair/makeup.webp"
           />
 
         </div>

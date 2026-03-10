@@ -1,5 +1,8 @@
+import Link from "next/link";
+
 export default function CardService({ title, description, image }) {
   return (
+    <Link href={`/servicesPage/${title}`}>
     <div className="p-1 text-center">
       <img
         src={image}
@@ -11,5 +14,6 @@ export default function CardService({ title, description, image }) {
       <h3 className="text-sm tracking-widest uppercase">{title}</h3>
       <p className="mt-4 text-sm text-gray-400">{description}</p>
     </div>
+    </Link>
   );
 }
