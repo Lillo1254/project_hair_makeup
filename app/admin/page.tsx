@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import ButtonBack from "../components/buttons/buttonBack";
 
 export default function AdminPageLogin() {
   const [email, setEmail] = useState("");
@@ -93,6 +94,10 @@ export default function AdminPageLogin() {
             {loading ? "Accesso in corso..." : "Accedi"}
           </button>
         </form>
+        <div className="flex mt-2 justify-center">
+
+       <button className="bg-red-400 p-2 rounded-xl" onClick={() => router.push("/")}>HOME</button>
+        </div>
       </div>
     </div>
   );

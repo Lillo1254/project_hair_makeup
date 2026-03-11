@@ -1,52 +1,137 @@
+
+
+
 {
-  "servizi": [
-    {
-      "nome": "Taglio Uomo + Shampoo",
-      "prezzo": 12,
-      "valuta": "EUR",
-      "descrizione": "Taglio moderno o classico personalizzato in base alla forma del viso, comprensivo di shampoo professionale e styling finale."
-    },
-    {
-      "nome": "Taglio Uomo + Shampoo + Barba",
-      "prezzo": 15,
-      "valuta": "EUR",
-      "descrizione": "Servizio completo uomo con taglio personalizzato, shampoo e sistemazione barba con rifinitura e modellatura."
-    },
-    {
-      "nome": "Taglio Donna + Piega",
-      "prezzo": 18,
-      "valuta": "EUR",
-      "descrizione": "Taglio su misura valorizzato da una piega professionale per un look fresco, elegante e duraturo."
-    },
-    {
-      "nome": "Taglio Donna + Colore + Piega",
-      "prezzo": 50,
-      "valuta": "EUR",
-      "descrizione": "Servizio completo donna con taglio personalizzato, colore professionale e piega finale per un risultato luminoso e armonioso."
-    },
-    {
-      "nome": "Taglio Bimbo + Shampoo",
-      "prezzo": 12,
-      "valuta": "EUR",
-      "descrizione": "Taglio pratico e alla moda per bambini, con shampoo delicato e asciugatura leggera."
-    },
-    {
-      "nome": "Solo Colore",
-      "prezzo": 30,
-      "valuta": "EUR",
-      "descrizione": "Colorazione professionale per ravvivare, coprire o trasformare il colore dei capelli con prodotti di qualità."
-    },
-    {
-      "nome": "Make-up Classico (Giorno/Sera)",
-      "prezzo": 35,
-      "valuta": "EUR",
-      "descrizione": "Trucco professionale adatto sia per il giorno che per la sera, studiato per valorizzare i lineamenti in modo elegante e naturale."
-    },
-    {
-      "nome": "Make-up Artist Eventi Speciali",
-      "prezzo": 60,
-      "valuta": "EUR",
-      "descrizione": "Make-up professionale per cerimonie, matrimoni ed eventi speciali, realizzato per garantire lunga durata e un risultato impeccabile."
-    }
-  ]
+  "categorie": {
+    "Uomo": [
+      {
+        "servizio": "Taglio Uomo + Shampoo",
+        "prezzo": 12,
+        "valuta": "EUR",
+        "descrizione": "Taglio moderno o classico personalizzato in base alla forma del viso, comprensivo di shampoo professionale e styling finale."
+      },
+      {
+        "servizio": "Taglio Uomo + Shampoo + Barba",
+        "prezzo": 15,
+        "valuta": "EUR",
+        "descrizione": "Servizio completo uomo con taglio personalizzato, shampoo e sistemazione barba con rifinitura e modellatura."
+      },
+      {
+        "servizio": "Taglio Uomo + Barba Express",
+        "prezzo": 10,
+        "valuta": "EUR",
+        "descrizione": "Taglio rapido con sistemazione barba leggera, ideale per chi ha poco tempo."
+      },
+      {
+        "servizio": "Taglio Uomo + Shampoo + Rasatura",
+        "prezzo": 18,
+        "valuta": "EUR",
+        "descrizione": "Servizio completo con taglio personalizzato, shampoo e rasatura accurata dei dettagli."
+      }
+    ],
+    "Donna": [
+      {
+        "servizio": "Taglio Donna + Piega",
+        "prezzo": 18,
+        "valuta": "EUR",
+        "descrizione": "Taglio su misura valorizzato da una piega professionale per un look fresco, elegante e duraturo."
+      },
+      {
+        "servizio": "Taglio Donna + Colore + Piega",
+        "prezzo": 50,
+        "valuta": "EUR",
+        "descrizione": "Servizio completo donna con taglio personalizzato, colore professionale e piega finale per un risultato luminoso e armonioso."
+      },
+      {
+        "servizio": "Solo Piega Donna",
+        "prezzo": 15,
+        "valuta": "EUR",
+        "descrizione": "Piega professionale veloce per uno styling perfetto e duraturo senza taglio."
+      },
+      {
+        "servizio": "Taglio Donna + Maschera + Piega",
+        "prezzo": 25,
+        "valuta": "EUR",
+        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+      }
+    ],
+    "Bimbi": [
+      {
+        "servizio": "Taglio Bimbo + Shampoo",
+        "prezzo": 12,
+        "valuta": "EUR",
+        "descrizione": "Taglio pratico e alla moda per bambini, con shampoo delicato e asciugatura leggera."
+      },
+      {
+        "servizio": "Taglio Bimbo Express",
+        "prezzo": 8,
+        "valuta": "EUR",
+        "descrizione": "Taglio veloce per bambini che vogliono un look semplice e ordinato."
+      },
+      {
+        "servizio": "Taglio Bimbo + Styling",
+        "prezzo": 14,
+        "valuta": "EUR",
+        "descrizione": "Taglio personalizzato con piccolo styling finale per un look divertente."
+      },
+      {
+        "servizio": "Taglio Bimbo + Shampoo + Piega",
+        "prezzo": 16,
+        "valuta": "EUR",
+        "descrizione": "Servizio completo con taglio, shampoo delicato e piega leggera."
+      }
+    ],
+    "Colore": [
+      {
+        "servizio": "Solo Colore",
+        "prezzo": 30,
+        "valuta": "EUR",
+        "descrizione": "Colorazione professionale per ravvivare, coprire o trasformare il colore dei capelli con prodotti di qualità."
+      },
+      {
+        "servizio": "Colore + Maschera Nutriente",
+        "prezzo": 35,
+        "valuta": "EUR",
+        "descrizione": "Colorazione con trattamento nutriente per capelli più luminosi e protetti."
+      },
+      {
+        "servizio": "Colore + Piega",
+        "prezzo": 40,
+        "valuta": "EUR",
+        "descrizione": "Servizio completo colore con piega finale per un look impeccabile."
+      },
+      {
+        "servizio": "Riflessante Lucentezza",
+        "prezzo": 25,
+        "valuta": "EUR",
+        "descrizione": "Trattamento colore rapido per ravvivare i riflessi naturali e dare luminosità."
+      }
+    ],
+    "Make-up": [
+      {
+        "servizio": "Make-up Classico (Giorno/Sera)",
+        "prezzo": 35,
+        "valuta": "EUR",
+        "descrizione": "Trucco professionale adatto sia per il giorno che per la sera, studiato per valorizzare i lineamenti in modo elegante e naturale."
+      },
+      {
+        "servizio": "Make-up Artist Eventi Speciali",
+        "prezzo": 60,
+        "valuta": "EUR",
+        "descrizione": "Make-up professionale per cerimonie, matrimoni ed eventi speciali, realizzato per garantire lunga durata e un risultato impeccabile."
+      },
+      {
+        "servizio": "Make-up Naturale Quotidiano",
+        "prezzo": 25,
+        "valuta": "EUR",
+        "descrizione": "Trucco leggero e fresco per tutti i giorni, che valorizza i lineamenti senza esagerare."
+      },
+      {
+        "servizio": "Make-up Serata Glam",
+        "prezzo": 45,
+        "valuta": "EUR",
+        "descrizione": "Trucco professionale per serate ed eventi speciali con effetti luminosi e dettagli glam."
+      }
+    ]
+  }
 }

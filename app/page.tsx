@@ -6,7 +6,10 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Link from "next/link";
 
+
 export default function PageHome() {
+
+
 
   return (
     <div className="min-h-screen bg-black text-white relative">
@@ -40,7 +43,9 @@ export default function PageHome() {
           <div className="mt-10">
             <Link href="/calendarPage">
               <ButtonPrimary label="Prenota ora" />
+            
             </Link>
+            
           </div>
 
         </div>

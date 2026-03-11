@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ButtonLogout from "../../components/buttons/buttonLogout";
 
 export default function DashboardAdmin() {
   const [galleryImages, setGalleryImages] = useState<string[]>([]);
@@ -118,6 +119,10 @@ export default function DashboardAdmin() {
             Upload in corso...
           </div>
         )}
+      </div>
+      <div className="flex justify-center">
+
+      <ButtonLogout label={"logout"} className={"bg-red-400 p-2 mt-2 rounded-xl"}/>
       </div>
     </div>
   );
