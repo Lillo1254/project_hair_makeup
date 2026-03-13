@@ -71,8 +71,8 @@ export default function PageServices() {
       </section>
 
       <Footer
-        name="A Testa in Su — Hair & Makeup Studio"
-        address="Via Roma · Piccola Cittadina"
+        
+       
       />
     </div>
   );

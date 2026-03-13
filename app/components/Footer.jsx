@@ -1,6 +1,7 @@
 import { Facebook, Images, Instagram, Layers2, MessageCircleMore, MessageCircle } from "lucide-react";
+import Image from "next/image";
 
-export default function Footer({ name, address }) {
+export default function Footer() {
     return (
         <footer className="border-t border-neutral-600  bg-gradient-to-b from-neutral-700 to-black text-white px-6 py-16">
 
@@ -8,7 +9,7 @@ export default function Footer({ name, address }) {
 
                 <div>
                     <h3 className="text-xl font-semibold tracking-widest uppercase">
-                        {name}
+                        A Testa in Su — Hair & Makeup Studio
                     </h3>
                     <p className="mt-4 text-gray-400 text-sm">
                         Eleganza, stile e cura del dettaglio.
@@ -21,7 +22,7 @@ export default function Footer({ name, address }) {
                         Contatti
                     </h4>
                     <ul className="mt-4 space-y-2 text-gray-400 text-sm">
-                        <li>{address}</li>
+                        <li>Via Vincenzo Monti, 6, 00010 Roma</li>
                         <li><a href="tel:+39  0774 366676" className="text-indigo-400">Tel: +39  0774 366676</a></li>
                         <li><a href="mailto:atestainsustyle@gmail.com" className="text-indigo-400">Email: atestainsustyle@gmail.com</a></li>
                     </ul>
@@ -62,16 +63,16 @@ export default function Footer({ name, address }) {
                         Seguici
                     </h4>
                     <ul className="mt-4 space-y-2 text-gray-400 text-sm">
-                        <li className="flex justify-center hover:text-white transition cursor-pointer"><Instagram size={32} /></li>
-                        <li className="flex justify-center hover:text-white transition cursor-pointer"><Facebook size={32} /></li>
-                        <li className="flex justify-center hover:text-white transition cursor-pointer">TikTok</li>
+                        <li className="flex justify-center hover:text-white transition cursor-pointer text-white"><Instagram size={32} /></li>
+                        <li className="flex justify-center hover:text-white transition cursor-pointer text-white"><Facebook size={32} /></li>
+                        <li className="flex justify-center hover:text-white transition cursor-pointer"><Image src="/tiktokicon.svg" alt="Tiktok" width={32} height={32} className="invert" /></li>
                     </ul>
                 </div>
 
             </div>
 
             <div className="border-t border-neutral-800 mt-12 pt-6 text-center text-gray-500 text-sm">
-                © {new Date().getFullYear()} {name}. Tutti i diritti riservati.
+                © {new Date().getFullYear()} A Testa in Su — Hair & Makeup Studio. Tutti i diritti riservati.
             </div>
 
         </footer>

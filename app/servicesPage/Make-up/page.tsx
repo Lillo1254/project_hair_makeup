@@ -67,8 +67,6 @@ export default function DonnaPage(){
       </section>
 
       <Footer
-        name="A Testa in Su — Hair & Makeup Studio"
-        address="Via Roma · Piccola Cittadina"
       />
     </div>
     )
