@@ -20,9 +20,9 @@ export async function POST(req: NextRequest) {
       const publicPath = `/${folder}/${filename}`;
       savedPaths.push(publicPath);
 
-      if (folder === "gallery") await db.query("INSERT INTO media (gallery) VALUES (?)", [publicPath]);
-      else if (folder === "offers") await db.query("INSERT INTO media (offers) VALUES (?)", [publicPath]);
-      else if (folder === "videos") await db.query("INSERT INTO media (videos) VALUES (?)", [publicPath]);
+      if (folder === "imagesGallery") await db.query("INSERT INTO media (gallery) VALUES (?)", [publicPath]);
+      else if (folder === "imagesOffers") await db.query("INSERT INTO media (offers) VALUES (?)", [publicPath]);
+      else if (folder === "videoGallery") await db.query("INSERT INTO media (videos) VALUES (?)", [publicPath]);
     }
 
     return NextResponse.json({ savedPaths });

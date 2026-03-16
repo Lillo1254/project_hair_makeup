@@ -20,9 +20,9 @@ export default function DashboardAdmin() {
     fetch("/api/media")
       .then(res => res.json())
       .then(data => {
-        setGalleryDB(Array.isArray(data.gallery) ? data.gallery : []);
-        setOfferDB(Array.isArray(data.offers) ? data.offers : []);
-        setVideosDB(Array.isArray(data.videos) ? data.videos : []);
+        setGalleryDB(Array.isArray(data.imagesGallery) ? data.imagesGallery : []);
+        setOfferDB(Array.isArray(data.imagesOffers) ? data.imagesOffers : []);
+        setVideosDB(Array.isArray(data.videoGallery) ? data.videoGallery : []);
       });
   }, []);
 
@@ -35,7 +35,7 @@ export default function DashboardAdmin() {
   };
 
   const saveToDB = async (
-    folder: "gallery" | "offers" | "videos",
+    folder: "imagesGallery" | "imagesOffers" | "videoGallery",
     files: File[],
     setDB: React.Dispatch<React.SetStateAction<string[]>>,
     clearFiles: React.Dispatch<React.SetStateAction<File[]>>
@@ -99,7 +99,7 @@ export default function DashboardAdmin() {
 
           {/* Preview upload */}
           {galleryFiles.length > 0 && <PreviewGrid files={galleryFiles} />}
-          {galleryFiles.length > 0 && <SaveButton folder="gallery" files={galleryFiles} setDB={setGalleryDB} clearFiles={setGalleryFiles} saveToDB={saveToDB} />}
+          {galleryFiles.length > 0 && <SaveButton folder="imagesGallery" files={galleryFiles} setDB={setGalleryDB} clearFiles={setGalleryFiles} saveToDB={saveToDB} />}
 
           {/* Preview DB */}
           {galleryDB.length > 0 && <ImageGrid items={galleryDB} onDelete={p => deleteFile(p, setGalleryDB)} />}
@@ -116,7 +116,7 @@ export default function DashboardAdmin() {
           />
 
           {offerFiles.length > 0 && <PreviewGrid files={offerFiles} />}
-          {offerFiles.length > 0 && <SaveButton folder="offers" files={offerFiles} setDB={setOfferDB} clearFiles={setOfferFiles} saveToDB={saveToDB} />}
+          {offerFiles.length > 0 && <SaveButton folder="imagesOffers" files={offerFiles} setDB={setOfferDB} clearFiles={setOfferFiles} saveToDB={saveToDB} />}
           {offerDB.length > 0 && <ImageGrid items={offerDB} onDelete={p => deleteFile(p, setOfferDB)} />}
         </Section>
 
@@ -131,7 +131,7 @@ export default function DashboardAdmin() {
           />
 
           {videoFiles.length > 0 && <PreviewVideoGrid files={videoFiles} />}
-          {videoFiles.length > 0 && <SaveButton folder="videos" files={videoFiles} setDB={setVideosDB} clearFiles={setVideoFiles} saveToDB={saveToDB} />}
+          {videoFiles.length > 0 && <SaveButton folder="videoGallery" files={videoFiles} setDB={setVideosDB} clearFiles={setVideoFiles} saveToDB={saveToDB} />}
           {videosDB.length > 0 && <VideoGrid items={videosDB} onDelete={p => deleteFile(p, setVideosDB)} />}
         </Section>
 
@@ -174,7 +174,7 @@ function PreviewGrid({ files }: { files: File[] }) {
 
 function PreviewVideoGrid({ files }: { files: File[] }) {
   return (
-    <div className="mt-4 grid md:grid-cols-2 gap-6">
+    <div className="mt-4 grid md:grid-cols-2 gap-6 ">
       {files.slice(0,6).map((file, idx) => {
         const url = URL.createObjectURL(file);
         return <div key={idx} className="relative">
@@ -188,7 +188,7 @@ function PreviewVideoGrid({ files }: { files: File[] }) {
 }
 
 function SaveButton({ folder, files, setDB, clearFiles, saveToDB }:
-  { folder: "gallery"|"offers"|"videos"; files: File[]; setDB: React.Dispatch<React.SetStateAction<string[]>>; clearFiles: React.Dispatch<React.SetStateAction<File[]>>; saveToDB: any }) {
+  { folder: "imagesGallery"|"imagesOffers"|"videoGallery"; files: File[]; setDB: React.Dispatch<React.SetStateAction<string[]>>; clearFiles: React.Dispatch<React.SetStateAction<File[]>>; saveToDB: any }) {
   return (
     <button
       className="mt-3 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded"
