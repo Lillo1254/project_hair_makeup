@@ -15,19 +15,12 @@ export default async function PageHome() {
   const host = h.get("host");
   const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
 
-  const imagesGallery = await fetch(`${protocol}://${host}/api/media/gallery`, {
-    cache: "no-store"
-  }).then(r => r.json());
+  const [imagesGallery, imagesOffers, videos] = await Promise.all([
+    fetch(`${protocol}://${host}/api/media/gallery`, { cache: "no-store" }).then(r => r.json()),
+    fetch(`${protocol}://${host}/api/media/offers`, { cache: "no-store" }).then(r => r.json()),
+    fetch(`${protocol}://${host}/api/media/videos`, { cache: "no-store" }).then(r => r.json()),
+  ])
 
-  const imagesOffers = await fetch(`${protocol}://${host}/api/media/offers`, {
-    cache: "no-store"
-  }).then(r => r.json());
-
-  const imagesVideos = await fetch(`${protocol}://${host}/api/media/videos`, {
-    cache: "no-store"
-  }).then(r => r.json());
-
-console.log("imagesGallery", imagesGallery);
 
   return (
     <div className="min-h-screen bg-black text-white relative">
@@ -110,7 +103,7 @@ console.log("imagesGallery", imagesGallery);
       </section>
 
       {/* ============ GALLERIA ================ */}
-      <section className="px-6 py-20 bg-neutral-700">
+      <section className="px-6 py-20 bg-neutral-700 ">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
 
         {imagesGallery.map((img, i) => (
@@ -121,23 +114,19 @@ console.log("imagesGallery", imagesGallery);
       </section>
 
       {/* ============= VIDEO ===========*/}
-      <section className="flex flex-col md:flex-row justify-center items-center min-h-screen sm:h-screen py-8 bg-neutral-700 sm:bgVideo ">
-        <video
-          src="/videoProva.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="vertical-video m-4 md:m-10"
-        />
-        <video
-          src="/videoProva2.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="vertical-video m-4 md:m-10"
-        />
+      <section className="flex flex-col md:flex-row justify-center md:justify-evenly items-center min-h-screen py-8 bg-neutral-700 sm:bgVideo">
+
+        {videos.slice(0, 3).map((video, i) => (
+          <video
+            key={i}
+            src={video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="vertical-video m-4 md:m-10"
+          />
+        ))}
       </section>
 
       {/* =============== FOOTER ========= */}

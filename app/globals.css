@@ -24,12 +24,18 @@ background-position: center;
 }
 
 .vertical-video {
-    height: 70%;        /* altezza 70vh della section */
-    aspect-ratio: 9/16;  /* rapporto verticale tipo Instagram */
-    object-fit: cover;   /* copre tutta l'area senza deformarsi */
-    border-radius: 10px; /* opzionale */
-    box-shadow: 0px 0px 5px 5px rgb(155, 155, 155);
+  height: 80vh;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px rgb(155, 155, 155);
+}
+
+@media (min-width: 768px) {
+  .vertical-video {
+    height: 90vh;
   }
+}
 
   .bgVideo{
     background: linear-gradient(

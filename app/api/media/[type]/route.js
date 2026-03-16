@@ -4,7 +4,7 @@ export async function GET(request, context) {
   const { params } = context;
   const { type } = await params;
 
-  const validColumns = ["gallery", "offers", "video"];
+  const validColumns = ["gallery", "offers", "videos"];
   if (!validColumns.includes(type)) {
     return Response.json({ error: "Colonna non valida" }, { status: 400 });
   }
@@ -14,8 +14,7 @@ export async function GET(request, context) {
       `SELECT ${type} 
        FROM media 
        WHERE ${type} IS NOT NULL
-       ORDER BY id DESC
-       LIMIT 6`
+       ORDER BY id DESC`
     );
 
     const paths = results.flatMap(row => {

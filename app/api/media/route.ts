@@ -3,7 +3,7 @@ import db from "@/lib/db";
 
 export async function GET() {
   try {
-    const [rows] = await db.query("SELECT gallery, offers, videos FROM media ORDER BY id DESC LIMIT 100");
+    const [rows] = await db.query("SELECT gallery, offers, videos FROM media ORDER BY id DESC");
     const row = rows[0] || { gallery: null, offers: null, videos: null };
 
     // garantisce che siano sempre array
