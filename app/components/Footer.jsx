@@ -1,5 +1,6 @@
 import { Facebook, Images, Instagram, Layers2, MessageCircleMore, MessageCircle } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -22,7 +23,14 @@ export default function Footer() {
                         Contatti
                     </h4>
                     <ul className="mt-4 space-y-2 text-gray-400 text-sm">
-                        <li>Via Vincenzo Monti, 6, 00010 Roma</li>
+                        <li> <a
+                            href="https://www.google.com/maps?q=Via+Vincenzo+Monti,+6,+00010+Roma"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600"
+                        >
+                            Via Vincenzo Monti, 6 - Roma
+                        </a></li>
                         <li><a href="tel:+39  0774 366676" className="text-indigo-400">Tel: +39  0774 366676</a></li>
                         <li><a href="mailto:atestainsustyle@gmail.com" className="text-indigo-400">Email: atestainsustyle@gmail.com</a></li>
                     </ul>
@@ -38,18 +46,18 @@ export default function Footer() {
 
                         <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer">
                             <Layers2 className="w-4 h-4" />
-                            <span>Servizi</span>
+                            <Link href="/servicesPage">Servizi</Link>
                         </li>
 
                         <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer">
                             <Images className="w-4 h-4" />
-                            <span>Gallery</span>
+                            <Link href="/galleryPage">Galleria</Link>
                         </li>
 
                         <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer">
                             <MessageCircleMore className="w-4 h-4" />
-                            <span>Prenotazioni</span>
-                            
+                            <Link href="/calendarPage">Prenotazioni</Link>
+
                         </li>
                         <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer">
                             <a href="https://wa.me/3298492353?text=Salve%20ti%20contatto%20dal%20sito" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-green-600 hover:text-green-700" > <MessageCircle size={20} /> Scrivimi su WhatsApp </a>

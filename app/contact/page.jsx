@@ -95,12 +95,12 @@ export default function ContactsPage() {
         </div>
 
       </section>
-<div className="flex justify-center bg_contact py-5">
-  <Link href="/calendarPage" className="bg-black/80 hover:scale-120 transition duration-300 hover:text-blue-400 text-white font-bold py-2 px-4 rounded mt-4 shadow_contact">
-    PRENOTA ORA
-  </Link>
+      <div className="flex justify-center bg_contact py-5">
+        <Link href="/calendarPage" className="bg-black/80 hover:scale-120 transition duration-300 hover:text-blue-400 text-white font-bold py-2 px-4 rounded mt-4 shadow_contact">
+          PRENOTA ORA
+        </Link>
 
-</div>
+      </div>
       <Footer />
 
     </div>
