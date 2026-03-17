@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Link from "next/link";
 import { headers } from "next/headers";
+import CardOffers from "./components/cards/CardOffers";
 
 
 
@@ -20,7 +21,6 @@ export default async function PageHome() {
     fetch(`${protocol}://${host}/api/media/offers`, { cache: "no-store" }).then(r => r.json()),
     fetch(`${protocol}://${host}/api/media/videos`, { cache: "no-store" }).then(r => r.json()),
   ])
-
 
   return (
     <div className="min-h-screen bg-black text-white relative">
@@ -128,6 +128,19 @@ export default async function PageHome() {
           />
         ))}
       </section>
+
+      
+
+        {imagesOffers.length > 0 &&
+        <section className="px-6 py-20 bg-neutral-700 w-full">
+        <div className="">
+        <CardOffers image={imagesOffers.at(0)} />
+         </div>
+        </section>
+        } 
+ 
+       
+      
 
       {/* =============== FOOTER ========= */}
       <Footer

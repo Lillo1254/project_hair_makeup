@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.png";
+import Link from "next/link";
 export default function Navbar() {
     const [open, setOpen] = useState(false);
 
@@ -64,25 +65,25 @@ export default function Navbar() {
                     {/* Links Placeholder */}
                     <nav className="flex flex-col gap-6 px-6 py-10 text-lg uppercase tracking-wide">
 
-                        <button className="text-left hover:opacity-70 transition">
+                        <Link href="/" className="text-left hover:opacity-70 transition">
                             Home
-                        </button>
+                        </Link>
 
-                        <button className="text-left hover:opacity-70 transition">
+                        <Link href="/servicesPage" className="text-left hover:opacity-70 transition">
                             Servizi
-                        </button>
+                        </Link>
 
-                        <button className="text-left hover:opacity-70 transition">
+                        <Link href="/galleryPage" className="text-left hover:opacity-70 transition">
                             Gallery
-                        </button>
+                        </Link>
 
-                        <button className="text-left hover:opacity-70 transition">
+                        <Link href="/calendarPage" className="text-left hover:opacity-70 transition">
                             Prenota
-                        </button>
+                        </Link>
 
-                        <button className="text-left hover:opacity-70 transition">
+                        <Link href="/contact" className="text-left hover:opacity-70 transition">
                             Contatti
-                        </button>
+                        </Link>
 
                     </nav>
 

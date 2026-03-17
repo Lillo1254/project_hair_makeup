@@ -248,6 +248,10 @@ export default function DashboardAdmin() {
           </div>
         )}
       </div>
+      <div className="flex justify-center mt-5">
+      <ButtonLogout label="Logout" className="bottom-5 left-5 bg-red-500 p-3 rounded-xl text-zinc-300 font-bold " />
+
+      </div>
     </div>
   );
 }
