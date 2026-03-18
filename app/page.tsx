@@ -96,10 +96,36 @@ export default async function PageHome() {
 
         </div>
       </section>
+{/* text seo friendly */}
+      <section className="px-8 py-16 bg-neutral-700 text-white text-center">
+  <div className="max-w-4xl mx-auto space-y-6">
+    <h2 className="text-3xl md:text-4xl font-bold uppercase">
+      Il Tuo Salone di Parrucchiere a Guidonia Montecelio
+    </h2>
+    <p className="text-lg md:text-xl leading-relaxed">
+      Benvenuti nel nostro salone, il punto di riferimento per chi cerca tagli moderni, colore professionale e trattamenti personalizzati per uomo, donna e bambino. 
+      Ogni servizio è pensato per esaltare il tuo stile unico e farti sentire al meglio in ogni occasione.
+    </p>
+    <p className="text-lg md:text-xl leading-relaxed">
+      Situato a pochi passi dalla Tiburtina, il nostro salone combina creatività, professionalità e attenzione ai dettagli, offrendo anche servizi di make-up artist per eventi speciali o quotidiani. 
+      La tua bellezza è la nostra passione.
+    </p>
+    <p className="text-lg md:text-xl leading-relaxed">
+      Prenota il tuo appuntamento oggi stesso e scopri perché il nostro salone è il preferito a Guidonia Montecelio per taglio, colore, barba e make-up professionale. 
+      Esperienza, qualità e stile ti aspettano in un ambiente accogliente e moderno.
+    </p>
+    <a
+      href="/prenotazioni"
+      className="inline-block mt-4 px-8 py-3 text-sm uppercase tracking-widest bg-white text-black hover:bg-neutral-200 transition"
+    >
+      Prenota Ora
+    </a>
+  </div>
+</section>
 
       {/* ============ GALLERIA ================ */}
       <section className="px-6 py-20 bg-neutral-700 ">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
 
         {imagesGallery.map((img, i) => (
             <CardGallery key={i} image={img} />
@@ -107,6 +133,32 @@ export default async function PageHome() {
  
         </div>
       </section>
+{/* text seo friendly */}
+      <section className="px-8 py-16 bg-neutral-700 text-white text-center">
+  <div className="max-w-4xl mx-auto space-y-6">
+    <h2 className="text-3xl md:text-4xl font-bold uppercase">
+      Bellezza, Stile e Cura dei Capelli a Guidonia Montecelio
+    </h2>
+    <p className="text-lg md:text-xl leading-relaxed">
+      Scopri il nostro salone, il luogo ideale dove ogni taglio, colore e trattamento è studiato per valorizzare la tua unicità. 
+      Offriamo servizi professionali per uomo, donna e bambino, con attenzione ai dettagli e alle ultime tendenze del mondo della bellezza.
+    </p>
+    <p className="text-lg md:text-xl leading-relaxed">
+      Situati vicino alla Tiburtina, uniamo creatività e competenza per offrirti un’esperienza completa: dai tagli moderni alla colorazione personalizzata, fino al make-up professionale per ogni occasione. 
+      Ogni cliente esce dal nostro salone sentendosi speciale.
+    </p>
+    <p className="text-lg md:text-xl leading-relaxed">
+      La tua bellezza è la nostra missione. Prenota subito il tuo appuntamento e lasciati coccolare da professionisti esperti che trasformano la cura dei capelli in arte. 
+      Guidonia Montecelio e la zona Tiburtina non hanno mai visto un salone come il nostro.
+    </p>
+    <a
+      href="/prenotazioni"
+      className="inline-block mt-4 px-8 py-3 text-sm uppercase tracking-widest bg-white text-black hover:bg-neutral-200 transition"
+    >
+      Prenota Ora
+    </a>
+  </div>
+</section>
 
       {/* ============= VIDEO ===========*/}
 <section
@@ -142,11 +194,41 @@ export default async function PageHome() {
       
 
         {imagesOffers.length > 0 &&
+        //text seo friendly
+        <>
+        <section className="px-8 py-16 bg-neutral-700 text-white text-center">
+  <div className="max-w-4xl mx-auto space-y-6">
+    <h2 className="text-3xl md:text-4xl font-bold uppercase">
+      Offerte Esclusive per il Tuo Salone a Guidonia Montecelio
+    </h2>
+    <p className="text-lg md:text-xl leading-relaxed">
+      Approfitta delle nostre promozioni speciali dedicate a uomini, donne e bambini. 
+      Tagli, colori, trattamenti e servizi di make-up professionale a prezzi incredibili, pensati per valorizzare la tua bellezza senza compromessi. 
+    </p>
+    <p className="text-lg md:text-xl leading-relaxed">
+      Il nostro salone, situato vicino alla Tiburtina a Guidonia Montecelio, unisce qualità, stile e professionalità. 
+      Ogni servizio è studiato per offrirti un’esperienza unica, e le nostre offerte in corso rendono il momento perfetto per prenotare.
+    </p>
+    <p className="text-lg md:text-xl leading-relaxed">
+      Scorri qui sotto e scopri l’immagine con tutte le promozioni attive. 
+      Non perdere l’occasione di rinnovare il tuo look con i migliori professionisti della zona!
+    </p>
+    <a
+      href="/prenotazioni"
+      className="inline-block mt-4 px-8 py-3 text-sm uppercase tracking-widest bg-white text-black hover:bg-neutral-200 transition"
+    >
+      Prenota Ora
+    </a>
+
+  </div>
+</section>
+        
         <section className=" py-10 bg-neutral-700 w-full">
         <div className="">
         <CardOffers image={imagesOffers.at(0)} />
          </div>
         </section>
+        </>
         } 
  
        
