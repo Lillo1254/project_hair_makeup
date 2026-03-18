@@ -1,5 +1,4 @@
 import serviziJson from "../servizi.json";
-import Footer from "../../components/Footer";
 import ButtonPrimary from "../../components/buttons/ButtonPrimary";
 import ButtonBack from "../../components/buttons/buttonBack";
 export default function DonnaPage(){
@@ -66,8 +65,6 @@ export default function DonnaPage(){
         </div>
       </section>
 
-      <Footer
-      />
     </div>
     )
 }

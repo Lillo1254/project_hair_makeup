@@ -58,12 +58,23 @@ export default function DashboardAdmin() {
 
   /* -------------------- HANDLERS -------------------- */
 
-  const handleUploadPreview = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    setFiles: React.Dispatch<React.SetStateAction<File[]>>
-  ) => {
-    if (e.target.files) setFiles(Array.from(e.target.files));
-  };
+const handleUploadPreview = (
+  e: React.ChangeEvent<HTMLInputElement>,
+  setFiles: React.Dispatch<React.SetStateAction<File[]>>
+) => {
+  if (!e.target.files) return;
+
+  const filesArray = Array.from(e.target.files);
+
+  // Filtra solo MP4
+  const mp4Files = filesArray.filter(file => file.type === "video/mp4");
+
+  if (mp4Files.length < filesArray.length) {
+    alert("Sono consentiti solo file MP4!");
+  }
+
+  setFiles(mp4Files);
+};
 
   const saveToDB = async (
     folder: string,

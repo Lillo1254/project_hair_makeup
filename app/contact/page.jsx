@@ -1,12 +1,10 @@
 import Link from "next/link";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+
 
 export default function ContactsPage() {
   return (
     <div className="min-h-screen bg-black text-white relative">
 
-      <Navbar />
 
       {/* HERO */}
       <section className="relative flex items-center justify-center min-h-[60vh] text-center px-6">
@@ -101,7 +99,7 @@ export default function ContactsPage() {
         </Link>
 
       </div>
-      <Footer />
+  
 
     </div>
   );

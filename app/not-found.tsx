@@ -1,5 +1,4 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+
 import ButtonPrimary from "./components/buttons/ButtonPrimary";
 import Link from "next/link";
 
@@ -7,7 +6,6 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col justify-between">
 
-      <Navbar />
 
       <main className="flex flex-1 flex-col items-center justify-center text-center px-6">
 
@@ -28,10 +26,7 @@ export default function NotFound() {
 
       </main>
 
-      <Footer
-      
-        
-      />
+
 
     </div>
   );

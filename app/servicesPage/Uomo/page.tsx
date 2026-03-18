@@ -66,9 +66,7 @@ export default function UomoPage(){
         </div>
       </section>
 
-      <Footer
-       
-      />
+
     </div>
     )
 }

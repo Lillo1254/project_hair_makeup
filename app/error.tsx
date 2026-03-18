@@ -1,7 +1,6 @@
 'use client'
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+
 import ButtonPrimary from "./components/buttons/ButtonPrimary";
 
 type ErrorProps = {
@@ -14,7 +13,7 @@ export default function Error({ error, reset }: ErrorProps) {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col justify-between">
 
-      <Navbar />
+
 
       <main className="flex flex-1 flex-col items-center justify-center text-center px-6">
 
@@ -33,10 +32,7 @@ export default function Error({ error, reset }: ErrorProps) {
 
       </main>
 
-      <Footer
-        
-        
-      />
+
 
     </div>
   );

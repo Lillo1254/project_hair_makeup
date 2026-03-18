@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "../../components/Footer";
 import ButtonPrimary from "../../components/buttons/ButtonPrimary";
 import ButtonBack from "../../components/buttons/buttonBack";
 import serviziJson from "../servizi.json";
@@ -71,10 +70,6 @@ export default function PageKids() {
         </div>
       </section>
 
-      <Footer
-        
-        
-      />
     </div>
   );
 }

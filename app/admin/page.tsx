@@ -48,6 +48,7 @@ export default function AdminPageLogin() {
   };
 
   return (
+    <>
     <div className="min-h-screen bg-black text-white flex items-center justify-center px-6">
       <div className="w-full max-w-md bg-neutral-800 p-10 rounded-xl shadow-lg">
         <div className="text-center">
@@ -100,5 +101,6 @@ export default function AdminPageLogin() {
         </div>
       </div>
     </div>
+    </>
   );
 }

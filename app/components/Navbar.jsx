@@ -1,18 +1,26 @@
 'use client'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import logo from "../../public/logo.png";
+import logo from "../../public/logogbgr.png";
 import Link from "next/link";
 export default function Navbar() {
     const [open, setOpen] = useState(false);
 
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return null;
+
     return (
         <>
-            <div className="flex justify-center sticky top-10 z-50">
+            <div className="flex justify-center sticky top-5 z-50">
 
                 {/* ================= TOP BAR ================= */}
-                <div className=" bg-black text-white px-3 py-0 flex justify-between items-center w-[70%] rounded-xl">
+                <div className=" bg_navi text-white px-3 py-0 flex justify-between items-center w-[70%] rounded-xl">
 
 
                   <button
@@ -86,6 +94,16 @@ export default function Navbar() {
                         </Link>
 
                     </nav>
+
+<div className="flex items-end px-6 py-4">
+<Link href="/admin" className="text-left hover:opacity-70 transition">
+                            <Image
+                        src={logo}
+                        alt="Logo"
+                        className=" h-15 w-auto rounded-l-xl invert"
+                    />
+                        </Link>
+</div>
 
                 </div>
             </div>

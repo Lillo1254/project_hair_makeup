@@ -2,8 +2,6 @@ import ButtonPrimary from "./components/buttons/ButtonPrimary";
 import CardService from "./components/cards/CardService";
 import CardGallery from "./components/cards/CardGallery";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
 import Link from "next/link";
 import { headers } from "next/headers";
 import CardOffers from "./components/cards/CardOffers";
@@ -26,7 +24,7 @@ export default async function PageHome() {
     <div className="min-h-screen bg-black text-white relative">
 
 
-      <Navbar />
+
 
       <Header title="A Testa in Su" subtitle="Hair & Makeup Studio" />
 
@@ -40,9 +38,9 @@ export default async function PageHome() {
         {/* Contenuto */}
         <div className="relative z-10 flex min-h-screen flex-col items-center justify-evenly text-center px-6">
 
-          <div>
+          <div className="flex flex-col items-center">
 
-            <h2 className="text-4xl md:text-5xl font-light tracking-widest uppercase">
+            <h2 className="text-4xl md:text-5xl font-light tracking-widest uppercase py-15">
               Stile che parla di te
             </h2>
 
@@ -114,25 +112,40 @@ export default async function PageHome() {
       </section>
 
       {/* ============= VIDEO ===========*/}
-      <section className="flex flex-col md:flex-row justify-center md:justify-evenly items-center min-h-screen py-8 bg-neutral-700 sm:bgVideo">
+<section
+  className="
+    flex flex-col items-center justify-center
+    min-h-screen py-8 bg-neutral-700 gap-6
 
-        {videos.slice(0, 3).map((video, i) => (
-          <video
-            key={i}
-            src={video}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="vertical-video m-4 md:m-10"
-          />
-        ))}
-      </section>
+    md:grid md:grid-cols-3 md:place-items-center
+  "
+>
+  {videos.slice(0, 3).map((video, i) => (
+    <video
+      key={i}
+      src={video}
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="
+        w-full max-w-sm
+
+        aspect-9/16
+        object-cover
+
+        md:max-w-none md:w-96 md:h-full md:rounded-xl video_shadow 
+
+        landscape:aspect-video
+      "
+    />
+  ))}
+</section>
 
       
 
         {imagesOffers.length > 0 &&
-        <section className="px-6 py-20 bg-neutral-700 w-full">
+        <section className=" py-10 bg-neutral-700 w-full">
         <div className="">
         <CardOffers image={imagesOffers.at(0)} />
          </div>
@@ -142,10 +155,7 @@ export default async function PageHome() {
        
       
 
-      {/* =============== FOOTER ========= */}
-      <Footer
 
-      />
 
     </div>
   );

@@ -1,7 +1,6 @@
 /* "use client"; */
 
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+
 import ButtonPrimary from "../components/buttons/ButtonPrimary";
 import ButtonBack from "../components/buttons/buttonBack";
 import serviziJson from "./servizi.json";
@@ -10,7 +9,6 @@ export default function PageServices() {
   return (
     <div className="min-h-screen bg-black text-white bg_toghether">
 
-<Navbar />
       {/* HEADER */}
       <div className="text-center pt-15 relative overflow-hidden">
         <h3>I Nostri Servizi</h3>
@@ -72,10 +70,7 @@ export default function PageServices() {
         </div>
       </section>
 
-      <Footer
-        
-       
-      />
+
     </div>
   );
 }

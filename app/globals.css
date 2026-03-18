@@ -22,22 +22,16 @@ background-position: center;
     background-repeat: no-repeat, no-repeat;
     filter: invert(0) brightness(2);
 }
-
-.vertical-video {
-  height: 80vh;
-  aspect-ratio: 9/16;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px 5px rgb(155, 155, 155);
+.video_shadow{
+    box-shadow: 0px 0px 15px 2px rgb(162, 162, 162);
+}
+@media(min-width:500px){
+.video_shadow{
+    box-shadow: 0px 0px 15px 2px rgb(162, 162, 162);
+}
 }
 
-@media (min-width: 768px) {
-  .vertical-video {
-    height: 90vh;
-  }
-}
-
-  .bgVideo{
+/*   .bgVideo{
     background: linear-gradient(
     to top,
     #404040 0%,       
@@ -47,7 +41,7 @@ background-position: center;
     #404040 53%,     
     #404040 100%    
   );
-  }
+  } */
 
   .bg_contact{
     background-color: #404040;
@@ -55,4 +49,11 @@ background-position: center;
 
   .shadow_contact{
     box-shadow: 0px 0px 15px 2px rgb(93, 122, 177);
+  }
+
+  .bg_navi{
+    background-color: #40404063;
+    backdrop-filter: blur(10px);
+  
+    box-shadow: inset 0px 0px 15px 1px rgb(155, 155, 155);
   }
