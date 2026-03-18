@@ -1,6 +1,4 @@
-"use client";
-
-import ButtonPrimary from "../../components/buttons/ButtonPrimary";
+import ButtonNavigate from "@/app/components/buttons/buttonNavigate";
 import ButtonBack from "../../components/buttons/buttonBack";
 import serviziJson from "../servizi.json";
 
@@ -9,7 +7,10 @@ export default function PageKids() {
   const serviziBimbi = serviziJson.categorie.Bimbi;
 
 
+
+
   return (
+    <>
     <div className="min-h-screen bg-black text-white bg_toghether">
 
       {/* HEADER */}
@@ -59,7 +60,7 @@ export default function PageKids() {
                 {servizio.descrizione}
               </p>
 
-              <ButtonPrimary label="Prenota" />
+              <ButtonNavigate label="PRENOTA" href="/prenotazioni" />
             </div>
           ))}
 
@@ -71,5 +72,6 @@ export default function PageKids() {
       </section>
 
     </div>
+    </>
   );
 }

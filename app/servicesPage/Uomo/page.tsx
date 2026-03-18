@@ -1,11 +1,11 @@
 import serviziJson from "../servizi.json";
-import Footer from "../../components/Footer";
-import ButtonPrimary from "../../components/buttons/ButtonPrimary";
 import ButtonBack from "../../components/buttons/buttonBack";
+import ButtonNavigate from "@/app/components/buttons/buttonNavigate";
 export default function UomoPage(){
 
     const serviziDonna = serviziJson.categorie.Uomo;
     return(
+      <>
 <div className="min-h-screen bg-black text-white bg_toghether">
 
       {/* HEADER */}
@@ -55,7 +55,7 @@ export default function UomoPage(){
                 {servizio.descrizione}
               </p>
 
-              <ButtonPrimary label="Prenota" />
+              <ButtonNavigate label="Prenota" href="/prenotazioni" />
             </div>
           ))}
 
@@ -68,5 +68,6 @@ export default function UomoPage(){
 
 
     </div>
+    </>
     )
 }

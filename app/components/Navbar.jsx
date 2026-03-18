@@ -22,21 +22,26 @@ export default function Navbar() {
                 {/* ================= TOP BAR ================= */}
                 <div className=" bg_navi text-white px-3 py-0 flex justify-between items-center w-[70%] rounded-xl">
 
-
-                  <button
-                        onClick={() => setOpen(true)}
-                        className="text-2xl z-2 mt-0 flex w-[100%] justify-between items-center "
-                    >
+                    <Link href="/" className="z-50" scroll={true}>
                     <Image
                         src={logo}
                         alt="Logo"
                         className=" h-15 w-auto rounded-l-xl"
                     />
+                    </Link>
+                  <div className="text-end">
+                  <button
+                        onClick={() => setOpen(true)}
+                        className="text-2xl z-2 mt-0 flex w-[100%] justify-between items-center "
+                    >
+
 
                     {/* Hamburger */}
   
                         ☰
                     </button>
+
+                  </div>
 
                 </div>
 
@@ -85,11 +90,11 @@ export default function Navbar() {
                             Gallery
                         </Link>
 
-                        <Link href="/calendarPage" className="text-left hover:opacity-70 transition">
+                        <Link href="/prenotazioni" className="text-left hover:opacity-70 transition">
                             Prenota
                         </Link>
 
-                        <Link href="/contact" className="text-left hover:opacity-70 transition">
+                        <Link href="/contatti" className="text-left hover:opacity-70 transition">
                             Contatti
                         </Link>
 

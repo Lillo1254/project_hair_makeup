@@ -122,7 +122,7 @@ const handleUploadPreview = (
   /* -------------------- RENDER -------------------- */
 
   return (
-    <div className="min-h-screen bg-black text-white px-6 py-20">
+    <div className="min-h-screen bg-gradient-to-b from-black/60 to-neutral-700 text-white px-6 py-20">
       <div className="max-w-6xl mx-auto space-y-16">
 
         <h1 className="text-4xl font-light tracking-widest uppercase text-center">

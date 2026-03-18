@@ -1,6 +1,5 @@
 
-import ButtonPrimary from "./components/buttons/ButtonPrimary";
-import Link from "next/link";
+import ButtonNavigate from "./components/buttons/buttonNavigate";
 
 export default function NotFound() {
   return (
@@ -19,9 +18,9 @@ export default function NotFound() {
         </p>
 
         <div className="mt-10">
-          <Link href="/">
-            <ButtonPrimary label="Torna alla Home" />
-          </Link>
+          
+            <ButtonNavigate label="Torna alla Home" href="/" />
+          
         </div>
 
       </main>

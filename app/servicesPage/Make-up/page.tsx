@@ -1,10 +1,11 @@
 import serviziJson from "../servizi.json";
-import ButtonPrimary from "../../components/buttons/ButtonPrimary";
 import ButtonBack from "../../components/buttons/buttonBack";
+import ButtonNavigate from "@/app/components/buttons/buttonNavigate";
 export default function DonnaPage(){
 
     const serviziDonna = serviziJson.categorie["Make-up"];
     return(
+      <>
 <div className="min-h-screen bg-black text-white bg_toghether">
 
       {/* HEADER */}
@@ -17,7 +18,7 @@ export default function DonnaPage(){
       <section className="px-6 py-20 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl font-light tracking-widest uppercase mb-6">
-            Listino Servizi Bimbi
+            Listino Servizi Make-Up
           </h2>
           <p className="text-gray-400">
             Tagli e trattamenti studiati per i più piccoli, con prodotti delicati e un servizio professionale.
@@ -54,7 +55,7 @@ export default function DonnaPage(){
                 {servizio.descrizione}
               </p>
 
-              <ButtonPrimary label="Prenota" />
+              <ButtonNavigate label="Prenota" href="/prenotazioni" />
             </div>
           ))}
 
@@ -66,5 +67,6 @@ export default function DonnaPage(){
       </section>
 
     </div>
+    </>
     )
 }

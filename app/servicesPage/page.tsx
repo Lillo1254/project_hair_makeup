@@ -1,12 +1,11 @@
-/* "use client"; */
 
-
-import ButtonPrimary from "../components/buttons/ButtonPrimary";
 import ButtonBack from "../components/buttons/buttonBack";
+import ButtonNavigate from "../components/buttons/buttonNavigate";
 import serviziJson from "./servizi.json";
 
 export default function PageServices() {
   return (
+    <>
     <div className="min-h-screen bg-black text-white bg_toghether">
 
       {/* HEADER */}
@@ -19,7 +18,7 @@ export default function PageServices() {
       <section className="px-6 py-20 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl font-light tracking-widest uppercase mb-6">
-            Listino Servizi
+            Listino Servizi Uomo
           </h2>
           <p className="text-gray-400">
             Scopri tutti i trattamenti disponibili nel nostro salone.
@@ -56,7 +55,7 @@ export default function PageServices() {
                       {servizio.descrizione}
                     </p>
 
-                    <ButtonPrimary label="Prenota" />
+                    <ButtonNavigate label="Prenota" href="/prenotazioni" />
                   </div>
                 ))}
               </div>
@@ -72,5 +71,6 @@ export default function PageServices() {
 
 
     </div>
+    </>
   );
 }

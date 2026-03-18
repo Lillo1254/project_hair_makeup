@@ -1,10 +1,10 @@
-import ButtonPrimary from "./components/buttons/ButtonPrimary";
 import CardService from "./components/cards/CardService";
 import CardGallery from "./components/cards/CardGallery";
 import Header from "./components/Header";
 import Link from "next/link";
 import { headers } from "next/headers";
 import CardOffers from "./components/cards/CardOffers";
+import ButtonNavigate from "./components/buttons/buttonNavigate";
 
 
 
@@ -50,10 +50,7 @@ export default async function PageHome() {
           </div>
 
           <div className="mt-10">
-            <Link href="/calendarPage">
-              <ButtonPrimary label="Prenota ora" />
-
-            </Link>
+           <ButtonNavigate label="Scopri i nostri servizi" href="/servicesPage" />
 
           </div>
 

@@ -24,12 +24,12 @@ export default function Footer() {
                     </h4>
                     <ul className="mt-4 space-y-2 text-gray-400 text-sm">
                         <li> <a
-                            href="https://www.google.com/maps?q=Via+Vincenzo+Monti,+6,+00010+Roma"
+                            href="https://www.google.com/maps?q=Via+Vincenzo+Monti,+63,+00012+Roma"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-600"
                         >
-                            Via Vincenzo Monti, 6 - Roma
+                            Via Vincenzo Monti, 63 - Roma
                         </a></li>
                         <li><a href="tel:+39  0774 366676" className="text-indigo-400">Tel: +39  0774 366676</a></li>
                         <li><a href="mailto:atestainsustyle@gmail.com" className="text-indigo-400">Email: atestainsustyle@gmail.com</a></li>
@@ -56,7 +56,7 @@ export default function Footer() {
 
                         <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer">
                             <MessageCircleMore className="w-4 h-4" />
-                            <Link href="/calendarPage">Prenotazioni</Link>
+                            <Link href="/prenotazioni">Prenotazioni</Link>
 
                         </li>
                         <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer">
