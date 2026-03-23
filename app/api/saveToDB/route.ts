@@ -1,8 +1,7 @@
 // app/api/saveToDB/route.ts
 import { NextRequest, NextResponse } from "next/server";
-import db from "@/lib/db"; // la tua connessione al DB
-import { writeFile, mkdir } from "fs/promises";
-import path from "path";
+import { put } from "@vercel/blob";
+import db from "@/lib/db";
 
 export async function POST(req: NextRequest) {
   try {
@@ -18,37 +17,28 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Nessun file da salvare" }, { status: 400 });
     }
 
-    // crea la cartella se non esiste
-    const folderPath = path.join(process.cwd(), "public", folder);
-    await mkdir(folderPath, { recursive: true });
-
     const savedPaths: string[] = [];
 
     for (const file of files) {
-      const buffer = Buffer.from(await file.arrayBuffer());
-      const filename = `${Date.now()}-${file.name}`;
-      const filePath = path.join(folderPath, filename);
+      const arrayBuffer = await file.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
 
-      // VALIDAZIONE LATO SERVER
-      if (folder === "videoGallery" && file.type !== "video/mp4") {
-        return NextResponse.json(
-          { error: `Il file ${file.name} non è un MP4 valido` },
-          { status: 400 }
-        );
-      }
+      // Upload su Vercel Blob
+      const blob = await put(`${folder}/${Date.now()}-${file.name}`, buffer, {
+        access: "public",
+        token: process.env.BLOB_READ_WRITE_TOKEN,
+      });
 
-      await writeFile(filePath, buffer);
+      const publicUrl = blob.url;
+      savedPaths.push(publicUrl);
 
-      const publicPath = `/${folder}/${filename}`;
-      savedPaths.push(publicPath);
-
-      // inserisci nel DB
+      // Salva nel DB
       if (folder === "imagesGallery") {
-        await db.query("INSERT INTO media (gallery) VALUES (?)", [publicPath]);
+        await db.query("INSERT INTO media (gallery) VALUES (?)", [publicUrl]);
       } else if (folder === "imagesOffers") {
-        await db.query("INSERT INTO media (offers) VALUES (?)", [publicPath]);
+        await db.query("INSERT INTO media (offers) VALUES (?)", [publicUrl]);
       } else if (folder === "videoGallery") {
-        await db.query("INSERT INTO media (videos) VALUES (?)", [publicPath]);
+        await db.query("INSERT INTO media (videos) VALUES (?)", [publicUrl]);
       }
     }
 

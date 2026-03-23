@@ -1,22 +1,44 @@
+// app/api/deleteMedia/route.ts
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs/promises";
-import path from "path";
+import { del } from "@vercel/blob";
 import db from "@/lib/db";
 
 export async function DELETE(req: NextRequest) {
   try {
-    const { path: filePath } = await req.json();
-    if (!filePath) return NextResponse.json({ error: "Path mancante" }, { status: 400 });
+    const body = await req.json();
+    const path = body.path;
 
-    // rimuove dal filesystem
-    try { await fs.unlink(path.join(process.cwd(), "public", filePath)); } catch {}
+    if (!path) {
+      console.error("DELETE: path mancante nel body");
+      return NextResponse.json({ error: "Path mancante" }, { status: 400 });
+    }
 
-    // rimuove dal DB
-    await db.query("DELETE FROM media WHERE gallery = ? OR offers = ? OR videos = ?", [filePath, filePath, filePath]);
+    console.log("DELETE richiesto per:", path);
+
+    // Se è un URL Blob, prova a cancellare dal Blob
+    if (path.startsWith("http")) {
+      try {
+        await del(path, {
+          token: process.env.BLOB_READ_WRITE_TOKEN,
+        });
+        console.log("Blob cancellato:", path);
+      } catch (err) {
+        console.error("Errore cancellazione Blob (continuo comunque con il DB):", err);
+      }
+    } else {
+      console.log("Path non è un URL Blob, salto cancellazione Blob");
+    }
+
+    // Cancella dal DB
+    const [result] = await db.query(
+      "DELETE FROM media WHERE gallery = ? OR offers = ? OR videos = ?",
+      [path, path, path]
+    );
+    console.log("Righe DB cancellate:", result);
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error(error);
+    console.error("Errore DELETE /api/deleteMedia:", error);
     return NextResponse.json({ error: "Errore cancellazione" }, { status: 500 });
   }
 }
