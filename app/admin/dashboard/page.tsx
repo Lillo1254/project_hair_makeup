@@ -58,23 +58,33 @@ export default function DashboardAdmin() {
 
   /* -------------------- HANDLERS -------------------- */
 
-const handleUploadPreview = (
-  e: React.ChangeEvent<HTMLInputElement>,
-  setFiles: React.Dispatch<React.SetStateAction<File[]>>
-) => {
-  if (!e.target.files) return;
+  const handleUploadPreview = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    setFiles: React.Dispatch<React.SetStateAction<File[]>>,
+    type: "image" | "video"
+  ) => {
+    if (!e.target.files) return;
 
-  const filesArray = Array.from(e.target.files);
+    const filesArray = Array.from(e.target.files);
 
-  // Filtra solo MP4
-  const mp4Files = filesArray.filter(file => file.type === "video/mp4");
+    if (type === "video") {
+      const mp4Files = filesArray.filter(file => file.type === "video/mp4");
 
-  if (mp4Files.length < filesArray.length) {
-    alert("Sono consentiti solo file MP4!");
-  }
+      if (mp4Files.length < filesArray.length) {
+        alert("Sono consentiti solo file MP4!");
+      }
 
-  setFiles(mp4Files);
-};
+      setFiles(mp4Files);
+    } else {
+      const imageFiles = filesArray.filter(file => file.type.startsWith("image/"));
+
+      if (imageFiles.length < filesArray.length) {
+        alert("Sono consentite solo immagini!");
+      }
+
+      setFiles(imageFiles);
+    }
+  };
 
   const saveToDB = async (
     folder: string,
@@ -97,7 +107,7 @@ const handleUploadPreview = (
       if (res.ok) {
         clearFiles([]);
         setMessage("Salvataggio completato ✅");
-        reload(); // aggiorna la modal senza chiuderla
+        reload();
       }
     } catch {
       setMessage("Errore salvataggio ❌");
@@ -143,7 +153,7 @@ const handleUploadPreview = (
               type="file"
               multiple
               accept="image/*"
-              onChange={e => handleUploadPreview(e, setGalleryFiles)}
+              onChange={e => handleUploadPreview(e, setGalleryFiles, "image")}
               className="w-full bg-neutral-800 p-3 rounded"
             />
 
@@ -184,7 +194,7 @@ const handleUploadPreview = (
               type="file"
               multiple
               accept="image/*"
-              onChange={e => handleUploadPreview(e, setOfferFiles)}
+              onChange={e => handleUploadPreview(e, setOfferFiles, "image")}
               className="w-full bg-neutral-800 p-3 rounded"
             />
 
@@ -225,7 +235,7 @@ const handleUploadPreview = (
               type="file"
               multiple
               accept="video/mp4"
-              onChange={e => handleUploadPreview(e, setVideoFiles)}
+              onChange={e => handleUploadPreview(e, setVideoFiles, "video")}
               className="w-full bg-neutral-800 p-3 rounded"
             />
 
@@ -259,9 +269,9 @@ const handleUploadPreview = (
           </div>
         )}
       </div>
-      <div className="flex justify-center mt-5">
-      <ButtonLogout label="Logout" className="bottom-5 left-5 bg-red-500 p-3 rounded-xl text-zinc-300 font-bold " />
 
+      <div className="flex justify-center mt-5">
+        <ButtonLogout label="Logout" className="bottom-5 left-5 bg-red-500 p-3 rounded-xl text-zinc-300 font-bold " />
       </div>
     </div>
   );
