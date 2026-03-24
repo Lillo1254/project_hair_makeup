@@ -9,6 +9,9 @@ export const metadata = {
     "Parrucchiere professionale a Guidonia Montecelio vicino Tiburtina. Taglio, colore, barba e make-up artist.",
   keywords:
     "Parrucchiere Guidonia, Parrucchiere Roma, Parrucchiere uomo, Parrucchiere donna, Parrucchiere bambino, Make up artist Roma, Taglio capelli Guidonia, capelli Roma, capelli uomo, capelli bambino, capelli donna",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -20,11 +23,12 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HairSalon",
-    name: "Nome Negozio",
-    image: "https://tuosito.it/logo.jpg", // Cambia con URL logo reale
-    "@id": "https://tuosito.it",
-    url: "https://tuosito.it",
-    telephone: "+390774366676", // Cambia con numero reale
+    name: "a testa in su",
+    image: "https://atestainsustyle.vercel.app/logo.png",
+    "@id": "https://atestainsustyle.vercel.app/#hairSalon",
+    logo: "https://atestainsustyle.vercel.app/logogbgr.png",
+    url: "https://atestainsustyle.vercel.app",
+    telephone: "+390774366676", 
     address: {
       "@type": "PostalAddress",
       streetAddress: "Via Vincenzo Monti 63",
@@ -35,8 +39,8 @@ export default function RootLayout({
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 41.9978, // Coordinate reali
-      longitude: 12.7324
+      latitude: 41.9444660,
+      longitude: 12.6480833
     },
     openingHoursSpecification: [
       {
@@ -61,7 +65,7 @@ export default function RootLayout({
       "Parrucchiere uomo, donna e bambino a Guidonia Montecelio vicino Tiburtina. Servizi di taglio, colore, barba e make-up professionale.",
     areaServed: {
       "@type": "Place",
-      name: "Guidonia Montecelio e zona Tiburtina"
+      name: "Guidonia Montecelio, Roma e zona Tiburtina"
     }
   };
 
