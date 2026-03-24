@@ -78,6 +78,10 @@ export default function Footer() {
                 </div>
 
             </div>
+            {/* iframe maps */}
+            <div className="flex justify-center items-center ">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.598801756979!2d12.645466176564028!3d41.94447166125534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f7b6bc8fa7885%3A0xc8364bab2375d949!2sA%20Testa%20in%20su%20Parrucchieri!5e0!3m2!1sit!2sit!4v1774376603987!5m2!1sit!2sit"  className="rounded-4xl mt-3" loading="lazy"></iframe>
+            </div>
 
             <div className="border-t border-neutral-800 mt-12 pt-6 text-center text-gray-500 text-sm">
                 © {new Date().getFullYear()} A Testa in Su — Hair & Makeup Studio. Tutti i diritti riservati.

@@ -39,8 +39,8 @@ export default function RootLayout({
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 41.9444660,
-      longitude: 12.6480833
+      latitude: 41.9444717,
+      longitude: 12.6454662
     },
     openingHoursSpecification: [
       {
@@ -54,7 +54,7 @@ export default function RootLayout({
           "Saturday"
         ],
         opens: "09:00",
-        closes: "18:30"
+        closes: "19:00"
       }
     ],
     sameAs: [
