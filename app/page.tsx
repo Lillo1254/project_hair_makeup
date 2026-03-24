@@ -127,7 +127,7 @@ export default async function PageHome() {
       <section className="px-6 py-20 bg-neutral-700 ">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
 
-        {imagesGallery.map((img: string, i: number) => (
+        {imagesGallery.slice(0, 6).map((img: string, i: number) => (
             <CardGallery key={i} image={img} />
           ))} 
  
@@ -178,7 +178,7 @@ export default async function PageHome() {
       loop
       playsInline
       className="
-        sm:w-72 max-w-sm
+        w-72 max-w-sm
 rounded-2xl
         aspect-9/16
         object-cover
