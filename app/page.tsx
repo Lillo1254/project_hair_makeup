@@ -29,7 +29,7 @@ export default async function PageHome() {
       <Header title="A Testa in Su" subtitle="Hair & Makeup Studio" />
 
       {/* === HERO ====== */}
-      <section className="relative min-h-screen overflow-hidden">
+      <section className="relative min-h-screen overflow-hidden ">
 
 
         {/* Overlay scuro */}
