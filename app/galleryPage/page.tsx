@@ -30,7 +30,8 @@ export default function GalleryPage() {
     }, []);
 
     return (
-        <div className="p-4">
+        <>
+        <div className="p-4 bg-gradient-to-b from-black/70 to-neutral-700">
             <h1 className="text-2xl font-bold mb-4">Gallery Page</h1>
 
            
@@ -75,5 +76,6 @@ export default function GalleryPage() {
                  <ButtonBack label=" Indietro" className="bg-red-400 text-white p-3 rounded-xl font-medium" />
             </div>
         </div>
+        </>
     );
 }
