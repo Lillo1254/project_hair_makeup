@@ -178,7 +178,7 @@ export default async function PageHome() {
       loop
       playsInline
       className="
-        sm:w-72 md:w-96 max-w-sm
+        sm:w-72 max-w-sm
 rounded-2xl
         aspect-9/16
         object-cover
