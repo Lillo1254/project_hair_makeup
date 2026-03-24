@@ -127,7 +127,7 @@ export default async function PageHome() {
       <section className="px-6 py-20 bg-neutral-700 ">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
 
-        {imagesGallery.map((img, i) => (
+        {imagesGallery.map((img: string, i: number) => (
             <CardGallery key={i} image={img} />
           ))} 
  
@@ -169,7 +169,7 @@ export default async function PageHome() {
     md:grid md:grid-cols-3 md:place-items-center
   "
 >
-  {videos.slice(0, 3).map((video, i) => (
+  {videos.slice(0, 3).map((video: string, i: number) => (
     <video
       key={i}
       src={video}

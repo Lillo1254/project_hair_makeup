@@ -252,7 +252,10 @@ export default function CalendarPage() {
 }
 
 /* COMPONENTE INPUT RIUTILIZZABILE */
-function Input({ label, name, type = "text" }: any) {
+function Input({ label, name, type = "text" }: {
+  label: string;
+  name: string;
+  type?: string;}) {
   return (
     <div>
       <label className="block mb-2 text-sm">{label}</label>
