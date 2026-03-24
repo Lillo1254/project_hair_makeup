@@ -241,7 +241,7 @@ export default function CalendarPage() {
           </button>
         </form>
       </div>
-<div className="flex flex-col items-center gap-2 items-center mt-5">
+<div className="flex flex-col items-center gap-2 mt-5">
 
 <a href="https://wa.me/3298492353?text=Salve%20mi%20fai%20schifo" target="_blank" rel="noopener noreferrer" className="flex gap-2 text-green-600 hover:text-green-700" > <MessageCircle size={20} /> oppure Scrivici su WA </a>
 
