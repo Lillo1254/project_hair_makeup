@@ -178,12 +178,12 @@ export default async function PageHome() {
       loop
       playsInline
       className="
-        w-full max-w-sm
-
+        sm:w-72 md:w-96 max-w-sm
+rounded-2xl
         aspect-9/16
         object-cover
 
-        md:max-w-none md:w-96 md:h-full md:rounded-xl video_shadow 
+        md:max-w-none md:h-full md:rounded-xl video_shadow 
 
         landscape:aspect-video
       "

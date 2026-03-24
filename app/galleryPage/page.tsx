@@ -31,51 +31,53 @@ export default function GalleryPage() {
 
     return (
         <>
-        <div className="p-4 bg-gradient-to-b from-black/70 to-neutral-700">
-            <h1 className="text-2xl font-bold mb-4">Gallery Page</h1>
+            <div className="p-4 bg-gradient-to-b from-black/70 to-neutral-700">
+                <h1 className="text-2xl font-bold mb-4">Gallery Page</h1>
 
-           
 
-            {loading ? (
-                <p className="mt-4">Caricamento...</p>
-            ) : (
-                <>
-                    {/* GALLERY */}
-                    <h2 className="text-xl font-semibold mt-6 mb-2">Gallery</h2>
-                    <div className="grid grid-cols-3 gap-4">
-                        {gallery.length === 0 ? (
-                            <p>Nessuna immagine</p>
-                        ) : (
-                            gallery.map((item, i) => (
-                                <CardGalleryPage key={i} image={item} />
-                            ))
-                        )}
-                    </div>
 
-                    {/* VIDEOS */}
-                    <h2 className="text-xl font-semibold mt-6 mb-2">Videos</h2>
-                    <div className="grid grid-cols-3 gap-4">
-                        {videos.length === 0 ? (
-                            <p>Nessun video</p>
-                        ) : (
-                            videos.map((item, i) => (
-                                <div key={i}>
-                                    <video
-                                        src={item}
-                                        controls
-                                        className=" rounded vertical_video"
-                                    />
-                                    <p className="text-sm">{item}</p>
-                                </div>
-                            ))
-                        )}
-                    </div>
-                </>
-            )}
-            <div className="flex justify-center space-y-2">
-                 <ButtonBack label=" Indietro" className="bg-red-400 text-white p-3 rounded-xl font-medium" />
+                {loading ? (
+                    <p className="mt-4">Caricamento...</p>
+                ) : (
+                    <>
+                        {/* GALLERY */}
+                        <h2 className="text-xl font-semibold mt-6 mb-2">Gallery</h2>
+                        <div className="grid grid-cols-3 gap-2 md:gap-4">
+                            {gallery.length === 0 ? (
+                                <p>Al momento non è presente nessun immagine in galleria</p>
+                            ) : (
+                                gallery.map((item, i) => (
+                                    <div key={i} className="w-full overflow-hidden">
+                                        <CardGalleryPage image={item} />
+                                    </div>
+                                ))
+                            )}
+                        </div>
+
+                        {/* VIDEOS */}
+                        <h2 className="text-xl font-semibold mt-6 mb-2 text-white">Videos</h2>
+                        <div className="grid grid-cols-3 gap-4">
+                            {videos.length === 0 ? (
+                                <p>Nessun video</p>
+                            ) : (
+                                videos.map((item, i) => (
+                                    <div key={i}>
+                                        <video
+                                            src={item}
+                                            controls
+                                            className=" rounded vertical_video"
+                                        />
+
+                                    </div>
+                                ))
+                            )}
+                        </div>
+                    </>
+                )}
+                <div className="flex justify-center mt-4  ">
+                    <ButtonBack label=" Indietro" className="bg-red-400 text-white p-3 rounded-xl font-medium" />
+                </div>
             </div>
-        </div>
         </>
     );
 }
