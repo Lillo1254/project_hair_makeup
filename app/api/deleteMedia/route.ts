@@ -13,7 +13,7 @@ export async function DELETE(req: NextRequest) {
       return NextResponse.json({ error: "Path mancante" }, { status: 400 });
     }
 
-    console.log("DELETE richiesto per:", path);
+    /* console.log("DELETE richiesto per:", path); */
 
     // Se è un URL Blob, prova a cancellare dal Blob
     if (path.startsWith("http")) {
@@ -34,7 +34,7 @@ export async function DELETE(req: NextRequest) {
       "DELETE FROM media WHERE gallery = ? OR offers = ? OR videos = ?",
       [path, path, path]
     );
-    console.log("Righe DB cancellate:", result);
+    /* console.log("Righe DB cancellate:", result); */
 
     return NextResponse.json({ success: true });
   } catch (error) {

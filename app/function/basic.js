@@ -9,7 +9,7 @@ export async function fetchMedia(type) {
 
     const data = await res.json();
 
-    console.log(`📂 MEDIA (${type}):`, data);
+   /*  console.log(`📂 MEDIA (${type}):`, data); */
 
     return data;
   } catch (err) {

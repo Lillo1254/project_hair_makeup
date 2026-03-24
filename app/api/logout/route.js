@@ -10,6 +10,6 @@ export async function POST(req){
         path: "/",
         maxAge: 0,
     });
-    console.log("Logout effettuato" );
+    /* console.log("Logout effettuato" ); */
     return response;
     }

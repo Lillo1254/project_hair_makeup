@@ -4,16 +4,16 @@ import db from "@/lib/db";
 
 export async function POST(req: NextRequest) {
   try {
-    console.log("➡️ saveToDB chiamata");
+    /* console.log("➡️ saveToDB chiamata"); */
 
     const data = await req.formData();
-    console.log("📦 formData ricevuto");
-
+    /* console.log("📦 formData ricevuto");
+ */
     const files = data.getAll("files") as File[];
     const folder = data.get("folder") as string;
 
-    console.log("📁 folder:", folder);
-    console.log("📸 numero file:", files.length);
+/*     console.log("📁 folder:", folder);
+    console.log("📸 numero file:", files.length); */
 
     if (!process.env.BLOB_READ_WRITE_TOKEN) {
       console.error("❌ TOKEN Blob mancante!");
@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
     const savedPaths: string[] = [];
 
     for (const file of files) {
-      console.log("➡️ Upload file:", file.name, file.type);
+     /*  console.log("➡️ Upload file:", file.name, file.type); */
 
       const arrayBuffer = await file.arrayBuffer();
       const buffer = Buffer.from(arrayBuffer);
@@ -41,12 +41,12 @@ export async function POST(req: NextRequest) {
         token: process.env.BLOB_READ_WRITE_TOKEN,
       });
 
-      console.log("✔️ Blob salvato:", blob.url);
+    /*   console.log("✔️ Blob salvato:", blob.url); */
 
       const publicUrl = blob.url;
       savedPaths.push(publicUrl);
 
-      console.log("➡️ Salvataggio nel DB:", publicUrl);
+      /* console.log("➡️ Salvataggio nel DB:", publicUrl); */
 
       await db.query(
         `INSERT INTO media (${folder === "imagesGallery" ? "gallery" :
@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
         [publicUrl]
       );
 
-      console.log("✔️ DB OK");
+     /*  console.log("✔️ DB OK"); */
     }
 
     return NextResponse.json({ savedPaths });
