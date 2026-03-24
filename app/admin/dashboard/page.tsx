@@ -1,8 +1,10 @@
 "use client";
 
 import { Dispatch, SetStateAction } from "react";
-
 import { useState, useEffect } from "react";
+
+import { put } from "@vercel/blob"; // ⬅ FUNZIONA CON LA TUA VERSIONE
+
 import ButtonLogout from "../../components/buttons/buttonLogout";
 import DashboardSection from "../../components/dashboard/DashboardSection";
 import PreviewGrid from "../../components/dashboard/PreviewGrid";
@@ -58,6 +60,35 @@ export default function DashboardAdmin() {
     loadVideos();
   }, [isVideosOpen]);
 
+  /* -------------------- UPLOAD VIDEO DIRETTO -------------------- */
+
+  const uploadVideo = async (file: File) => {
+    try {
+      setLoading(true);
+
+      // 1) Upload diretto al Blob
+      const blob = await put(file.name, file, {
+        access: "public",
+      });
+
+      const url = blob.url;
+
+      // 2) Salva l’URL nel DB
+      await fetch("/api/saveVideoToDB", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url }),
+      });
+
+      return url;
+    } catch (err) {
+      console.error("Errore upload video:", err);
+      setMessage("Errore upload video ❌");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   /* -------------------- HANDLERS -------------------- */
 
   const handleUploadPreview = (
@@ -97,6 +128,19 @@ export default function DashboardAdmin() {
   ) => {
     if (files.length === 0) return;
 
+    // 🔥 SE È VIDEO → upload diretto
+    if (folder === "videoGallery") {
+      for (const file of files) {
+        const url = await uploadVideo(file);
+        if (url) setDB(prev => [url, ...prev]);
+      }
+      clearFiles([]);
+      reload();
+      setMessage("Video salvati correttamente 🎥");
+      return;
+    }
+
+    // 🔥 ALTRIMENTI → immagini → API normale
     const formData = new FormData();
     files.forEach(f => formData.append("files", f));
     formData.append("folder", folder);
@@ -118,25 +162,26 @@ export default function DashboardAdmin() {
     }
   };
 
-const deleteFile = async (
-  path: string,
-  setDB: Dispatch<SetStateAction<string[]>>
-) => {
-  try {
-    await fetch("/api/deleteMedia", {
-      method: "DELETE",
-      body: JSON.stringify({ path })
-    });
+  const deleteFile = async (
+    path: string,
+    setDB: Dispatch<SetStateAction<string[]>>
+  ) => {
+    try {
+      await fetch("/api/deleteMedia", {
+        method: "DELETE",
+        body: JSON.stringify({ path })
+      });
 
-    setDB((prev) => prev.filter((p) => p !== path));
-  } catch {
-    setMessage("Errore cancellazione ❌");
-  }
-};
+      setDB((prev) => prev.filter((p) => p !== path));
+    } catch {
+      setMessage("Errore cancellazione ❌");
+    }
+  };
 
   /* -------------------- RENDER -------------------- */
 
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-b from-black/60 to-neutral-700 text-white px-6 py-20">
       <div className="max-w-6xl mx-auto space-y-16">
 
@@ -269,7 +314,7 @@ const deleteFile = async (
 
         {/* -------------------- NOTIFICHE -------------------- */}
         {message && (
-          <div className="fixed bottom-5 right-5 bg-white text-black px-6 py-3 rounded-full shadow-lg z-[100]">
+          <div className="fixed bottom-5 right-5 bg-white text-black px-6 py-3 rounded-full shadow-lg z-100">
             {message}
           </div>
         )}
@@ -279,5 +324,6 @@ const deleteFile = async (
         <ButtonLogout label="Logout" className="bottom-5 left-5 bg-red-500 p-3 rounded-xl text-zinc-300 font-bold " />
       </div>
     </div>
+    </>
   );
 }

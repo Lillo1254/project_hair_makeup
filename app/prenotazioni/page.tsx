@@ -145,6 +145,7 @@ export default function CalendarPage() {
   };
 
   return (
+    <>
     <div className="min-h-screen bg-black text-white px-6 py-20">
       <div className="max-w-4xl mx-auto">
         <div className="text-center">
@@ -248,6 +249,7 @@ export default function CalendarPage() {
       <ButtonBack label="Indietro" className="bg-red-400 mt-10 p-3 rounded-xl" />
 </div>
     </div>
+    </>
   );
 }
 
