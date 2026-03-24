@@ -217,7 +217,7 @@ rounded-2xl
       href="/prenotazioni"
       className="inline-block mt-4 px-8 py-3 text-sm uppercase rounded tracking-widest bg-white text-black hover:bg-neutral-200 hover:rounded-3xl transition-all duration-300"
     >
-      Prenota Ora
+      Prenota Ora 
     </a>
 
   </div>
