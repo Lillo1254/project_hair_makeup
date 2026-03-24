@@ -1,4 +1,7 @@
 // app/api/saveToDB/route.ts
+
+export const runtime = "nodejs";
+
 import { NextRequest, NextResponse } from "next/server";
 import { put } from "@vercel/blob";
 import db from "@/lib/db";
