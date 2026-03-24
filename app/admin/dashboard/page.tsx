@@ -69,6 +69,7 @@ export default function DashboardAdmin() {
       // 1) Upload diretto al Blob
       const blob = await put(file.name, file, {
         access: "public",
+        token: process.env.NEXT_PUBLIC_BLOB_TOKEN,
       });
 
       const url = blob.url;
