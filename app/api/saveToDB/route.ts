@@ -1,16 +1,24 @@
-// app/api/saveToDB/route.ts
-
-export const runtime = "nodejs";
-
 import { NextRequest, NextResponse } from "next/server";
 import { put } from "@vercel/blob";
 import db from "@/lib/db";
 
 export async function POST(req: NextRequest) {
   try {
+    console.log("➡️ saveToDB chiamata");
+
     const data = await req.formData();
+    console.log("📦 formData ricevuto");
+
     const files = data.getAll("files") as File[];
     const folder = data.get("folder") as string;
+
+    console.log("📁 folder:", folder);
+    console.log("📸 numero file:", files.length);
+
+    if (!process.env.BLOB_READ_WRITE_TOKEN) {
+      console.error("❌ TOKEN Blob mancante!");
+      return NextResponse.json({ error: "TOKEN mancante" }, { status: 500 });
+    }
 
     if (!folder) {
       return NextResponse.json({ error: "Folder mancante" }, { status: 400 });
@@ -23,31 +31,36 @@ export async function POST(req: NextRequest) {
     const savedPaths: string[] = [];
 
     for (const file of files) {
+      console.log("➡️ Upload file:", file.name, file.type);
+
       const arrayBuffer = await file.arrayBuffer();
       const buffer = Buffer.from(arrayBuffer);
 
-      // Upload su Vercel Blob
       const blob = await put(`${folder}/${Date.now()}-${file.name}`, buffer, {
         access: "public",
         token: process.env.BLOB_READ_WRITE_TOKEN,
       });
 
+      console.log("✔️ Blob salvato:", blob.url);
+
       const publicUrl = blob.url;
       savedPaths.push(publicUrl);
 
-      // Salva nel DB
-      if (folder === "imagesGallery") {
-        await db.query("INSERT INTO media (gallery) VALUES (?)", [publicUrl]);
-      } else if (folder === "imagesOffers") {
-        await db.query("INSERT INTO media (offers) VALUES (?)", [publicUrl]);
-      } else if (folder === "videoGallery") {
-        await db.query("INSERT INTO media (videos) VALUES (?)", [publicUrl]);
-      }
+      console.log("➡️ Salvataggio nel DB:", publicUrl);
+
+      await db.query(
+        `INSERT INTO media (${folder === "imagesGallery" ? "gallery" :
+                             folder === "imagesOffers" ? "offers" :
+                             "videos"}) VALUES (?)`,
+        [publicUrl]
+      );
+
+      console.log("✔️ DB OK");
     }
 
     return NextResponse.json({ savedPaths });
   } catch (error) {
-    console.error("Errore saveToDB:", error);
-    return NextResponse.json({ error: "Errore salvataggio DB" }, { status: 500 });
+    console.error("❌ ERRORE saveToDB:", error);
+    return NextResponse.json({ error: String(error) }, { status: 500 });
   }
 }
