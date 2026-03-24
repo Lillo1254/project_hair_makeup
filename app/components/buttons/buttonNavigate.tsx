@@ -16,7 +16,7 @@ export default function ButtonNavigate({
   const styles =
     variant === "filled"
       ? "bg-white text-black hover:bg-neutral-200"
-      : "border border-white hover:bg-white hover:text-black";
+      : "border border-white hover:bg-white hover:text-black hover:rounded-3xl  transition-all duration-300";
 
   const router = useRouter();
 

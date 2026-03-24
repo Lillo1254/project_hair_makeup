@@ -57,3 +57,22 @@ background-position: center;
   
     box-shadow: inset 0px 0px 15px 1px rgb(155, 155, 155);
   }
+
+  /* font */
+  .playfair_text{
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+* {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}

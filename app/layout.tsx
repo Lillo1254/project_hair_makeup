@@ -67,16 +67,30 @@ export default function RootLayout({
 
   return (
     <html lang="it">
-      <body className="bg-black">
-        <Navbar />
-
-        {/* JSON-LD per SEO locale */}
+      <head>
+ {/* JSON-LD per SEO locale */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        <main className="min-h-screen">
+        {/* font */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet" />
+
+        {/* font 2 */}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet" />
+
+        </head>
+      <body className="bg-black">
+        <Navbar />
+
+       
+
+        <main className="">
           {children}
         </main>
 

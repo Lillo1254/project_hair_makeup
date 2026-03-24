@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function ContactsPage() {
   return (
-    <div className="min-h-screen bg-black text-white relative">
+    <div className=" bg-black text-white relative">
 
 
       {/* HERO */}
-      <section className="relative flex items-center justify-center min-h-[60vh] text-center px-6">
+      <section className="relative flex items-center justify-center min-h-[35vh] text-center px-6">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-neutral-700" />
 
         <div className="relative z-10">
@@ -21,7 +21,7 @@ export default function ContactsPage() {
       </section>
 
       {/* CONTENUTI */}
-      <section className="px-6 py-20 bg_contact">
+      <section className="px-6 bg_contact">
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
 
@@ -38,7 +38,7 @@ export default function ContactsPage() {
                 href="https://www.google.com/maps?q=Via+Vincenzo+Monti,+6,+00010+Roma"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600"
+                className="text-blue-400"
               >
                 Via Vincenzo Monti, 6 - Roma
               </a>
@@ -46,15 +46,15 @@ export default function ContactsPage() {
 
             <div>
               <p className="text-gray-400 text-sm uppercase tracking-widest">Telefono</p>
-              <a href="tel:+390774366676" className="text-blue-600">
+              <a href="tel:+390774366676" className="text-blue-400">
                 +39 0774 366676
               </a>
             </div>
 
             <div>
               <p className="text-gray-400 text-sm uppercase tracking-widest">Email</p>
-              <a href="mailto:atestainsustyle@gmail.com" className="text-blue-600
-                atestainsustyle@gmail.com">
+              <a href="mailto:atestainsustyle@gmail.com" className="text-blue-400">
+                atestainsustyle@gmail.com
               </a>
             </div>
 
@@ -99,7 +99,7 @@ export default function ContactsPage() {
         </Link>
 
       </div>
-  
+
 
     </div>
   );

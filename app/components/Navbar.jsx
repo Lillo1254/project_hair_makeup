@@ -1,19 +1,19 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import logo from "../../public/logogbgr.png";
 import Link from "next/link";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
-    const [mounted, setMounted] = useState(false);
+/*     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
         setMounted(true);
     }, []);
 
-    if (!mounted) return null;
+    if (!mounted) return null; */
 
     return (
         <>
@@ -33,7 +33,7 @@ export default function Navbar() {
                     <div className="text-end">
                         <button
                             onClick={() => setOpen(true)}
-                            className="text-2xl z-2 mt-0 flex w-[100%] justify-between items-center"
+                            className="text-2xl z-50 mt-0 mr-2 flex w-full justify-between items-center "
                         >
                             ☰
                         </button>
