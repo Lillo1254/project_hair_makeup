@@ -1,5 +1,7 @@
 "use client";
 
+import { Dispatch, SetStateAction } from "react";
+
 import { useState, useEffect } from "react";
 import ButtonLogout from "../../components/buttons/buttonLogout";
 import DashboardSection from "../../components/dashboard/DashboardSection";
@@ -89,8 +91,8 @@ export default function DashboardAdmin() {
   const saveToDB = async (
     folder: string,
     files: File[],
-    setDB: any,
-    clearFiles: any,
+    setDB: Dispatch<SetStateAction<string[]>>,
+    clearFiles: Dispatch<SetStateAction<File[]>>,
     reload: () => void
   ) => {
     if (files.length === 0) return;
@@ -116,18 +118,21 @@ export default function DashboardAdmin() {
     }
   };
 
-  const deleteFile = async (path: string, setDB: any) => {
-    try {
-      await fetch("/api/deleteMedia", {
-        method: "DELETE",
-        body: JSON.stringify({ path })
-      });
+const deleteFile = async (
+  path: string,
+  setDB: Dispatch<SetStateAction<string[]>>
+) => {
+  try {
+    await fetch("/api/deleteMedia", {
+      method: "DELETE",
+      body: JSON.stringify({ path })
+    });
 
-      setDB((prev: any) => prev.filter((p: any) => p !== path));
-    } catch {
-      setMessage("Errore cancellazione ❌");
-    }
-  };
+    setDB((prev) => prev.filter((p) => p !== path));
+  } catch {
+    setMessage("Errore cancellazione ❌");
+  }
+};
 
   /* -------------------- RENDER -------------------- */
 
