@@ -254,7 +254,9 @@ rounded-2xl
         
         <section className=" py-10 bg-neutral-700 w-full">
         <div className="">
+          <Link href="/prenotazioni">
         <CardOffers image={imagesOffers.at(0)} />
+         </Link>
          </div>
         </section>
         </>
