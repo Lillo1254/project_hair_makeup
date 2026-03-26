@@ -4,6 +4,9 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import ButtonBack from "../components/buttons/buttonBack";
 import { MessageCircle } from "lucide-react";
+import servizi from "../servicesPage/servizi.json";
+
+import Select from "react-select";
 
 export default function CalendarPage() {
   const [gender, setGender] = useState("");
@@ -12,14 +15,15 @@ export default function CalendarPage() {
   const [loading, setLoading] = useState(false);
   const [dateTime, setDateTime] = useState("");
   const [dateError, setDateError] = useState("");
+  const [privacyAccepted, setPrivacyAccepted] = useState(false); // ✅ AGGIUNTO
 
   const servicesByGender: Record<string, string[]> = {
-    uomo: ["Shampoo + Taglio", "Shampoo + Taglio + Barba"],
-    donna: ["Taglio", "Taglio e Piega", "Taglio + Colore + Piega"],
-    bambino: ["Shampoo + Taglio"],
+    uomo: servizi.categorie.Uomo.map((servizio) => servizio.servizio),
+    donna: servizi.categorie.Donna.map((servizio) => servizio.servizio),
+    bambino: servizi.categorie.Bimbi.map((servizio) => servizio.servizio),
+    makeup: servizi.categorie["Make-up"].map((servizio) => servizio.servizio),
   };
-
-  /* ================= VALIDAZIONE DATA LIVE ================= */
+  console.log(servicesByGender);
 
   const validateDateTime = (value: string) => {
     if (!value) {
@@ -49,8 +53,6 @@ export default function CalendarPage() {
 
     setDateError("");
   };
-
-  /* ================= HANDLE SUBMIT ================= */
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -99,6 +101,12 @@ export default function CalendarPage() {
       return;
     }
 
+    // ✅ VALIDAZIONE PRIVACY
+    if (!privacyAccepted) {
+      setError("⚠️ Devi accettare la privacy policy.");
+      return;
+    }
+
     setLoading(true);
 
     const selectedDate = new Date(dateTime);
@@ -134,6 +142,7 @@ export default function CalendarPage() {
         setGender("");
         setService("");
         setDateTime("");
+        setPrivacyAccepted(false); // ✅ RESET CHECKBOX
       })
       .catch((err) => {
         console.error(err);
@@ -146,118 +155,156 @@ export default function CalendarPage() {
 
   return (
     <>
-    <div className="min-h-screen bg-black text-white px-6 py-20">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-light tracking-widest uppercase">
-            Prenota il tuo appuntamento
-          </h1>
-          <p className="mt-4 text-gray-400">
-            Compila il form e riceverai conferma via email.
-          </p>
-        </div>
-
-        <form
-          onSubmit={handleSubmit}
-          className="mt-12 bg-neutral-800 p-8 rounded-lg space-y-6"
-        >
-          <div className="grid md:grid-cols-2 gap-6">
-            <Input label="Nome" name="nome" />
-            <Input label="Cognome" name="cognome" />
-
-            <div>
-              <label className="block mb-2 text-sm">Genere</label>
-              <select
-                name="genere"
-                value={gender}
-                onChange={(e) => {
-                  setGender(e.target.value);
-                  setService("");
-                }}
-                className="w-full bg-neutral-900 border border-neutral-700 p-3 rounded"
-              >
-                <option value="">Seleziona</option>
-                <option value="uomo">Uomo</option>
-                <option value="donna">Donna</option>
-                <option value="bambino">Bambino</option>
-              </select>
-            </div>
-
-            <Input label="Età" name="eta" type="number" />
-            <Input label="Descrizione servizio" name="servicesRequest" />
-
-            <div>
-              <label className="block mb-2 text-sm">Data e orario</label>
-              <input
-                type="datetime-local"
-                name="dateTime"
-                value={dateTime}
-                min={new Date().toISOString().slice(0, 16)}
-                onChange={(e) => {
-                  setDateTime(e.target.value);
-                  validateDateTime(e.target.value);
-                }}
-                className="w-full bg-neutral-900 border border-neutral-700 p-3 rounded"
-              />
-              {dateError && (
-                <p className="text-red-400 text-sm mt-2">{dateError}</p>
-              )}
-            </div>
-
-            <Input label="Telefono (+39)" name="phone" type="tel" />
-            <Input label="Email" name="email" type="email" />
+      <div className="min-h-screen bg-gradient-to-b from-black/60 to-neutral-700 text-white px-6 py-20">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-light tracking-widest uppercase">
+              Prenota il tuo appuntamento
+            </h1>
+            <p className="mt-4 text-gray-400">
+              Compila il form e riceverai conferma via email.
+            </p>
           </div>
 
-          {gender && (
-            <div>
-              <label className="block mb-2 text-sm">Tipologia Servizio</label>
-              <select
-                name="servizio"
-                value={service}
-                onChange={(e) => setService(e.target.value)}
-                className="w-full bg-neutral-900 border border-neutral-700 p-3 rounded"
-              >
-                <option value="">Seleziona servizio</option>
-                {servicesByGender[gender].map((s, i) => (
-                  <option key={i} value={s}>
-                    {s}
-                  </option>
-                ))}
-              </select>
-            </div>
-          )}
-
-          {error && (
-            <div className="bg-red-600/20 border border-red-500 text-red-400 p-3 rounded text-sm">
-              {error}
-            </div>
-          )}
-
-          <button
-            type="submit"
-            disabled={loading || !!dateError}
-            className="w-full bg-white text-black py-3 rounded hover:bg-gray-200 transition disabled:opacity-50"
+          <form
+            onSubmit={handleSubmit}
+            className="mt-12 bg-neutral-800 p-8 rounded-lg space-y-6"
           >
-            {loading ? "Invio in corso..." : "Invia Prenotazione"}
-          </button>
-        </form>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Input label="Nome" name="nome" />
+              <Input label="Cognome" name="cognome" />
+
+              <div>
+                <label className="block mb-2 text-sm">Genere</label>
+                <select
+                  name="genere"
+                  value={gender}
+                  onChange={(e) => {
+                    setGender(e.target.value);
+                    setService("");
+                  }}
+                  className="w-full bg-neutral-900 border border-neutral-700 p-3 rounded"
+                >
+                  <option value="">Seleziona</option>
+                  <option value="uomo">Uomo</option>
+                  <option value="donna">Donna</option>
+                  <option value="bambino">Bambino</option>
+                  <option value="makeup">Make-Up</option>
+                </select>
+              </div>
+
+              <Input label="Età" name="eta" type="number" />
+              <Input label="Descrizione servizio" name="servicesRequest" />
+
+              <div>
+                <label className="block mb-2 text-sm">Data e orario</label>
+                <input
+                  type="datetime-local"
+                  name="dateTime"
+                  value={dateTime}
+                  min={new Date().toISOString().slice(0, 16)}
+                  onChange={(e) => {
+                    setDateTime(e.target.value);
+                    validateDateTime(e.target.value);
+                  }}
+                  className="w-full bg-neutral-900 border border-neutral-700 p-3 rounded"
+                />
+                {dateError && (
+                  <p className="text-red-400 text-sm mt-2">{dateError}</p>
+                )}
+              </div>
+
+              <Input label="Telefono (+39)" name="phone" type="tel" />
+              <Input label="Email" name="email" type="email" />
+            </div>
+
+            {gender && (
+              <div>
+                <label className="block mb-2 text-sm">Tipologia Servizio</label>
+                <div className="w-full max-w-[80vw] border border-neutral-700 rounded bg-neutral-900 relative">
+                  <select
+                    name="servizio"
+                    value={service}
+                    onChange={(e) => setService(e.target.value)}
+                    className="w-full p-3 rounded bg-neutral-900"
+                    size={Math.min(servicesByGender[gender].length, 8)} // mostra massimo 8 opzioni visibili
+                  >
+                    <option value="">Seleziona servizio</option>
+                    {servicesByGender[gender].map((s, i) => (
+                      <option key={i} value={s} className="border-t whitespace-normal p-3 wrap-break-words ">
+                        {s}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            )}
+
+            {/* ✅ CHECKBOX PRIVACY */}
+            <div className="flex items-start gap-2 text-sm">
+              <input
+                type="checkbox"
+                checked={privacyAccepted}
+                onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                className="mt-1"
+              />
+              <p className="text-gray-300">
+                Dichiaro di aver letto l{" "}
+                <a
+                  href="/privacy-policy"
+                  target="_blank"
+                  className="underline text-white"
+                >
+                  informativa sulla privacy
+                </a>{" "}
+                e acconsento al trattamento dei dati personali.
+              </p>
+            </div>
+
+            {error && (
+              <div className="bg-red-600/20 border border-red-500 text-red-400 p-3 rounded text-sm">
+                {error}
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={loading || !!dateError || !privacyAccepted}
+              className="w-full bg-white text-black py-3 rounded hover:bg-gray-200 transition disabled:opacity-50"
+            >
+              {loading ? "Invio in corso..." : "Invia Prenotazione"}
+            </button>
+          </form>
+        </div>
+
+        <div className="flex flex-col items-center gap-2 mt-5">
+          <a
+            href="https://wa.me/3298492353?text=Salve%20mi%20fai%20schifo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex gap-2 text-green-600 hover:text-green-700"
+            aria-label="Contatto whatsapp"
+          >
+            <MessageCircle size={20} /> oppure Scrivici su WA
+          </a>
+
+          <ButtonBack label="Indietro" className="bg-red-400 mt-10 p-3 rounded-xl hover:bg-red-500 transition-all duration-300 cursor-pointer" />
+        </div>
       </div>
-<div className="flex flex-col items-center gap-2 mt-5">
-
-<a href="https://wa.me/3298492353?text=Salve%20mi%20fai%20schifo" target="_blank" rel="noopener noreferrer" className="flex gap-2 text-green-600 hover:text-green-700" > <MessageCircle size={20} /> oppure Scrivici su WA </a>
-
-      <ButtonBack label="Indietro" className="bg-red-400 mt-10 p-3 rounded-xl" />
-</div>
-    </div>
     </>
   );
 }
 
 /* COMPONENTE INPUT RIUTILIZZABILE */
-function Input({ label, name, type = "text" }: {
+function Input({
+  label,
+  name,
+  type = "text",
+}: {
   label: string;
   name: string;
-  type?: string;}) {
+  type?: string;
+}) {
   return (
     <div>
       <label className="block mb-2 text-sm">{label}</label>

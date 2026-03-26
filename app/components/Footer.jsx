@@ -1,4 +1,4 @@
-import { Facebook, Images, Instagram, Layers2, MessageCircleMore, MessageCircle } from "lucide-react";
+import { Facebook, Images, Instagram, Layers2, MessageCircleMore, MessageCircle, GlobeLock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,7 +20,7 @@ export default function Footer() {
 
                 <div>
                     <h4 className="text-sm uppercase tracking-widest text-gray-300">
-                        Contatti
+                        Contatti e Info
                     </h4>
                     <ul className="mt-4 space-y-2 text-gray-400 text-sm">
                         <li> <a
@@ -33,6 +33,8 @@ export default function Footer() {
                         </a></li>
                         <li><a href="tel:+39  0774 366676" className="text-indigo-400">Tel: +39  0774 366676</a></li>
                         <li><a href="mailto:atestainsustyle@gmail.com" className="text-indigo-400">Email: atestainsustyle@gmail.com</a></li>
+                        <li>C.F 11956641002</li>
+                        <li>Mafe SNC</li>
                     </ul>
                 </div>
 
@@ -59,6 +61,7 @@ export default function Footer() {
                             <Link href="/prenotazioni">Prenotazioni</Link>
 
                         </li>
+                        <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer"><GlobeLock size={32} /><Link href="/privacy-policy">Privacy-plicy</Link></li>
                         <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer">
                             <a href="https://wa.me/3298492353?text=Salve%20A%20testa%20in%20Su,%20mi%20piacerebbe%20contattarvi%20per%20una%20prenotazione%20" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-green-600 hover:text-green-700" > <MessageCircle size={20} /> Scrivimi su WhatsApp </a>
                         </li>
@@ -70,10 +73,13 @@ export default function Footer() {
                     <h4 className="text-sm text-center uppercase tracking-widest text-gray-300">
                         Seguici
                     </h4>
-                    <ul className="mt-4 space-y-2 text-gray-400 text-sm">
-                        <li className="flex justify-center hover:text-white transition cursor-pointer text-white"><Instagram size={32} /></li>
-                        <li className="flex justify-center hover:text-white transition cursor-pointer text-white"><Facebook size={32} /></li>
-                        <li className="flex justify-center hover:text-white transition cursor-pointer"><Image src="/tiktokicon.svg" alt="Tiktok" width={32} height={32} className="invert" /></li>
+                    <ul className="mt-4 space-y-4 text-gray-400 text-sm">
+                        <li className="flex justify-center hover:text-white transition cursor-pointer text-white"><a href="https://www.instagram.com/atestainsuhairmakeupstudio?igsh=MXd0dDE1bWtpOHdwdQ==" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" aria-label="Vai al nostro profilo Instagram"><Instagram size={32} /></a></li>
+
+                        <li className="flex justify-center hover:text-white transition cursor-pointer text-white"><a href="https://www.facebook.com/share/1AhzVgfUvg/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" aria-label="Vai al nostro profilo Facebook"><Facebook size={32} /></a></li>
+
+                        <li className="flex justify-center hover:text-white transition cursor-pointer"><a href="https://www.tiktok.com/@a.testa.in.su" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2" aria-label="Vai al nostro profilo TikTok"><Image src="/tiktokicon.svg" alt="Tiktok" width={32} height={32} className="invert" /></a></li>
+
                     </ul>
                 </div>
 
@@ -87,6 +93,7 @@ export default function Footer() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
+                    title="Mappa Sede Studio atestainsu parrucchieri"
                 ></iframe>
             </div>
 

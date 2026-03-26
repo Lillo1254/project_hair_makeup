@@ -173,32 +173,6 @@
         "descrizione": "Servizio completo con taglio, shampoo delicato e piega leggera."
       }
     ],
-    "Colore": [
-      {
-        "servizio": "Solo Colore",
-        "prezzo": 30,
-        "valuta": "EUR",
-        "descrizione": "Colorazione professionale per ravvivare, coprire o trasformare il colore dei capelli con prodotti di qualità."
-      },
-      {
-        "servizio": "Colore + Maschera Nutriente",
-        "prezzo": 35,
-        "valuta": "EUR",
-        "descrizione": "Colorazione con trattamento nutriente per capelli più luminosi e protetti."
-      },
-      {
-        "servizio": "Colore + Piega",
-        "prezzo": 40,
-        "valuta": "EUR",
-        "descrizione": "Servizio completo colore con piega finale per un look impeccabile."
-      },
-      {
-        "servizio": "Riflessante Lucentezza",
-        "prezzo": 25,
-        "valuta": "EUR",
-        "descrizione": "Trattamento colore rapido per ravvivare i riflessi naturali e dare luminosità."
-      }
-    ],
     "Make-up": [
       {
         "servizio": "Make-up Classico (Giorno/Sera)",
