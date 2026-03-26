@@ -61,7 +61,7 @@ export default function Footer() {
                             <Link href="/prenotazioni">Prenotazioni</Link>
 
                         </li>
-                        <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer"><GlobeLock size={32} /><Link href="/privacy-policy">Privacy-plicy</Link></li>
+                        <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer"><GlobeLock size={32} /><Link href="/privacy-policy">Privacy-Policy</Link></li>
                         <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer">
                             <a href="https://wa.me/3298492353?text=Salve%20A%20testa%20in%20Su,%20mi%20piacerebbe%20contattarvi%20per%20una%20prenotazione%20" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-green-600 hover:text-green-700" > <MessageCircle size={20} /> Scrivimi su WhatsApp </a>
                         </li>
@@ -85,7 +85,7 @@ export default function Footer() {
 
             </div>
             {/* iframe maps */}
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center pt-3">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.598801756979!2d12.645466176564028!3d41.94447166125534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f7b6bc8fa7885%3A0xc8364bab2375d949!2sA%20Testa%20in%20su%20Parrucchieri!5e0!3m2!1sit!2sit!4v1774376603987!5m2!1sit!2sit"
                     className="rounded-full md:rounded-xl mt-3 w-80 md:w-full max-w-3xl h-100"
