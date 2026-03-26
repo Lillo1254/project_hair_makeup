@@ -6,8 +6,6 @@ import ButtonBack from "../components/buttons/buttonBack";
 import { MessageCircle } from "lucide-react";
 import servizi from "../servicesPage/servizi.json";
 
-import Select from "react-select";
-
 export default function CalendarPage() {
   const [gender, setGender] = useState("");
   const [service, setService] = useState("");
