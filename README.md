@@ -92,4 +92,4 @@ L’accesso all’area amministrativa è protetto tramite:
 - Navigazione veloce e responsive
 - SEO ottimizzato per visibilità locale
 
-### <a href="https://lillo1254.github.io/portfolio_react_js/" target="blank_">Alessandro Lucia</a> , Roma alessandroluciaroma@gmail.com
+### <a href="https://lillo1254.github.io/portfolio_react_js/" target="_blank">Alessandro Lucia</a> , Roma alessandroluciaroma@gmail.com
