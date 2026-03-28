@@ -63,7 +63,7 @@ export default function Footer() {
                         </li>
                         <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer"><GlobeLock size={32} /><Link href="/privacy-policy">Privacy-Policy</Link></li>
                         <li className="flex items-center justify-center gap-3 hover:text-white transition cursor-pointer">
-                            <a href="https://wa.me/3298492353?text=Salve%20A%20testa%20in%20Su,%20mi%20piacerebbe%20contattarvi%20per%20una%20prenotazione%20" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-green-600 hover:text-green-700" > <MessageCircle size={20} /> Scrivimi su WhatsApp </a>
+                            <a href="https://wa.me/3514808336?text=Salve%20A%20testa%20in%20Su,%20mi%20piacerebbe%20contattarvi%20per%20una%20prenotazione%20" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-green-600 hover:text-green-700" > <MessageCircle size={20} /> Scrivimi su WhatsApp </a>
                         </li>
 
                     </ul>

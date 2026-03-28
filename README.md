@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#  Salone Parrucchieri Roma – Guidonia Montecelio
 
-## Getting Started
+Benvenuto nel repository del sito web dedicato al nostro salone di parrucchieri situato a **Guidonia Montecelio**, in zona adiacente alla **Via Tiburtina**.  
+Il progetto è sviluppato utilizzando tecnologie moderne per garantire prestazioni elevate, sicurezza e una gestione efficiente delle prenotazioni.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+##  Descrizione del Progetto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Questo sito web è stato progettato per:
+- Presentare i servizi del salone (uomo, donna, bambino)
+- Consentire la prenotazione online
+- Mostrare una galleria dei lavori
+- Gestire un'area amministrativa riservata
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##  Tecnologie Utilizzate
 
-## Learn More
+Il progetto utilizza le seguenti tecnologie:
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend**
+  - Next.js
+  - HTML5 / CSS3
+  - JavaScript (ES6+)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Backend**
+  - Node.js
+  - API REST
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Database**
+  - MySQL
 
-## Deploy on Vercel
+- **Autenticazione**
+  - JWT (JSON Web Token)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+##  Struttura delle Pagine
+
+Il sito è composto dalle seguenti pagine:
+
+###  Home Page
+Pagina principale con presentazione del salone, promozioni e accesso rapido ai servizi.
+
+###  Not Found
+Pagina mostrata quando una rotta non esiste.
+
+###  Error
+Pagina per la gestione degli errori applicativi.
+
+###  Services Page
+Sezione dedicata ai servizi offerti:
+- Uomo
+- Donna
+- Bambino
+
+###  Privacy & Policy
+Informativa sulla privacy e gestione dei dati personali.
+
+###  Prenotazioni
+Sistema per prenotare appuntamenti online.
+
+###  Galleria
+Raccolta di immagini dei lavori realizzati.
+
+###  Login Admin
+Accesso riservato agli amministratori.
+
+###  Dashboard Admin
+Area gestionale per:
+- Caricamento immagini e video
+- Gestire servizi
+- Amministrare contenuti
+
+---
+
+## 🔐 Autenticazione e Sicurezza
+
+L’accesso all’area amministrativa è protetto tramite:
+- Token JWT
+- Gestione sicura delle sessioni
+- Validazione delle richieste lato server
+
+---
+
+## ⚙️ Funzionalità Principali
+
+- Prenotazioni online in tempo reale
+- Dashboard amministrativa completa
+- Sistema di autenticazione sicuro
+- Navigazione veloce e responsive
+- SEO ottimizzato per visibilità locale
+
+### Alessandro Lucia, Roma alessandroluciaroma@gmail.com
