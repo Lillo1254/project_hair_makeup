@@ -75,7 +75,7 @@ Area gestionale per:
 
 ---
 
-## 🔐 Autenticazione e Sicurezza
+##  Autenticazione e Sicurezza
 
 L’accesso all’area amministrativa è protetto tramite:
 - Token JWT
@@ -84,7 +84,7 @@ L’accesso all’area amministrativa è protetto tramite:
 
 ---
 
-## ⚙️ Funzionalità Principali
+##  Funzionalità Principali
 
 - Prenotazioni online in tempo reale
 - Dashboard amministrativa completa
@@ -92,4 +92,4 @@ L’accesso all’area amministrativa è protetto tramite:
 - Navigazione veloce e responsive
 - SEO ottimizzato per visibilità locale
 
-### Alessandro Lucia, Roma alessandroluciaroma@gmail.com
+### <a href="https://lillo1254.github.io/portfolio_react_js/" target="blank_">Alessandro Lucia</a> , Roma alessandroluciaroma@gmail.com
