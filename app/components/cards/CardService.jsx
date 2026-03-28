@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CardService({ title, description, image }) {
   return (
-    <Link href={`/servicesPage/${title}`}>
+    <Link href={`/servicesPage/${title.toLowerCase()}`}>
       <div className="p-1 text-center">
         <img
           src={image}
