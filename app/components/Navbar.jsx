@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import logo from "../../public/logogbgr.png";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -14,6 +15,8 @@ export default function Navbar() {
     }, []);
 
     if (!mounted) return null; */
+    const pathName = usePathname();
+    const onUp = () => window.scrollTo({top : 0, behavior : "smooth"});
 
     return (
         <>
@@ -22,7 +25,7 @@ export default function Navbar() {
                 {/* ================= TOP BAR ================= */}
                 <div className="bg_navi text-white px-3 py-0 flex justify-between items-center w-[70%] rounded-xl">
 
-                    <Link href="/" className="z-50" scroll={true}>
+                    <Link href="/" className="z-50" onClick={pathName === "/" ? onUp : null}>
                         <Image
                             src={logo}
                             alt="Logo"
