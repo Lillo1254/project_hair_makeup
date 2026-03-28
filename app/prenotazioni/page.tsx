@@ -277,7 +277,7 @@ export default function CalendarPage() {
 
         <div className="flex flex-col items-center gap-2 mt-5">
           <a
-            href="https://wa.me/3514808336?text=Salve%20mi%20fai%20schifo"
+            href="https://wa.me/3514808336?text=Salve%20A%20Testa%20In%20Su%20vi%20contatto%20per%20prendere%20appuntamento"
             target="_blank"
             rel="noopener noreferrer"
             className="flex gap-2 text-green-600 hover:text-green-700"
