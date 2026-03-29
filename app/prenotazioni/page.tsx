@@ -13,7 +13,7 @@ export default function CalendarPage() {
   const [loading, setLoading] = useState(false);
   const [dateTime, setDateTime] = useState("");
   const [dateError, setDateError] = useState("");
-  const [privacyAccepted, setPrivacyAccepted] = useState(false); // ✅ AGGIUNTO
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
 
   const servicesByGender: Record<string, string[]> = {
     uomo: servizi.categorie.Uomo.map((servizio) => servizio.servizio),
@@ -21,7 +21,6 @@ export default function CalendarPage() {
     bambino: servizi.categorie.Bimbi.map((servizio) => servizio.servizio),
     makeup: servizi.categorie["Make-up"].map((servizio) => servizio.servizio),
   };
-  console.log(servicesByGender);
 
   const validateDateTime = (value: string) => {
     if (!value) {
@@ -99,7 +98,6 @@ export default function CalendarPage() {
       return;
     }
 
-    // ✅ VALIDAZIONE PRIVACY
     if (!privacyAccepted) {
       setError("⚠️ Devi accettare la privacy policy.");
       return;
@@ -117,30 +115,42 @@ export default function CalendarPage() {
       minute: "2-digit",
     });
 
+    const templateParams = {
+      nome,
+      cognome,
+      genere,
+      eta,
+      phone,
+      servizio,
+      servicesRequest,
+      formattedDate,
+      email,
+    };
+
+    // ✅ INVIO EMAIL (ADMIN → CLIENTE)
     emailjs
       .send(
         "service_9vn6p2w",
-        "template_qphamv5",
-        {
-          nome,
-          cognome,
-          genere,
-          eta,
-          phone,
-          servizio,
-          servicesRequest,
-          formattedDate,
-          email,
-        },
+        "template_qphamv5", // gestore
+        templateParams,
         "Eo0HWfVmhOzn2apD6"
       )
       .then(() => {
-        alert("Prenotazione inviata con successo!");
+        return emailjs.send(
+          "service_9vn6p2w",
+          "template_awon57c", // autoreply cliente
+          templateParams,
+          "Eo0HWfVmhOzn2apD6"
+        );
+      })
+      .then(() => {
+        alert("Richiesta inviata! Ti contatteremo a breve ✂️");
+
         form.reset();
         setGender("");
         setService("");
         setDateTime("");
-        setPrivacyAccepted(false); // ✅ RESET CHECKBOX
+        setPrivacyAccepted(false);
       })
       .catch((err) => {
         console.error(err);
@@ -225,7 +235,7 @@ export default function CalendarPage() {
                     value={service}
                     onChange={(e) => setService(e.target.value)}
                     className="w-full p-3 rounded bg-neutral-900"
-                    size={Math.min(servicesByGender[gender].length, 8)} // mostra massimo 8 opzioni visibili
+                    size={Math.min(servicesByGender[gender].length, 8)}
                   >
                     <option value="">Seleziona servizio</option>
                     {servicesByGender[gender].map((s, i) => (
@@ -238,7 +248,6 @@ export default function CalendarPage() {
               </div>
             )}
 
-            {/* ✅ CHECKBOX PRIVACY */}
             <div className="flex items-start gap-2 text-sm">
               <input
                 type="checkbox"
@@ -293,7 +302,6 @@ export default function CalendarPage() {
   );
 }
 
-/* COMPONENTE INPUT RIUTILIZZABILE */
 function Input({
   label,
   name,
