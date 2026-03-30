@@ -117,6 +117,14 @@ export default function Navbar() {
                             Contatti
                         </Link>
 
+                        <Link 
+                            href="/chi-siamo" 
+                            className="text-left hover:opacity-70 transition"
+                            onClick={() => setOpen(false)}
+                        >
+                            Chi Siamo
+                        </Link>
+
                     </nav>
 
                     {/* Admin link */}

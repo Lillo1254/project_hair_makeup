@@ -23,11 +23,11 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HairSalon",
-    name: "a testa in su",
-    image: "https://atestainsustyle.vercel.app/logo.png",
-    "@id": "https://atestainsustyle.vercel.app/#hairSalon",
-    logo: "https://atestainsustyle.vercel.app/logogbgr.png",
-    url: "https://atestainsustyle.vercel.app",
+    name: "A Testa In Su",
+    image: "https://atestainsu.vercel.app/logo.png",
+    "@id": "https://atestainsu.vercel.app/#hairSalon",
+    logo: "https://atestainsu.vercel.app/logogbgr.png",
+    url: "https://atestainsu.vercel.app",
     telephone: "+390774366676", 
     address: {
       "@type": "PostalAddress",
@@ -58,15 +58,33 @@ export default function RootLayout({
       }
     ],
     sameAs: [
-      "https://instagram.com/tuoprofilo", // Cambia con profilo reale
-      "https://facebook.com/tuoprofilo"   // Cambia con profilo reale
+      "https://www.instagram.com/atestainsuhairmakeupstudio?igsh=MXd0dDE1bWtpOHdwdQ==", 
+      "https://www.facebook.com/share/1AhzVgfUvg/",
+      "https://www.tiktok.com/@a.testa.in.su"
     ],
     description:
       "Parrucchiere uomo, donna e bambino a Guidonia Montecelio vicino Tiburtina. Servizi di taglio, colore, barba e make-up professionale.",
     areaServed: {
       "@type": "Place",
       name: "Guidonia Montecelio, Roma e zona Tiburtina"
+    },
+    makesOffer: [
+  {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Service",
+      name: "Taglio capelli uomo"
     }
+  },
+  {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Service",
+      name: "Taglio donna e colore"
+    }
+  }
+],
+priceRange: "€€",
   };
 
   return (
