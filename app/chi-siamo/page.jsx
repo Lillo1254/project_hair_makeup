@@ -124,8 +124,8 @@ export default function ChiSiamo() {
       <section className="px-6 py-16 text-center max-w-3xl mx-auto">
         <h2 className="text-3xl mb-4 uppercase tracking-wider">Filosofia</h2>
         <p className="text-gray-300 leading-relaxed">
-          Crediamo nel rapporto umano, nell’ascolto e nella personalizzazione. Ogni cliente
-          viene seguito con attenzione, con l’obiettivo di valorizzare al massimo ogni tipo
+          Crediamo nel rapporto umano, nel`&apos;` ascolto e nella personalizzazione. Ogni cliente
+          viene seguito con attenzione, con l`&apos;` obiettivo di valorizzare al massimo ogni tipo
           di capello e creare un legame di fiducia duraturo.
         </p>
       </section>
