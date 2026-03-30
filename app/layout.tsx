@@ -23,12 +23,12 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HairSalon",
-    name: "A Testa In Su",
+    name: "A Testa In Su Parrucchiere",
     image: "https://atestainsu.vercel.app/logo.png",
     "@id": "https://atestainsu.vercel.app/#hairSalon",
     logo: "https://atestainsu.vercel.app/logogbgr.png",
     url: "https://atestainsu.vercel.app",
-    telephone: "+390774366676", 
+    telephone: ["+390774366676", "3514808336"], 
     address: {
       "@type": "PostalAddress",
       streetAddress: "Via Vincenzo Monti 63",
@@ -64,10 +64,13 @@ export default function RootLayout({
     ],
     description:
       "Parrucchiere uomo, donna e bambino a Guidonia Montecelio vicino Tiburtina. Servizi di taglio, colore, barba e make-up professionale.",
-    areaServed: {
-      "@type": "Place",
-      name: "Guidonia Montecelio, Roma e zona Tiburtina"
-    },
+    areaServed: [
+  "Guidonia Montecelio",
+  "Roma",
+  "Tiburtina",
+  "Setteville",
+  "Tivoli"
+],
     makesOffer: [
   {
     "@type": "Offer",
@@ -82,9 +85,51 @@ export default function RootLayout({
       "@type": "Service",
       name: "Taglio donna e colore"
     }
-  }
+  },
+    {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Service",
+      name: "Taglio capelli bambino"
+    }
+  },
+    {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Service",
+      name: "Barba uomo"
+    }
+  },
+    {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Service",
+      name: "Make-up artist"
+    }
+  },
+    {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Service",
+      name: "Trucco sposi"
+    }
+  },
 ],
 priceRange: "€€",
+hasMap: "https://www.google.com/maps?q=41.9444717,12.6454662",
+knowsAbout: [
+  "Taglio capelli uomo",
+  "Taglio capelli donna",
+  "Colore capelli",
+  "Barba",
+  "Make-up artist",
+  "Trucco sposa"
+],
+aggregateRating: {
+  "@type": "AggregateRating",
+  ratingValue: "4.8",
+  reviewCount: "108" //da aggiornare con il numero di recensioni
+},
   };
 
   return (
