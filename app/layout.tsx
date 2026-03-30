@@ -60,7 +60,8 @@ export default function RootLayout({
     sameAs: [
       "https://www.instagram.com/atestainsuhairmakeupstudio?igsh=MXd0dDE1bWtpOHdwdQ==", 
       "https://www.facebook.com/share/1AhzVgfUvg/",
-      "https://www.tiktok.com/@a.testa.in.su"
+      "https://www.tiktok.com/@a.testa.in.su",
+      "https://share.google/a7iItbGZrBWfO5Vzi"
     ],
     description:
       "Parrucchiere uomo, donna e bambino a Guidonia Montecelio vicino Tiburtina. Servizi di taglio, colore, barba e make-up professionale.",
@@ -83,7 +84,7 @@ export default function RootLayout({
     "@type": "Offer",
     itemOffered: {
       "@type": "Service",
-      name: "Taglio donna e colore"
+      name: "Taglio capelli donna e colore"
     }
   },
     {
@@ -115,7 +116,7 @@ export default function RootLayout({
     }
   },
 ],
-priceRange: "€€",
+priceRange: "€€ (15€ - 40€",
 hasMap: "https://www.google.com/maps?q=41.9444717,12.6454662",
 knowsAbout: [
   "Taglio capelli uomo",
