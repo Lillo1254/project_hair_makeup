@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function ChiSiamo() {
   const attrezzatura = "/pageChisiamo/attrezzOR.webP";
   const alterego = [
-    "/pageChisiamo/alteregoAllVER.webP",
+    "/pageChisiamo/alteregoAllVER.webp",
     "/pageChisiamo/alteregocassaOR.jpg",
     "/pageChisiamo/alteregolavOR.webP",
     "/pageChisiamo/alteregopiantOR.webp",
