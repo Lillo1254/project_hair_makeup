@@ -37,7 +37,7 @@ export default function GalleryPage() {
 
 
                 {loading ? (
-                    <p className="mt-4">Caricamento...</p>
+                    <></>
                 ) : (
                     <>
                         {/* GALLERY */}
@@ -75,7 +75,7 @@ export default function GalleryPage() {
                     </>
                 )}
                 <div className="flex justify-center mt-4  ">
-                    <ButtonBack label=" Indietro" className="bg-red-400 text-white p-3 rounded-xl font-medium" />
+                    <ButtonBack label=" Indietro" className="bg-red-400 p-2 rounded-xl hover: hover:scale-105" />
                 </div>
             </div>
         </>

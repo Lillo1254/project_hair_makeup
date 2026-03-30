@@ -6,7 +6,7 @@ import serviziJson from "./servizi.json";
 export default function PageServices() {
   return (
     <>
-    <div className="min-h-screen bg-black text-white bg_toghether">
+    <div className="min-h-screen bg-gradient-to-b from-black/60 via-neutral-700 to-neutral-700 text-white bg_toghether">
 
       {/* HEADER */}
       <div className="text-center pt-15 relative overflow-hidden">
@@ -17,7 +17,7 @@ export default function PageServices() {
       {/* HERO */}
       <section className="px-6 py-20 text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-light tracking-widest uppercase mb-6">
+          <h2 className="text-4xl font-light tracking-widest uppercase mb-6 ">
             Listino Servizi Uomo
           </h2>
           <p className="text-gray-400">
@@ -65,7 +65,7 @@ export default function PageServices() {
         </div>
 
         <div className="flex justify-center mt-12">
-          <ButtonBack label="Indietro" className="bg-red-500 p-2 rounded-xl " />
+          <ButtonBack label="Indietro" className="bg-red-400 p-2 rounded-xl hover: hover:scale-105" />
         </div>
       </section>
 

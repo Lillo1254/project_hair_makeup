@@ -47,7 +47,7 @@ export default async function PageCategoria({ params }: PageProps) {
     return (
       <div className="text-white p-10 text-center">
         <h2 className="text-3xl mb-4">Categoria non trovata</h2>
-        <ButtonBack label="Torna indietro" className="bg-red-500 p-2 rounded-xl" />
+        <ButtonBack label="Torna indietro" className="bg-red-400 p-2 rounded-xl hover: hover:scale-105" />
       </div>
     );
   }
@@ -104,7 +104,7 @@ export default async function PageCategoria({ params }: PageProps) {
         </div>
 
         <div className="flex justify-center mt-12">
-          <ButtonBack label="Indietro" className="bg-red-500 p-2 rounded-xl" />
+          <ButtonBack label="Indietro" className="bg-red-400 p-2 rounded-xl hover: hover:scale-105" />
         </div>
       </section>
 

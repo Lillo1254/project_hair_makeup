@@ -295,7 +295,7 @@ export default function CalendarPage() {
             <MessageCircle size={20} /> oppure Scrivici su WA
           </a>
 
-          <ButtonBack label="Indietro" className="bg-red-400 mt-10 p-3 rounded-xl hover:bg-red-500 transition-all duration-300 cursor-pointer" />
+          <ButtonBack label="Indietro" className="bg-red-400 p-2 rounded-xl hover: hover:scale-105" />
         </div>
       </div>
     </>

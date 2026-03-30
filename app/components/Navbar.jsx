@@ -8,15 +8,15 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
-/*     const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    if (!mounted) return null; */
+    /*     const [mounted, setMounted] = useState(false);
+    
+        useEffect(() => {
+            setMounted(true);
+        }, []);
+    
+        if (!mounted) return null; */
     const pathName = usePathname();
-    const onUp = () => window.scrollTo({top : 0, behavior : "smooth"});
+    const onUp = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
     return (
         <>
@@ -77,60 +77,59 @@ export default function Navbar() {
                     {/* Links */}
                     <nav className="flex flex-col gap-6 px-6 py-10 text-lg uppercase tracking-wide">
 
-                        <Link 
-                            href="/" 
+                        <Link
+                            href="/"
                             className="text-left hover:opacity-70 transition"
                             onClick={() => setOpen(false)}
                         >
                             Home
                         </Link>
 
-                        <Link 
-                            href="/servicesPage" 
+                        <Link
+                            href="/servicesPage"
                             className="text-left hover:opacity-70 transition"
                             onClick={() => setOpen(false)}
                         >
                             Servizi
                         </Link>
 
-                        <Link 
-                            href="/galleryPage" 
+                        <Link
+                            href="/galleryPage"
                             className="text-left hover:opacity-70 transition"
                             onClick={() => setOpen(false)}
                         >
                             Gallery
                         </Link>
 
-                        <Link 
-                            href="/prenotazioni" 
+                        <Link
+                            href="/prenotazioni"
                             className="text-left hover:opacity-70 transition"
                             onClick={() => setOpen(false)}
                         >
                             Prenota
                         </Link>
 
-                        <Link 
-                            href="/contatti" 
+                        <Link
+                            href="/contatti"
                             className="text-left hover:opacity-70 transition"
                             onClick={() => setOpen(false)}
                         >
                             Contatti
                         </Link>
 
-                        <Link 
-                            href="/chi-siamo" 
+                        <Link
+                            href="/chi-siamo"
                             className="text-left hover:opacity-70 transition"
                             onClick={() => setOpen(false)}
                         >
                             Chi Siamo
                         </Link>
-
                     </nav>
 
                     {/* Admin link */}
                     <div className="flex items-end px-6 py-4">
-                        <Link 
-                            href="/admin" 
+                        <Link
+                            href="/admin"
                             className="text-left hover:opacity-70 transition"
                             onClick={() => setOpen(false)}
                         >
