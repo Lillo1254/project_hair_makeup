@@ -142,6 +142,9 @@ aggregateRating: {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
+        {/* google verification */}
+<meta name="google-site-verification" content="H4GXNltP14JU3HCRR-G4OtiqboS9PWirwSUHwGM-unU" />
+
         {/* font */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
