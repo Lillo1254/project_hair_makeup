@@ -125,15 +125,18 @@ export default async function PageHome() {
       </section>
 
       {/* ============ GALLERIA ================ */}
-      <section className="px-6 py-20 bg-neutral-700 ">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
+      {  imagesGallery.length > 0 &&
+        <section className="px-6 py-20 bg-neutral-700 ">
+          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
 
-          {imagesGallery.slice(0, 6).map((img: string, i: number) => (
-            <CardGallery key={i} image={img} />
-          ))}
+            {imagesGallery.slice(0, 6).map((img: string, i: number) => (
+              <CardGallery key={i} image={img} />
+            ))}
 
-        </div>
-      </section>
+          </div>
+        </section>
+      }
+
       {/* text seo friendly */}
       <section className="px-8 py-16 bg-neutral-700 text-white text-center">
         <div className="max-w-4xl mx-auto space-y-6">
@@ -192,7 +195,7 @@ rounded-2xl
   ))}
 </section> */}
 
-
+{  videos.length > 0 &&
       <section
         className={`
     min-h-screen py-8 bg-neutral-700 gap-6
@@ -219,7 +222,7 @@ rounded-2xl
           />
         ))}
       </section>
-
+}
 
 
       {imagesOffers.length > 0 &&
