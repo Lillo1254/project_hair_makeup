@@ -4,9 +4,9 @@ import Navbar from './components/Navbar'
 import './globals.css'
 
 export const metadata = {
-  title: "Parrucchiere Guidonia | Uomo Donna Bambino | Make Up Artist | Parrucchiere Roma | Taglio Capelli | Guidonia Montecelio | Tiburtina",
+  title: "Parrucchiere Setteville Guidonia Montecelio Tiburtina | A Testa In Su",
   description:
-    "Parrucchiere professionale a Guidonia Montecelio vicino Tiburtina. Taglio, colore, barba e make-up artist.",
+    "Parrucchiere a Setteville Guidonia Montecelio. Taglio, colore, barba e make-up per uomo, donna e bambino. Prenota ora da A Testa In Su.",
   keywords:
     "Parrucchiere Guidonia, Parrucchiere Roma, Parrucchiere uomo, Parrucchiere donna, Parrucchiere bambino, Make up artist Roma, Taglio capelli Guidonia, capelli Roma, capelli uomo, capelli bambino, capelli donna",
   icons: {
@@ -23,7 +23,7 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HairSalon",
-    name: "A Testa In Su Parrucchiere",
+    name: "A Testa in Su Parrucchiere",
     image: "https://atestainsu.vercel.app/logo.png",
     "@id": "https://atestainsu.vercel.app/#hairSalon",
     logo: "https://atestainsu.vercel.app/logogbgr.png",
@@ -61,7 +61,7 @@ export default function RootLayout({
       "https://www.instagram.com/atestainsuhairmakeupstudio?igsh=MXd0dDE1bWtpOHdwdQ==", 
       "https://www.facebook.com/share/1AhzVgfUvg/",
       "https://www.tiktok.com/@a.testa.in.su",
-      "https://share.google/a7iItbGZrBWfO5Vzi"
+      "https://maps.app.goo.gl/bPypXeo37VnSRrj38"
     ],
     description:
       "Parrucchiere uomo, donna e bambino a Guidonia Montecelio vicino Tiburtina. Servizi di taglio, colore, barba e make-up professionale.",
@@ -70,7 +70,9 @@ export default function RootLayout({
   "Roma",
   "Tiburtina",
   "Setteville",
-  "Tivoli"
+  "Tivoli",
+  "Settecamini",
+  "Marco Simone",
 ],
     makesOffer: [
   {
@@ -116,8 +118,8 @@ export default function RootLayout({
     }
   },
 ],
-priceRange: "€€ (15€ - 40€",
-hasMap: "https://www.google.com/maps?q=41.9444717,12.6454662",
+priceRange: "€€ (15€ - 40€)",
+hasMap: "https://maps.app.goo.gl/bPypXeo37VnSRrj38",
 knowsAbout: [
   "Taglio capelli uomo",
   "Taglio capelli donna",
@@ -145,14 +147,14 @@ aggregateRating: {
         {/* google verification */}
 <meta name="google-site-verification" content="H4GXNltP14JU3HCRR-G4OtiqboS9PWirwSUHwGM-unU" />
 
-        {/* font */}
+        {/* font connection */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* fonts  */}
         <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet" />
 
-        {/* font 2 */}
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet" />
 
         </head>

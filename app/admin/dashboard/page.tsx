@@ -129,7 +129,7 @@ export default function DashboardAdmin() {
   ) => {
     if (files.length === 0) return;
 
-    // 🔥 SE È VIDEO → upload diretto
+    // SE È VIDEO → upload diretto
     if (folder === "videoGallery") {
       for (const file of files) {
         const url = await uploadVideo(file);
@@ -141,7 +141,7 @@ export default function DashboardAdmin() {
       return;
     }
 
-    // 🔥 ALTRIMENTI → immagini → API normale
+    //  ALTRIMENTI → immagini → API normale
     const formData = new FormData();
     files.forEach(f => formData.append("files", f));
     formData.append("folder", folder);

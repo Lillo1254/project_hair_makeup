@@ -127,7 +127,7 @@ export default function CalendarPage() {
       email,
     };
 
-    // ✅ INVIO EMAIL (ADMIN → CLIENTE)
+    // INVIO EMAIL (ADMIN → CLIENTE)
     emailjs
       .send(
         "service_9vn6p2w",

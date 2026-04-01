@@ -27,26 +27,27 @@ export default async function PageHome() {
 
 
 
-      <Header title="A Testa in Su Parrucchiere" subtitle="Hair & Makeup Studio in Roma" />
+      <Header title="A Testa in su Parrucchiere" subtitle="Hair & Makeup Studio Roma, Setteville Guidonia" />
 
-      {/* === HERO ====== */}
+
+      {/* ====== HERO ====== */}
       <section className="relative min-h-screen overflow-hidden ">
 
 
-        {/* Overlay scuro */}
+        
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-neutral-700" />
 
-        {/* Contenuto */}
+        
         <div className="relative z-10 flex min-h-screen flex-col items-center justify-evenly text-center px-6">
 
           <div className="flex flex-col items-center">
 
             <h2 className="text-4xl md:text-5xl font-light tracking-widest uppercase pt-45 playfair_text">
-              Stile che parla di te per Uomo, Donna e Bambini
+              Stile che parla di te <br />Parrucchiere a Setteville Guidonia per Uomo, Donna e Bambino
             </h2>
 
             <p className="mt-6 text-gray-300 max-w-md">
-              Taglio, colore e barba moderni e personalizzati a Guidonia Montecelio .
+              Taglio, colore e barba moderni e personalizzati a Setteville Guidonia Montecelio .
             </p>
           </div>
 
@@ -97,23 +98,23 @@ export default async function PageHome() {
 
         </div>
       </section>
-      {/* text seo friendly */}
+      
       <section className="px-8 py-16 bg-neutral-700 text-white text-center">
         <div className="max-w-4xl mx-auto space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold uppercase playfair_text">
-            Il Tuo Salone di Parrucchiere a Guidonia Montecelio
+            Parrucchiere a Setteville Guidonia Montecelio – A Testa In Su
           </h2>
           <p className="text-md md:text-md leading-relaxed">
-            Benvenuti nel nostro salone, il punto di riferimento per chi cerca tagli moderni, colore professionale e trattamenti personalizzati per uomo, donna e bambino.
-            Ogni servizio è pensato per esaltare il tuo stile unico e farti sentire al meglio in ogni occasione.
+              A Testa In Su è il tuo parrucchiere di fiducia a Setteville, Guidonia Montecelio, a pochi passi dalla Tiburtina.
+      Offriamo servizi professionali di taglio, colore e trattamenti per capelli per uomo, donna e bambino, sempre aggiornati alle ultime tendenze.
           </p>
           <p className="text-md md:text-md leading-relaxed">
-            Situato a pochi passi dalla Tiburtina, il nostro salone combina creatività, professionalità e attenzione ai dettagli, offrendo anche servizi di make-up artist per eventi speciali o quotidiani.
-            La tua bellezza è la nostra passione.
+            Il nostro salone è un punto di riferimento per chi cerca un parrucchiere a Guidonia, Setteville, Tiburtina capace di unire esperienza, qualità e attenzione ai dettagli.
+      Realizziamo tagli personalizzati, colorazioni moderne, servizi barba e make-up professionale per ogni occasione, dai look quotidiani agli eventi speciali.
           </p>
           <p className="text-md md:text-md leading-relaxed">
-            Prenota il tuo appuntamento oggi stesso e scopri perché il nostro salone è il preferito a Guidonia Montecelio per taglio, colore, barba e make-up professionale.
-            Esperienza, qualità e stile ti aspettano in un ambiente accogliente e moderno.
+            Se cerchi un parrucchiere a Setteville o nelle zone di Guidonia, Tivoli e Roma Tiburtina, A Testa In Su è la scelta ideale.
+      Prenota il tuo appuntamento e scopri un ambiente accogliente, moderno e dedicato alla valorizzazione del tuo stile.
           </p>
           <a
             href="/prenotazioni"
@@ -137,7 +138,7 @@ export default async function PageHome() {
         </section>
       }
 
-      {/* text seo friendly */}
+      
       <section className="px-8 py-16 bg-neutral-700 text-white text-center">
         <div className="max-w-4xl mx-auto space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold uppercase playfair_text">
@@ -148,7 +149,7 @@ export default async function PageHome() {
             Offriamo servizi professionali per uomo, donna e bambino, con attenzione ai dettagli e alle ultime tendenze del mondo della bellezza.
           </p>
           <p className="text-md md:text-md leading-relaxed">
-            Situati vicino alla Tiburtina, uniamo creatività e competenza per offrirti un’esperienza completa: dai tagli moderni alla colorazione personalizzata, fino al make-up professionale per ogni occasione.
+            Situati vicino alla Tiburtina per chi desidera un parrucchiere esperto nella zona di Guidonia, Tivoli e Roma, uniamo creatività e competenza per offrirti un’esperienza completa: dai tagli moderni alla colorazione personalizzata, fino al make-up professionale per ogni occasione.
             Ogni cliente esce dal nostro salone sentendosi speciale.
           </p>
           <p className="text-md md:text-md leading-relaxed">
@@ -163,37 +164,6 @@ export default async function PageHome() {
           </a>
         </div>
       </section>
-
-      {/* ============= VIDEO ===========*/}
-      {/* <section
-  className="
-    flex flex-col items-center justify-center
-    min-h-screen py-8 bg-neutral-700 gap-6
-
-    md:grid md:grid-cols-3 md:place-items-center
-  "
->
-  {videos.slice(0, 3).map((video: string, i: number) => (
-    <video
-      key={i}
-      src={video}
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="
-        w-72 max-w-sm
-rounded-2xl
-        aspect-9/16
-        object-cover
-        md:w-full
-        md:max-w-none md:h-full md:rounded-xl video_shadow 
-
-        landscape:aspect-video
-      "
-    />
-  ))}
-</section> */}
 
 {  videos.length > 0 &&
       <section
@@ -226,7 +196,6 @@ rounded-2xl
 
 
       {imagesOffers.length > 0 &&
-        //text seo friendly
         <>
           <section className="px-8 py-16 bg-neutral-700 text-white text-center">
             <div className="max-w-4xl mx-auto space-y-6">
