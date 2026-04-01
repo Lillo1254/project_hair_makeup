@@ -1,4 +1,8 @@
-export default function sitemap() {
+import { MetadataRoute } from "next";
+
+export const dynamic = "force-dynamic";
+
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://atestainsu.vercel.app";
 
   return [
