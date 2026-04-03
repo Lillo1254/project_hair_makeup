@@ -42,7 +42,7 @@ export default async function PageHome() {
 
           <div className="flex flex-col items-center">
 
-            <h2 className="text-4xl md:text-5xl font-light tracking-widest uppercase pt-45 playfair_text">
+            <h2 className="text-4xl md:text-5xl font-light tracking-widest uppercase pt-55 playfair_text">
               Stile che parla di te <br />Parrucchiere a Setteville Guidonia per Uomo, Donna e Bambino
             </h2>
 
