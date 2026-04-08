@@ -93,3 +93,7 @@ background-position: center;
   font-variation-settings:
     "wdth" 100;
 }
+
+.vertical_video{
+  height: 500px;
+}
