@@ -169,11 +169,11 @@ export default async function PageHome() {
       <section
         className={`
     min-h-screen py-8 bg-neutral-700 gap-6
-    flex items-center justify-center
+    
 
-    ${count === 1 ? " md:flex-col" : ""}
-    ${count === 2 ? "md:flex-row md:justify-evenly" : ""}
-    ${count === 3 ? "md:grid md:grid-cols-3 md:place-items-center" : ""}
+    ${count === 1 ? " flex justify-center items-center" : ""}
+    ${count === 2 ? "flex flex-col justify-center items-center md:flex-row md:justify-evenly" : ""}
+    ${count >= 3 ? grid grid-cols-1 md:grid-cols-3 places-items-center" : ""}
   `}
       >
         {videos.slice(0, 3).map((video: string, i: number) => (
