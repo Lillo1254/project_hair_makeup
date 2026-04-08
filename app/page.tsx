@@ -171,9 +171,9 @@ export default async function PageHome() {
     min-h-screen py-8 bg-neutral-700 gap-6
     
 
-    ${count === 1 ? " flex justify-center items-center" : ""}
+    ${count === 1 ? " flex  justify-center items-center" : ""}
     ${count === 2 ? "flex flex-col justify-center items-center md:flex-row md:justify-evenly" : ""}
-    ${count >= 3 ? grid grid-cols-1 md:grid-cols-3 places-items-center" : ""}
+    ${count >= 3 ? "grid grid-cols-1 md:grid-cols-3 places-items-center" : ""}
   `}
       >
         {videos.slice(0, 3).map((video: string, i: number) => (
