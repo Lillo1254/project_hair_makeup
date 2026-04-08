@@ -169,10 +169,10 @@ export default async function PageHome() {
       <section
         className={`
     min-h-screen py-8 bg-neutral-700 gap-6
-    flex flex-col items-center justify-center
+    flex items-center justify-center
 
-    ${count === 1 ? "md:flex md:flex-col" : ""}
-    ${count === 2 ? "md:flex md:flex-row md:justify-evenly" : ""}
+    ${count === 1 ? " md:flex-col" : ""}
+    ${count === 2 ? "md:flex-row md:justify-evenly" : ""}
     ${count === 3 ? "md:grid md:grid-cols-3 md:place-items-center" : ""}
   `}
       >
