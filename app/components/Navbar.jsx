@@ -16,22 +16,37 @@ export default function Navbar() {
     
         if (!mounted) return null; */
     const pathName = usePathname();
-    const onUp = () => window.scrollTo({ top: 0, behavior: "smooth" });
+    const onUp = (e) => {
+        if (pathName === "/") {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    }
 
     return (
         <>
             <div className="flex justify-center sticky top-5 z-50">
 
                 {/* ================= TOP BAR ================= */}
-                <div className="bg_navi text-white px-3 py-0 flex justify-between items-center w-[70%] rounded-xl">
+                <div className="bg_navi text-white px-3 py-0 flex justify-between items-center w-[95%] sm:w-[70%] rounded-xl">
 
-                    <Link href="/" className="z-50" onClick={pathName === "/" ? onUp : null}>
-                        <Image
-                            src={logo}
-                            alt="Logo"
-                            className="h-15 w-auto rounded-l-xl"
-                        />
-                    </Link>
+                    {pathName === "/" ? (
+                        <button onClick={onUp} className="z-9999">
+                            <Image
+                                src={logo}
+                                alt="Logo"
+                                className="h-15 w-auto rounded-l-xl cursor-pointer"
+                            />
+                        </button>
+                    ) : (
+                        <Link href="/" className="z-50">
+                            <Image
+                                src={logo}
+                                alt="Logo"
+                                className="h-15 w-auto rounded-l-xl"
+                            />
+                        </Link>
+                    )}
 
                     <div className="text-end">
                         <button

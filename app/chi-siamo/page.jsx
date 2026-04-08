@@ -1,6 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  name: "Chi Siamo",
+  url: "https://atestainsu.vercel.app/chi-siamo",
+  description:
+    "Scopri la storia, la filosofia e il team del salone A Testa In Su a Setteville Guidonia.",
+  mainEntity: {
+    "@type": "Organization",
+    name: "A Testa In Su Parrucchiere",
+    logo: "https://atestainsu.vercel.app/logo.png",
+    url: "https://atestainsu.vercel.app",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Via Vincenzo Monti 63",
+      addressLocality: "Guidonia Montecelio",
+      addressRegion: "RM",
+      postalCode: "00012",
+      addressCountry: "IT",
+    },
+  },
+};
+
 export default function ChiSiamo() {
   const attrezzatura = "/pageChisiamo/attrezzOR.webP";
   const alterego = [
@@ -20,6 +43,9 @@ export default function ChiSiamo() {
   const selective = "/pageChisiamo/selectivelavVert.webp";
 
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }} />
+
     <div className="bg-gradient-to-b from-black via-neutral-900 to-neutral-700 text-white">
 
       {/* HERO */}
@@ -141,5 +167,6 @@ export default function ChiSiamo() {
       </section>
 
     </div>
+    </>
   );
 }

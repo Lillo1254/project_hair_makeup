@@ -4,6 +4,24 @@ import ButtonBack from "../components/buttons/buttonBack";
 import { fetchMedia } from "../function/basic";
 import CardGalleryPage from "../components/cards/CardGalleryPage";
 
+export const galleryJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  name: "Gallery A Testa In Su",
+  url: "https://atestainsu.vercel.app/galleryPage",
+  description:
+    "Foto e video del salone A Testa In Su: tagli, colori, barba e make-up.",
+  image: [
+    "https://atestainsu.vercel.app/gallery/img1.jpg",
+    "https://atestainsu.vercel.app/gallery/img2.jpg",
+    "https://atestainsu.vercel.app/gallery/img3.jpg",
+  ],
+  video: [
+    "https://atestainsu.vercel.app/gallery/video1.mp4",
+    "https://atestainsu.vercel.app/gallery/video2.mp4",
+  ],
+};
+
 export default function GalleryPage() {
     const [gallery, setGallery] = useState([]);
     const [videos, setVideos] = useState([]);
@@ -31,6 +49,7 @@ export default function GalleryPage() {
 
     return (
         <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(galleryJsonLd) }} />
             <div className="p-4 bg-gradient-to-b from-black/70 to-neutral-700">
                 <h1 className="text-2xl font-bold mb-4">Gallery Page</h1>
 

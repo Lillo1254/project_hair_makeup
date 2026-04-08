@@ -3,9 +3,61 @@ import ButtonBack from "../components/buttons/buttonBack";
 import ButtonNavigate from "../components/buttons/buttonNavigate";
 import serviziJson from "./servizi.json";
 
+export const servicesJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  name: "Servizi Parrucchiere",
+  url: "https://atestainsu.vercel.app/servicesPage",
+  itemListElement: [
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Taglio capelli uomo",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Taglio capelli donna e colore",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Taglio capelli bambino",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Barba uomo",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Make-up artist",
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Trucco sposa",
+      },
+    },
+  ],
+};
+
 export default function PageServices() {
   return (
     <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }} />
     <div className="min-h-screen bg-gradient-to-b from-black/60 via-neutral-700 to-neutral-700 text-white bg_toghether">
 
       {/* HEADER */}

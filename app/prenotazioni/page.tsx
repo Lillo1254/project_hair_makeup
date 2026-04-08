@@ -6,6 +6,22 @@ import ButtonBack from "../components/buttons/buttonBack";
 import { MessageCircle } from "lucide-react";
 import servizi from "../servicesPage/servizi.json";
 
+export const bookingJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ReserveAction",
+  name: "Prenotazione Parrucchiere",
+  url: "https://atestainsu.vercel.app/prenotazioni",
+  provider: {
+    "@type": "HairSalon",
+    name: "A Testa In Su Parrucchiere",
+    url: "https://atestainsu.vercel.app",
+  },
+  potentialAction: {
+    "@type": "ScheduleAction",
+    target: "https://atestainsu.vercel.app/prenotazioni",
+  },
+};
+
 export default function CalendarPage() {
   const [gender, setGender] = useState("");
   const [service, setService] = useState("");
@@ -163,6 +179,9 @@ export default function CalendarPage() {
 
   return (
     <>
+    
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bookingJsonLd) }} />
+
       <div className="min-h-screen bg-gradient-to-b from-black/60 to-neutral-700 text-white px-6 py-20">
         <div className="max-w-4xl mx-auto">
           <div className="text-center">

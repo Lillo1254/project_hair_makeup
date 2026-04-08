@@ -7,6 +7,46 @@ import CardOffers from "./components/cards/CardOffers";
 import ButtonNavigate from "./components/buttons/buttonNavigate";
 
 
+export const metadata = {
+  title: "Parrucchiere Setteville Guidonia | A Testa In Su",
+  description:
+    "Parrucchiere a Setteville Guidonia Montecelio. Taglio uomo, donna e bambino, colore, barba e make-up professionale.",
+  keywords:
+    "Parrucchiere Guidonia, Parrucchiere Setteville, Parrucchiere Roma, Taglio capelli uomo, Taglio capelli donna, Colore capelli, Barba, Make-up artist",
+  openGraph: {
+    title: "Parrucchiere Setteville Guidonia | A Testa In Su",
+    description:
+      "Parrucchiere uomo, donna e bambino a Setteville Guidonia. Taglio, colore, barba e make-up professionale.",
+    url: "https://atestainsu.vercel.app",
+    images: [{ url: "/logo.png" }],
+  },
+};
+
+export const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  name: "A Testa In Su Parrucchiere",
+  url: "https://atestainsu.vercel.app",
+  description:
+    "Parrucchiere uomo, donna e bambino a Setteville Guidonia. Taglio, colore, barba e make-up professionale.",
+  image: "https://atestainsu.vercel.app/logo.png",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Via Vincenzo Monti 63",
+    addressLocality: "Guidonia Montecelio",
+    addressRegion: "RM",
+    postalCode: "00012",
+    addressCountry: "IT",
+  },
+  areaServed: ["Guidonia", "Setteville", "Roma", "Tivoli", "Tiburtina"],
+  sameAs: [
+    "https://www.instagram.com/atestainsuhairmakeupstudio",
+    "https://www.facebook.com/share/1AhzVgfUvg/",
+    "https://www.tiktok.com/@a.testa.in.su",
+    "https://maps.app.goo.gl/bPypXeo37VnSRrj38",
+  ],
+};
+
 
 export default async function PageHome() {
 
@@ -22,6 +62,12 @@ export default async function PageHome() {
 
   const count = videos.length;
   return (
+<>
+    <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+/>
+
     <div className="min-h-screen bg-black text-white relative">
 
 
@@ -172,8 +218,8 @@ export default async function PageHome() {
     
 
     ${count === 1 ? " flex  justify-center items-center" : ""}
-    ${count === 2 ? "flex flex-col justify-center items-center md:flex-row md:justify-evenly" : ""}
-    ${count >= 3 ? "grid grid-cols-1 md:grid-cols-3 places-items-center" : ""}
+    ${count === 2 ? "grid grid-cols-1 place-items-center sm:grid-cols-2  md:px-15 " : ""}
+    ${count >= 3 ? "grid grid-cols-1 md:grid-cols-3 place-items-center md:px-10" : ""}
   `}
       >
         {videos.slice(0, 3).map((video: string, i: number) => (
@@ -240,5 +286,6 @@ export default async function PageHome() {
 
 
     </div>
+    </>
   );
 }

@@ -1,5 +1,17 @@
+
+
+export const privacyJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Privacy Policy",
+  url: "https://atestainsu.vercel.app/privacy-policy",
+  description:
+    "Informativa sulla privacy del salone A Testa In Su secondo GDPR.",
+};
 export default function PrivacyPolicy() {
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(privacyJsonLd) }} />
     <div className="min-h-screen bg-black text-white px-6 py-20">
       <div className="max-w-4xl mx-auto space-y-8 text-sm leading-relaxed">
 
@@ -118,5 +130,6 @@ export default function PrivacyPolicy() {
 
       </div>
     </div>
+    </>
   );
 }
