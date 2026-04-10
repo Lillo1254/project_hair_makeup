@@ -87,7 +87,8 @@ export default function GalleryPage() {
                 `}
               >
                 {gallery.length === 0 ? (
-                  <p>Al momento non è presente nessuna immagine in galleria</p>
+                  
+                  <p className="text-cyan-100">Al momento non è presente nessuna immagine in galleria</p>
                 ) : (
                   gallery.map((item, i) => (
                     <div key={i} className="w-full overflow-hidden">
