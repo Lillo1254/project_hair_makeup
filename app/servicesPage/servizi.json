@@ -22,12 +22,7 @@
         "valuta": "EUR",
         "descrizione": "Taglio rapido con sistemazione barba leggera, ideale per chi ha poco tempo."
       },
-      {
-        "servizio": "Taglio Uomo + Shampoo + Rasatura",
-        "prezzo": 20,
-        "valuta": "EUR",
-        "descrizione": "Servizio completo con taglio personalizzato, shampoo e rasatura accurata dei dettagli."
-      },
+
     {
         "servizio": "Taglio macchinetta UNIFORME",
         "prezzo": 10,
@@ -153,24 +148,6 @@
         "prezzo": 18,
         "valuta": "EUR",
         "descrizione": "Taglio pratico e alla moda per bambini, con shampoo delicato e asciugatura leggera."
-      },
-      {
-        "servizio": "Taglio Bimbo Express + Shampoo",
-        "prezzo": 15,
-        "valuta": "EUR",
-        "descrizione": "Taglio veloce per bambini che vogliono un look semplice e ordinato."
-      },
-      {
-        "servizio": "Taglio Bimbo + Shampoo + Styling",
-        "prezzo": 20,
-        "valuta": "EUR",
-        "descrizione": "Taglio personalizzato con piccolo styling finale per un look divertente."
-      },
-      {
-        "servizio": "Taglio Bimbo + Shampoo + Piega",
-        "prezzo": 22,
-        "valuta": "EUR",
-        "descrizione": "Servizio completo con taglio, shampoo delicato e piega leggera."
       }
     ],
     "Make-up": [

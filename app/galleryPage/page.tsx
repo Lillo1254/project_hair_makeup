@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import ButtonBack from "../components/buttons/buttonBack";
 import { fetchMedia } from "../function/basic";
-import CardGalleryPage from "../components/cards/CardGalleryPage";
+
 
 export const galleryJsonLd = {
   "@context": "https://schema.org",
