@@ -19,8 +19,22 @@ export default function Navbar() {
     const onUp = (e) => {
         if (pathName === "/") {
             e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.scrollTo({ top: -10, behavior: "smooth" });
+            setOpen(false);
         }
+    }
+
+    const handleScrollOfferte = (E) => {
+        if (pathName === "/" || pathName === "/#offerte") {
+            E.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            const el = document.getElementById("offerte");
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+            }
+            setOpen(false);
+        }
+        
     }
 
     return (
@@ -45,6 +59,7 @@ export default function Navbar() {
                                 alt="Logo"
                                 className="h-15 w-auto rounded-l-xl"
                                 loading="eager"
+                                priority
                             />
                         </Link>
                     )}
@@ -96,7 +111,7 @@ export default function Navbar() {
                         <Link
                             href="/"
                             className="text-left hover:opacity-70 transition"
-                            onClick={() => setOpen(false)}
+                            onClick={onUp}
                         >
                             Home
                         </Link>
@@ -143,10 +158,10 @@ export default function Navbar() {
 
                         <Link
                             href="/#offerte"
+                            onClick={handleScrollOfferte}
                             className="text-left hover:opacity-70 transition"
-                            onClick={() => setOpen(false)}
                         >
-                            scopri di piu
+                            scopri di più
                         </Link>
                     </nav>
 

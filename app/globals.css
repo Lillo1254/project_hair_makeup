@@ -1,8 +1,8 @@
 @import "tailwindcss";
-
+/* 
 html{
   scroll-behavior: smooth;
-}
+} */
 
 .bg_uomo{
     background-image: url("/sketchuom.png");
