@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ContactsPage() {
   return (
-    <div className=" bg-black text-white relative">
+    <div className=" bg-black text-white relative text-white expanda">
 
 
       {/* HERO */}

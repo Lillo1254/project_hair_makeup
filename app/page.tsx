@@ -68,7 +68,7 @@ export default async function PageHome() {
   dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
 />
 
-    <div className="min-h-screen bg-black text-white relative">
+    <div className="min-h-screen bg-black text-white relative expanda" >
 
 
 
@@ -174,13 +174,13 @@ export default async function PageHome() {
       {/* ============ GALLERIA ================ */}
       {  imagesGallery.length > 0 &&
         <section className="px-6 py-20 bg-neutral-700 ">
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
+          <Link href="/galleryPage" className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
 
             {imagesGallery.slice(0, 6).map((img: string, i: number) => (
               <CardGallery key={i} image={img} />
             ))}
 
-          </div>
+          </Link>
         </section>
       }
 
@@ -223,6 +223,11 @@ export default async function PageHome() {
   `}
       >
         {videos.slice(0, 3).map((video: string, i: number) => (
+          <Link key={i} href="/galleryPage" className="
+        relative w-72 md:w-full aspect-9/16 md:aspect-9/16
+        rounded-xl overflow-hidden video_shadow
+        group hover:scale-[1.05] transition-transform duration-300
+      ">
           <video
             key={i}
             src={video}
@@ -231,11 +236,10 @@ export default async function PageHome() {
             loop
             playsInline
             className="
-        w-72 max-w-sm rounded-2xl aspect-9/16 object-cover
-        md:w-full md:max-w-none md:h-full md:rounded-xl video_shadow
-        landscape:aspect-video
+        absolute inset-0 w-full h-full object-cover
       "
           />
+          </Link>
         ))}
       </section>
 }

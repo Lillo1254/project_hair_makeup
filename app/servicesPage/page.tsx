@@ -56,7 +56,7 @@ export const servicesJsonLd = {
 
 export default function PageServices() {
   return (
-    <>
+    <section className="min-h-screen expanda">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }} />
     <div className="min-h-screen bg-gradient-to-b from-black/60 via-neutral-700 to-neutral-700 text-white bg_toghether">
 
@@ -123,6 +123,6 @@ export default function PageServices() {
 
 
     </div>
-    </>
+    </section>
   );
 }

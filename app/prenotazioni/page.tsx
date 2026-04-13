@@ -178,7 +178,7 @@ export default function CalendarPage() {
   };
 
   return (
-    <>
+    <section className="expanda">
     
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bookingJsonLd) }} />
 
@@ -317,7 +317,7 @@ export default function CalendarPage() {
           <ButtonBack label="Indietro" className="bg-red-400 p-2 rounded-xl hover: hover:scale-105" />
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

@@ -55,7 +55,7 @@ export default async function PageCategoria({ params }: PageProps) {
   const servizi = (serviziJson as ServiziJSON).categorie[categoriaJsonKey];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black/60 to-neutral-700 text-white ">
+    <div className="min-h-screen bg-gradient-to-b from-black/60 to-neutral-700 text-white expanda">
 
       {/* HEADER */}
       <div className="text-center pt-15 relative overflow-hidden">

@@ -97,3 +97,20 @@ background-position: center;
 .vertical_video{
   height: 500px;
 }
+
+.expanda{
+  width:100%;
+  transform: scaleX(0.01);
+  transform-origin: center;
+  animation: expandMain 1s ease-in-out forwards;
+}
+
+
+@keyframes expandMain {
+  from{
+    transform: scaleX(0.01);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

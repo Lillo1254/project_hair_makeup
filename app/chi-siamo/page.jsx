@@ -46,7 +46,7 @@ export default function ChiSiamo() {
     <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }} />
 
-    <div className="bg-gradient-to-b from-black via-neutral-900 to-neutral-700 text-white">
+    <div className="bg-gradient-to-b from-black via-neutral-900 to-neutral-700 text-white expanda">
 
       {/* HERO */}
       <section className="min-h-[40vh] flex flex-col justify-center items-center text-center px-6 ">

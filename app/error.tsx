@@ -11,7 +11,7 @@ type ErrorProps = {
 export default function Error({ error, reset }: ErrorProps) {
 
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col justify-between">
+    <div className="min-h-screen bg-black text-white flex flex-col justify-between expanda">
 
 
 

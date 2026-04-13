@@ -113,9 +113,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet" />
       </head>
 
-      <body className="bg-black">
+      <body className="bg-gradient-to-b from-black to-neutral-700 ">
         <Navbar />
-        <main>{children}</main>
+        <main  >{children}</main>
         <Footer />
       </body>
     </html>

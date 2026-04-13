@@ -70,13 +70,13 @@ export default function GalleryPage() {
         </div>
       )}
 
-      <section className="p-4 bg-gradient-to-b from-black/70 to-neutral-700">
-        <h1 className="text-2xl font-bold mb-4">Gallery Page</h1>
+      <section className="p-4 bg-gradient-to-b from-black/70 to-neutral-700 expanda">
+        <h1 className="text-2xl font-bold mb-4 text-white">Gallery Page</h1>
 
         {loading ? null : (
           <>
             {/* ===================== GALLERY IMMAGINI ===================== */}
-            <h2 className="text-xl font-semibold mt-6 mb-2">Gallery</h2>
+            <h2 className="text-xl font-semibold mt-6 mb-2 text-white">Images</h2>
 
             <div className="relative">
               <div
@@ -116,9 +116,9 @@ export default function GalleryPage() {
             </div>
 
             {/* ===================== VIDEO ===================== */}
-            <h2 className="text-xl font-semibold mt-10 mb-2 text-white">Videos</h2>
+            <h2 className="text-xl font-semibold mt-10 mb-2 text-white" id="videos">Videos</h2>
 
-            <div className="grid grid-cols-1 place-items-center sm:grid-cols-2 gap-6 md:px-10">
+            <div className="grid grid-cols-1 place-items-center sm:grid-cols-3 gap-6 md:px-10">
               {videos.length === 0 ? (
                 <p>Nessun video</p>
               ) : (
@@ -129,8 +129,8 @@ export default function GalleryPage() {
                       controls
                       className="
                         w-72 max-w-sm rounded-2xl aspect-9/16 object-cover
-                        md:w-full md:max-w-none md:h-full md:rounded-xl video_shadow
-                        landscape:aspect-video
+                        md:w-full   -xl video_shadow
+                        landscape:aspect-9/16 md:rounded
                       "
                     />
                   </div>

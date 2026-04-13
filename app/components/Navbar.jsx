@@ -44,6 +44,7 @@ export default function Navbar() {
                                 src={logo}
                                 alt="Logo"
                                 className="h-15 w-auto rounded-l-xl"
+                                loading="eager"
                             />
                         </Link>
                     )}

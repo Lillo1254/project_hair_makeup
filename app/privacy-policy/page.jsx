@@ -10,7 +10,7 @@ export const privacyJsonLd = {
 };
 export default function PrivacyPolicy() {
   return (
-    <>
+    <section className="min-h-screen expanda">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(privacyJsonLd) }} />
     <div className="min-h-screen bg-black text-white px-6 py-20">
       <div className="max-w-4xl mx-auto space-y-8 text-sm leading-relaxed">
@@ -130,6 +130,6 @@ export default function PrivacyPolicy() {
 
       </div>
     </div>
-    </>
+    </section>
   );
 }

@@ -3,7 +3,7 @@ import ButtonNavigate from "./components/buttons/buttonNavigate";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col justify-between">
+    <div className="min-h-screen bg-black text-white flex flex-col justify-between expanda">
 
 
       <main className="flex flex-1 flex-col items-center justify-center text-center px-6">
