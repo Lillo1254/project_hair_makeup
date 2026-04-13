@@ -25,7 +25,7 @@ export const aboutJsonLd = {
 };
 
 export default function ChiSiamo() {
-  const attrezzatura = "/pageChisiamo/attrezzOR.webP";
+  const attrezzatura = "/pageChisiamo/attrezzOR.webp";
   const alterego = [
     "/pageChisiamo/alteregoAllVER.webp",
     "/pageChisiamo/alteregocassaOR.jpg",
