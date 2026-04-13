@@ -140,6 +140,14 @@ export default function Navbar() {
                         >
                             Chi Siamo
                         </Link>
+
+                        <Link
+                            href="/#offerte"
+                            className="text-left hover:opacity-70 transition"
+                            onClick={() => setOpen(false)}
+                        >
+                            scopri di piu
+                        </Link>
                     </nav>
 
                     {/* Admin link */}
