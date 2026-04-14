@@ -71,12 +71,12 @@ export default function GalleryPage() {
       )}
 
       <section className="p-4 bg-gradient-to-b from-black/70 to-neutral-700 expanda">
-        <h1 className="pt-20 text-center text-3xl font-bold mb-4 text-white">La tua immagine, il tuo potere.</h1>
+        <h1 className="pt-20 text-center text-4xl font-bold mb-4 text-white uppercase">La tua immagine, il tuo potere !</h1>
 
         {loading ? null : (
           <>
             {/* ===================== GALLERY IMMAGINI ===================== */}
-            <h2 className="text-center text-xl font-semibold mt-6 mb-2 text-white">La firma del nostro stile è sotto i tuoi occhi <br /><span className="opacity-80">clicca e osserva</span></h2>
+            <h2 className="text-center text-xl font-semibold mt-6 mb-6 text-white">La firma del nostro stile è sotto i tuoi occhi <br /><span className="opacity-80 uppercase">osserva</span></h2>
 
             <div className="relative">
               <div

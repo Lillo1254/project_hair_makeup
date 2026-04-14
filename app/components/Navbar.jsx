@@ -5,23 +5,22 @@ import Image from "next/image";
 import logo from "../../public/logogbgr.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import {useRouter} from "next/navigation";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
-    /*     const [mounted, setMounted] = useState(false);
-    
-        useEffect(() => {
-            setMounted(true);
-        }, []);
-    
-        if (!mounted) return null; */
+    const router = useRouter();
     const pathName = usePathname();
+
     const onUp = (e) => {
         if (pathName === "/") {
             e.preventDefault();
             window.scrollTo({ top: -10, behavior: "smooth" });
-            setOpen(false);
+        }else{
+            router.push("/");
+
         }
+        setOpen(false);
     }
 
     const handleScrollOfferte = (E) => {
@@ -44,25 +43,17 @@ export default function Navbar() {
                 {/* ================= TOP BAR ================= */}
                 <div className="bg_navi text-white px-3 py-0 flex justify-between items-center w-[95%] sm:w-[70%] rounded-xl">
 
-                    {pathName === "/" ? (
+                    
                         <button onClick={onUp} className="z-9999">
                             <Image
                                 src={logo}
                                 alt="Logo"
                                 className="h-15 w-auto rounded-l-xl cursor-pointer"
-                            />
-                        </button>
-                    ) : (
-                        <Link href="/" className="z-50">
-                            <Image
-                                src={logo}
-                                alt="Logo"
-                                className="h-15 w-auto rounded-l-xl"
                                 loading="eager"
                                 priority
                             />
-                        </Link>
-                    )}
+                        </button>
+                    
 
                     <div className="text-end">
                         <button
@@ -110,7 +101,7 @@ export default function Navbar() {
 
                         <Link
                             href="/"
-                            className="text-left hover:opacity-70 transition"
+                            className={` hover:opacity-70 transition text-center ${pathName === "/" ? "bg-white/70 opacity-80 rounded-md" : ""}`}
                             onClick={onUp}
                         >
                             Home
@@ -118,7 +109,7 @@ export default function Navbar() {
 
                         <Link
                             href="/servicesPage"
-                            className="text-left hover:opacity-70 transition"
+                            className={` hover:opacity-70 transition text-center ${pathName.startsWith("/servicesPage") ? "bg-white/70 opacity-80 rounded-md" : ""}`}
                             onClick={() => setOpen(false)}
                         >
                             Servizi
@@ -126,7 +117,7 @@ export default function Navbar() {
 
                         <Link
                             href="/galleryPage"
-                            className="text-left hover:opacity-70 transition"
+                            className={` hover:opacity-70 transition text-center ${pathName === "/galleryPage" ? "bg-white/70 opacity-80 rounded-md" : ""}`}
                             onClick={() => setOpen(false)}
                         >
                             Gallery
@@ -134,7 +125,7 @@ export default function Navbar() {
 
                         <Link
                             href="/prenotazioni"
-                            className="text-left hover:opacity-70 transition"
+                            className={` hover:opacity-70 transition text-center ${pathName === "/prenotazioni" ? "bg-white/70 opacity-80 rounded-md" : ""}`}
                             onClick={() => setOpen(false)}
                         >
                             Prenota
@@ -142,7 +133,7 @@ export default function Navbar() {
 
                         <Link
                             href="/contatti"
-                            className="text-left hover:opacity-70 transition"
+                            className={` hover:opacity-70 transition text-center ${pathName === "/contatti" ? "bg-white/70 opacity-80 rounded-md" : ""}`}
                             onClick={() => setOpen(false)}
                         >
                             Contatti
@@ -150,7 +141,7 @@ export default function Navbar() {
 
                         <Link
                             href="/chi-siamo"
-                            className="text-left hover:opacity-70 transition"
+                            className={` hover:opacity-70 transition text-center ${pathName === "/chi-siamo" ? "bg-white/70 opacity-80 rounded-md" : ""}`}
                             onClick={() => setOpen(false)}
                         >
                             Chi Siamo
@@ -159,7 +150,7 @@ export default function Navbar() {
                         <Link
                             href="/#offerte"
                             onClick={handleScrollOfferte}
-                            className="text-left hover:opacity-70 transition"
+                            className="text-center hover:opacity-70 transition"
                         >
                             scopri di più
                         </Link>

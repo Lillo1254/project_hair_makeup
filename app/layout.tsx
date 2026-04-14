@@ -96,6 +96,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     }
   };
 
+  console.log(
+  "%c Sviluppato da Alessandro Lucia alessandroluciaroma@gmail.com ",
+  "color: #0f0; background: #000; font-size: 16px; padding: 8px 12px; border: 1px solid #0f0; border-radius: 6px;",
+);
+
+console.log(
+  "%c Next.js • React • Node.js • MySQL • HTML5 • CSS3 • JavaScript ",
+  "color: #0f0; background: #000; font-size: 16px; padding: 8px 12px; border: 1px solid #0f0; border-radius: 6px;",
+);
+
+console.log(
+  "%c Deploy eseguito su Vercel ",
+  "color: #fff; background: #333; padding: 4px 8px; border-radius: 4px; margin-top: 4px;"
+);
+
   return (
     <html lang="it">
       <head>

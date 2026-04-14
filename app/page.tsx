@@ -60,6 +60,9 @@ export default async function PageHome() {
     fetch(`${protocol}://${host}/api/media/videos`, { cache: "no-store" }).then(r => r.json()),
   ])
 
+
+  
+
   const count = videos.length;
   return (
     <>
@@ -94,7 +97,7 @@ export default async function PageHome() {
 
               <p className="mt-6 text-gray-300 max-w-md">
                 Cerchi un parrucchiere a Setteville Guidonia capace di valorizzare davvero il tuo stile?
-                A Testa In Su è il salone dove taglio, colore e cura dei capelli diventano un’esperienza personale, pensata su misura per uomo, donna e bambino.
+                A Testa In Su è il salone dove taglio, colore e cura dei capelli diventano un’esperienza personale, pensata su misura per  donna, uomo e bambino.
               </p>
             </div>
 
