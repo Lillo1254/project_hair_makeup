@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CardReview from "../components/cards/CardsReview";
 
 export const aboutJsonLd = {
   "@context": "https://schema.org",
@@ -48,6 +49,8 @@ export default function ChiSiamo() {
 
     <div className="bg-gradient-to-b from-black via-neutral-900 to-neutral-700 text-white expanda">
 
+    {/* <CardReview /> */}
+
       {/* HERO */}
       <section className="min-h-[40vh] flex flex-col justify-center items-center text-center px-6 ">
         <h1 className="text-4xl md:text-6xl uppercase tracking-widest mb-6 playfair_text">
@@ -75,6 +78,7 @@ export default function ChiSiamo() {
           width={800}
           height={500}
           className="rounded-2xl mx-auto object-cover shadow_black"
+          loading="eager"
         />
       </section>
 

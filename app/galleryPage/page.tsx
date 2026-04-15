@@ -70,7 +70,7 @@ export default function GalleryPage() {
         </div>
       )}
 
-      <section className="p-4 bg-gradient-to-b from-black/70 to-neutral-700 expanda">
+      <section className="p-4 bg-gradient-to-b from-black/70 to-neutral-700 expanda min-h-screen">
         <h1 className="pt-20 text-center text-4xl font-bold mb-4 text-white uppercase">La tua immagine, il tuo potere !</h1>
 
         {loading ? null : (

@@ -31,8 +31,8 @@ export default function Navbar() {
             if (el) {
                 el.scrollIntoView({ behavior: "smooth" });
             }
-            setOpen(false);
         }
+        setOpen(false);
         
     }
 
