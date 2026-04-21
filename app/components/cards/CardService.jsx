@@ -7,9 +7,9 @@ export default function CardService({ title, description, image }) {
         <img
           src={image}
           alt={title}
-          className="mx-auto mb-6 h-42 w-42 rounded-full object-cover grayscale-55 hover:grayscale-0 md:grayscale
+          className="mx-auto mb-6 h-42 w-42 rounded-full object-cover filter grayscale-55 brightness-50 saturate-0
                    shadow-xl shadow-white/30
-                   transition-all duration-500 md:hover:grayscale-0"
+                   transition-all duration-900 test_services"
         />
         <h3 className="text-sm tracking-widest uppercase">{title}</h3>
         <p className="mt-4 text-sm text-gray-400">{description}</p>

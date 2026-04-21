@@ -302,6 +302,7 @@ export default async function PageHome() {
       <Observer classSearch="prova_test" classAdd="!grayscale-0 !brightness-125 saturate-150" percent={0.4}/>
       <Observer classSearch="testo_fade" classAdd="opacity-100" percent={0.2}/>
       <Observer classSearch="testOffers" classAdd="!w-100 grayscale-0" percent={0.8}/>
+      <Observer classSearch="test_services" classAdd="!grayscale-0 !brightness-125 saturate-150" percent={0.4}/>
       
     </>
   );
