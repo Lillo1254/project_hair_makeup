@@ -4,7 +4,8 @@ return (
 <img
 src={image}
 alt="parrucchiere guidonia roma"
-className="h-full md:h-full w-full object-cover grayscale-55 hover:grayscale-0 md:grayscale md:hover:grayscale-0 transition rounded-md"
+className="h-full md:h-full w-full object-cover filter grayscale brightness-50 saturate-0 transition-all duration-[1700ms]  rounded-md prova_test"
+
 />
 );
 }

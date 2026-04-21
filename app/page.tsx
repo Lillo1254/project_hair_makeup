@@ -5,6 +5,7 @@ import Link from "next/link";
 import { headers } from "next/headers";
 import CardOffers from "./components/cards/CardOffers";
 import ButtonNavigate from "./components/buttons/buttonNavigate";
+import Observer from "./components/observers/Observer";
 
 
 export const metadata = {
@@ -150,7 +151,7 @@ export default async function PageHome() {
         </section>
 
         <section className="px-8 py-16 bg-neutral-700 text-white text-center">
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="max-w-4xl mx-auto space-y-6 opacity-0 transition-all duration-300 md:duration-1000 testo_fade">
             <h3 className="text-2xl md:text-2xl font-bold uppercase playfair_text">
               <strong> A Testa In Su </strong> <br />Il tuo parrucchiere di fiducia a Guidonia Montecelio
             </h3>
@@ -191,8 +192,8 @@ export default async function PageHome() {
         }
 
 
-        <section className="px-8 py-16 bg-neutral-700 text-white text-center">
-          <div className="max-w-4xl mx-auto space-y-6">
+        <section className="px-8 py-16 bg-neutral-700 text-white text-center ">
+          <div className="max-w-4xl mx-auto space-y-6 opacity-0 transition-all duration-300 md:duration-1000 testo_fade">
             <h2 className="text-3xl md:text-4xl font-bold uppercase playfair_text">
               Bellezza, Stile e Cura dei Capelli a Guidonia Montecelio
             </h2>
@@ -251,7 +252,7 @@ export default async function PageHome() {
 
 
             <section className="px-0 py-16 bg-neutral-700 text-white text-center relative" >
-              <div className="max-w-4xl mx-auto space-y-6 px-8">
+              <div className="max-w-4xl mx-auto space-y-6 px-8 opacity-0 transition-all duration-300 md:duration-1000 testo_fade">
                 <h2 className="text-3xl md:text-4xl font-bold uppercase playfair_text">
                   Offerte e promozioni per rinnovare il tuo look
                 </h2>
@@ -282,7 +283,7 @@ export default async function PageHome() {
 
             <section className=" py-10 bg-neutral-700 w-full relative">
               <div className="">
-                <Link href="/prenotazioni">
+                <Link href="/prenotazioni" className="justify-center flex">
                   <CardOffers image={imagesOffers.at(0)} />
                 </Link>
               </div>
@@ -298,6 +299,10 @@ export default async function PageHome() {
 
 
       </div>
+      <Observer classSearch="prova_test" classAdd="!grayscale-0 !brightness-125 saturate-150" percent={0.4}/>
+      <Observer classSearch="testo_fade" classAdd="opacity-100" percent={0.2}/>
+      <Observer classSearch="testOffers" classAdd="!w-100 grayscale-0" percent={0.8}/>
+      
     </>
   );
 }

@@ -17,3 +17,23 @@ export async function fetchMedia(type) {
     return [];
   }
 }
+
+export const observerReveal = (target, classAdd, percent = 0.3) => {
+    const elements = document.querySelectorAll(`.${target}`);  
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const classArray = classAdd.split(' ');
+
+
+                entry.target.classList.add(...classArray);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: percent,
+    });
+    elements.forEach((el) => {
+        observer.observe(el);
+    });
+}

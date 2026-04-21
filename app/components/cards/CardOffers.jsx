@@ -4,7 +4,7 @@ return (
 <img
 src={image}
 alt="parrucchiere guidonia roma offerta"
-className=" w-full max-h-screen object-contain md:grayscale md:hover:grayscale-0 transition rounded-md"
+className=" w-10  object-contain filter grayscale transition-all duration-700 rounded-md testOffers"
 />
 );
 }
