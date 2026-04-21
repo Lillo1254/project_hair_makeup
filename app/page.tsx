@@ -6,6 +6,7 @@ import { headers } from "next/headers";
 import CardOffers from "./components/cards/CardOffers";
 import ButtonNavigate from "./components/buttons/buttonNavigate";
 import Observer from "./components/observers/Observer";
+import LogoSvg from "./components/cards/CardsReview";
 
 
 export const metadata = {
@@ -74,7 +75,9 @@ export default async function PageHome() {
 
       <div className="min-h-screen bg-black text-white relative expanda" >
 
-
+<div className="grid place-items-center h-100px bg-red mt-25">
+<LogoSvg width={700} height={700} />
+</div>
 
 
         <Header title="A Testa in su Parrucchiere" subtitle="Hair & Makeup Studio Roma, Setteville Guidonia" />

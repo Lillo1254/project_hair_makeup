@@ -1,11 +1,18 @@
+import Image from "next/image";
 
 
 
 
-export default function CardReview(){
+export default function LogoSvg({width, height}){
     return(
     <>
-    <h3 className="text-sm bg-red uppercase mt-50">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h3>
+    <Image 
+    src="/copilotlogo.svg"
+    width={width}
+    height={height}
+    alt="logo"
+    className="svgLogo"
+    />
     </>
     )
 }
