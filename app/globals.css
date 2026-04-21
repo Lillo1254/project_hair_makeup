@@ -122,4 +122,18 @@ background-position: center;
 
 .svgLogo{
   filter: drop-shadow(3px 5px 10px rgb(255, 255, 255)) brightness(2);
+  animation-name: rotazione;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function:ease-in-out;
+}
+
+@keyframes rotazione {
+  from {
+    transform: perspective(400px) rotateY(0deg);
+  }
+  to {
+    transform: perspective(400px) rotateY(360deg);
+  }
 }

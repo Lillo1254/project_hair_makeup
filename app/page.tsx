@@ -84,18 +84,18 @@ export default async function PageHome() {
 
 
         {/* ====== HERO ====== */}
-        <section className="relative min-h-screen overflow-hidden ">
+        <section className="relative pb-15 overflow-hidden ">
 
 
 
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-neutral-700" />
+          {<div className="absolute inset-0 bg-gradient-to-b from-black/60 to-neutral-700" />}
 
 
-          <div className="relative z-10 flex min-h-screen flex-col items-center justify-evenly text-center px-6">
+          <div className="relative z-10 flex flex-col items-center justify-evenly text-center px-6">
 
             <div className="flex flex-col items-center">
 
-              <h2 className="text-4xl md:text-5xl font-light tracking-widest uppercase pt-55 playfair_text">
+              <h2 className="text-4xl md:text-5xl font-light tracking-widest uppercase pt-25 playfair_text">
                 Stile che parla di te
               </h2>
 

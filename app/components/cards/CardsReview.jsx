@@ -12,6 +12,8 @@ export default function LogoSvg({width, height}){
     height={height}
     alt="logo"
     className="svgLogo"
+    loading="eager"
+    priority
     />
     </>
     )
