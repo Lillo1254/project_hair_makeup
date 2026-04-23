@@ -1,5 +1,5 @@
 "use client";
-import { use, useEffect } from "react";
+import { useEffect } from "react";
 import {observerReveal} from "../../function/basic";
 export default function ObserverWrap({classSearch , classAdd , percent}){
 

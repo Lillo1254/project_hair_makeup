@@ -37,3 +37,30 @@ export const observerReveal = (target, classAdd, percent = 0.3) => {
         observer.observe(el);
     });
 }
+
+export const observerVideo = (target, attrName,attrValue , percent = 0.3) => {
+    const elements = document.querySelectorAll(`.${target}`);  
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            const video = entry.target;
+                 if (entry.isIntersecting && entry.intersectionRatio >= percent) {
+        if (attrName && attrValue) {
+          video.setAttribute(attrName, attrValue);
+        }
+
+        // forza la riproduzione
+        video.play().catch(() => {});
+
+        
+      } else {
+        // opzionale: pausa quando esce
+        video.pause();
+      }
+        });
+    }, {
+        threshold: percent,
+    });
+    elements.forEach((el) => {
+        observer.observe(el);
+    });
+}

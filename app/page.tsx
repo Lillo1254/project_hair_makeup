@@ -7,16 +7,17 @@ import CardOffers from "./components/cards/CardOffers";
 import ButtonNavigate from "./components/buttons/buttonNavigate";
 import Observer from "./components/observers/Observer";
 import LogoSvg from "./components/cards/CardsReview";
+import ObserverWrapVideo from "./components/observers/ObserverVideo";
 
 
 export const metadata = {
   title: "Parrucchiere Setteville Guidonia | A Testa In Su",
   description:
-    "Parrucchiere a Setteville Guidonia Montecelio. Taglio uomo, donna e bambino, colore, barba e make-up professionale.",
+    "parrucchieri a Setteville Guidonia Montecelio. Taglio uomo, donna e bambino, colore, barba e make-up professionale.",
   keywords:
-    "Parrucchiere Guidonia, Parrucchiere Setteville, Parrucchiere Roma, Taglio capelli uomo, Taglio capelli donna, Colore capelli, Barba, Make-up artist",
+    "parrucchieri Guidonia, parrucchieri Setteville, parrucchieri Roma, Taglio capelli uomo, Taglio capelli donna, Colore capelli, Barba, Make-up artist",
   openGraph: {
-    title: "Parrucchiere Setteville Guidonia | A Testa In Su",
+    title: "parrucchieri Setteville Guidonia | A Testa In Su",
     description:
       "Parrucchiere uomo, donna e bambino a Setteville Guidonia. Taglio, colore, barba e make-up professionale.",
     url: "https://atestainsu.vercel.app",
@@ -27,7 +28,7 @@ export const metadata = {
 export const homeJsonLd = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
-  name: "A Testa In Su Parrucchiere",
+  name: "A Testa In Su Parrucchieri",
   url: "https://atestainsu.vercel.app",
   description:
     "Parrucchiere uomo, donna e bambino a Setteville Guidonia. Taglio, colore, barba e make-up professionale.",
@@ -80,7 +81,7 @@ export default async function PageHome() {
 </div>
 
 
-        <Header title="A Testa in su Parrucchiere" subtitle="Hair & Makeup Studio Roma, Setteville Guidonia" />
+        <Header title="A Testa in su Parrucchieri" subtitle="Hair & Makeup Studio Roma, Setteville Guidonia" />
 
 
         {/* ====== HERO ====== */}
@@ -240,18 +241,19 @@ export default async function PageHome() {
                 <video
                   key={i}
                   src={video}
-                  autoPlay
+                  preload="none"
                   muted
                   loop
                   playsInline
                   className="
-        absolute inset-0 w-full h-full object-cover
+        absolute inset-0 w-full h-full object-cover videoLoad
       "
                 />
               </Link>
             ))}
           </section>
         }
+        
 
 
             <section className="px-0 py-16 bg-neutral-700 text-white text-center relative" >
@@ -306,6 +308,7 @@ export default async function PageHome() {
       <Observer classSearch="testo_fade" classAdd="opacity-100" percent={0.2}/>
       <Observer classSearch="testOffers" classAdd="!w-100 grayscale-0" percent={0.8}/>
       <Observer classSearch="test_services" classAdd="!grayscale-0 !brightness-125 saturate-150" percent={0.4}/>
+      <ObserverWrapVideo classSearch="videoLoad" attrName="" attrValue="" percent={0.3} />
       
     </>
   );
