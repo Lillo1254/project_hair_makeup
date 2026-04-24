@@ -1,4 +1,5 @@
 // app/layout.tsx
+import  Console  from './consoleLog';
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './globals.css'
@@ -96,7 +97,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     }
   };
 
-  console.log(
+/*   console.log(
   "%c Sviluppato da Alessandro Lucia alessandroluciaroma@gmail.com ",
   "color: #0f0; background: #000; font-size: 16px; padding: 8px 12px; border: 1px solid #0f0; border-radius: 6px;",
 );
@@ -109,7 +110,7 @@ console.log(
 console.log(
   "%c Deploy eseguito su Vercel ",
   "color: #fff; background: #333; padding: 4px 8px; border-radius: 4px; margin-top: 4px;"
-);
+); */
 
   return (
     <html lang="it">
@@ -128,7 +129,9 @@ console.log(
         <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet" />
       </head>
 
+
       <body className="bg-gradient-to-b from-black to-neutral-700 ">
+<Console />
         <Navbar />
         <main  >{children}</main>
         <Footer />
