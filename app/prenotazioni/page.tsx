@@ -47,20 +47,23 @@ export default function CalendarPage() {
     const selectedDate = new Date(value);
     const now = new Date();
 
-    if (selectedDate < now) {
-      setDateError("⚠️ Non puoi selezionare una data passata.");
+    const minBookingTime = new Date(now.getTime() + 2 * 60 * 60 * 1000);
+
+    if (selectedDate < minBookingTime) {
+      setDateError("Le prenotazioni devono essere effettuate con almeno 2 ore di anticipo.");
       return;
     }
 
     if (selectedDate.getDay() === 0) {
-      setDateError("⚠️ La domenica il salone è chiuso.");
+      setDateError("La domenica il salone è chiuso.");
       return;
     }
 
     const hour = selectedDate.getHours();
+    const minutes = selectedDate.getMinutes();
 
-    if (hour < 9 || hour >= 19) {
-      setDateError("⚠️ Prenotazioni disponibili dalle 09:00 alle 19:00.");
+    if (hour < 9 || hour > 18 || (hour === 18 && minutes > 0)) {
+      setDateError("Prenotazioni disponibili dalle 09:00 alle 18:00.");
       return;
     }
 
