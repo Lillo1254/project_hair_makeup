@@ -85,7 +85,7 @@ export default function CalendarPage() {
     const servizio = (form.elements.namedItem("servizio") as HTMLSelectElement)?.value?.trim();
     const email = (form.elements.namedItem("email") as HTMLInputElement).value.trim();
 
-    const phoneRegex = /^[0-9]{9,10}$/;
+    const phoneRegex = /^(\+39)?\s?[0-9]{9,10}$/;
 
     if (
       !nome ||
