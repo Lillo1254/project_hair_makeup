@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import LogoSvg from "../components/cards/CardsReview";
 
 export const metadata = {
   title: "Laminazione e Ricostruzione | A Testa In Su",
@@ -15,11 +16,22 @@ export default function ServiziSpecialiPage() {
       {/* HEADER SEMPLIFICATO (Indipendente da componenti esterni) */}
       <header className="pt-20 pb-12 px-6 text-center">
         <h1 className="text-4xl md:text-6xl font-light tracking-widest uppercase playfair_text mb-4">
-          Trattamenti Esclusivi
+          
         </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+
+              <div className="text-center pt-15 relative overflow-hidden">
+                <div className="flex items-center justify-center gap-4 mb-4">
+            <LogoSvg width={100} height={100} />
+                <h1 className="text-4xl md:text-6xl lg:text-7xl   font-bold uppercase playfair_tex">A Testa In Su</h1>
+                </div>
+                <h2>Trattamenti Esclusivi laminazione e ricostruzione</h2>
+                
+                <small>Qualità, stile e professionalità</small>
+              </div>
+
+        <small className="text-gray-400 max-w-2xl mx-auto ">
           Rituali di luce e ricostruzione profonda per esaltare e proteggere la bellezza dei tuoi capelli.
-        </p>
+        </small>
       </header>
 
       <main className="max-w-6xl mx-auto px-6 pb-24 space-y-24">
