@@ -35,7 +35,7 @@ export default function Navbar() {
         setOpen(false);
         
     }
-if (pathName.startsWith("/admin") || pathName.startsWith("/serviziqr")) {
+if (pathName.startsWith("/admin") || pathName.startsWith("/serviziqr") || pathName.startsWith("/laminazione")) {
     return null;}
 
     return (

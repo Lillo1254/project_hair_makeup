@@ -99,17 +99,23 @@ export default function ChiSiamo() {
       </section>
 
       {/* POSTAZIONI */}
-      <section className="px-6 py-16 grid md:grid-cols-2 gap-10 max-w-6xl mx-auto items-center bg-neutral-700 rounded-xl mt-10 shadow_price">
+      <section className="px-6 py-16  gap-10 max-w-6xl mx-auto items-center bg-neutral-700 rounded-xl mt-10 shadow_price">
+        <div className="grid md:grid-cols-2 gap-y-6">
+
         <Image src={negozio[2]} alt="Postazione parrucchiere moderna" width={400} height={700} className="rounded-2xl mx-auto shadow_black" />
-        <Image src={negozio[1]} alt="Postazione styling capelli" width={400} height={700} className="rounded-2xl mx-auto shadow_black" />
+        <Image src={negozio[1]} alt="Postazione styling capelli" width={400} height={700} className="rounded-2xl mx-auto shadow_black mb-5" />
+        </div>
+        <p className="text-gray-300 text-center md:text-left leading-relaxed">
+          La postazione di lavoro è stata strutturata con colori caldi e linea curve per non affaticare l&apos;occhio e creare un ambiente accogliente. Ogni dettaglio è pensato per garantire comfort e funzionalità, permettendo ai nostri professionisti di esprimere al meglio la loro creatività.
+        </p>
       </section>
 
       {/* LAVAGGIO */}
       <section className="px-6 py-16 grid md:grid-cols-2 gap-10 max-w-6xl mx-auto items-center bg-neutral-700 rounded-xl mt-10 shadow_price">
         <Image src={negozio[3]} alt="Zona lavaggio relax parrucchiere" width={400} height={700} className="rounded-2xl mx-auto shadow_black" />
-        <p className="text-gray-300 text-center md:text-left leading-relaxed">
+        <p className="text-gray-300 text-center md:text-left leading-relaxed ">
           La zona lavaggio è pensata per offrire un momento di relax completo. Le poltrone
-          ergonomiche e l’ambiente curato trasformano ogni lavaggio in un’esperienza
+          ergonomiche e l&apos;ambiente curato trasformano ogni lavaggio in un&apos;esperienza
           piacevole e rigenerante.
         </p>
       </section>
@@ -154,7 +160,7 @@ export default function ChiSiamo() {
       <section className="px-6 py-16 text-center max-w-3xl mx-auto">
         <h2 className="text-3xl mb-4 uppercase tracking-wider">Filosofia</h2>
         <p className="text-gray-300 leading-relaxed">
-          Crediamo nel rapporto umano, nel`&apos;` ascolto e nella personalizzazione. Ogni cliente
+          Crediamo nel rapporto umano, nel&apos; ascolto e nella personalizzazione. Ogni cliente
           viene seguito con attenzione, con l`&apos;` obiettivo di valorizzare al massimo ogni tipo
           di capello e creare un legame di fiducia duraturo.
         </p>
