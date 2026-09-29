@@ -35,6 +35,8 @@ export default function Navbar() {
         setOpen(false);
         
     }
+if (pathName.startsWith("/admin") || pathName.startsWith("/serviziqr")) {
+    return null;}
 
     return (
         <>
