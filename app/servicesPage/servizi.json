@@ -158,6 +158,12 @@
         "prezzo": "da 60",
         "valuta": "EUR",
         "descrizione": "Make-up professionale per cerimonie, matrimoni ed eventi speciali, realizzato per garantire lunga durata e un risultato impeccabile."
+      },
+      {
+        "servizio": "Make-up Servizio Trucco Sposa",
+        "prezzo": "da 600",
+        "valuta": "EUR",
+        "descrizione": "Comprensivo di 1 prova make-up, 1 prova acconciatura, trucco finale e aconciatura finale per il giorno del matrimonio, con prodotti professionali a lunga durata e tecniche personalizzate per valorizzare la bellezza naturale della sposa. Le prime due prove (acconciatura e make-up) hanno un costo di 100€ totali che verranno detratti dal totale del servizio. Le prove successive hanno un costo di 50€ a prova che non verrà detratto dal totale del servizio. Il servizio include anche la consulenza personalizzata per la scelta dei prodotti e delle tecniche più adatte al tipo di pelle, alla forma del viso e allo stile del matrimonio."
       }
     ]
   }
