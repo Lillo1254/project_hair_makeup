@@ -27,13 +27,31 @@
         "servizio": "Taglio macchinetta UNIFORME",
         "prezzo": 10,
         "valuta": "EUR",
-        "descrizione": "Servizio completo con taglio personalizzato, per un risultato luminoso e armonioso."
+        "descrizione": "Servizio completo solo macchinetta con taglio personalizzato, per un risultato luminoso e armonioso."
       }
     ],
     "Donna": [
+      {
+        "servizio": "Solo Piega Donna corta/media",
+        "prezzo": 18,
+        "valuta": "EUR",
+        "descrizione": "Piega professionale veloce per uno styling perfetto e duraturo senza taglio."
+      },
+      {
+        "servizio": "Solo Piega Donna lunga (lunghezza oltre spalle)",
+        "prezzo": 20,
+        "valuta": "EUR",
+        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+      },
+      {
+        "servizio": "Solo Piega Donna extralunga (lunghezza oltre il petto)",
+        "prezzo": 25,
+        "valuta": "EUR",
+        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+      },
          {
         "servizio": "Taglio Donna",
-        "prezzo": 25,
+        "prezzo": 30,
         "valuta": "EUR",
         "descrizione": "Taglio su misura valorizzato da una piega professionale per un look fresco, elegante e duraturo."
       },
@@ -65,7 +83,7 @@
         "servizio": "Frangia o ritocco profili",
         "prezzo": 5,
         "valuta": "EUR",
-        "descrizione": "Servizio completo donna con taglio personalizzato, colore professionale e piega finale per un risultato luminoso e armonioso."
+        "descrizione": "Servizio completo donna con taglio frangia o ritocco profili personalizzato"
       },
       {
         "servizio": "Taglio macchinetta UNIFORME",
@@ -74,46 +92,22 @@
         "descrizione": "Servizio completo donna con taglio personalizzato, colore professionale e piega finale per un risultato luminoso e armonioso."
       },
       {
-        "servizio": "Solo Piega Donna corta",
-        "prezzo": 16,
-        "valuta": "EUR",
-        "descrizione": "Piega professionale veloce per uno styling perfetto e duraturo senza taglio."
-      },
-      {
-        "servizio": "Solo Piega Donna media (lunghezza sopra spalle)",
-        "prezzo": 18,
-        "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
-      },
-      {
-        "servizio": "Solo Piega Donna lunga (lunghezza inferiore spalle)",
-        "prezzo": 20,
-        "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
-      },
-      {
-        "servizio": "Solo Piega Donna extralunga (lunghezza inferiore scapole)",
-        "prezzo": 25,
-        "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
-      },
-      {
         "servizio": "Trecce, semiraccolti, acconciature",
-        "prezzo": "da 15 a 60",
+        "prezzo": "da 25",
         "valuta": "EUR",
-        "descrizione": "Servizio completo donna con taglio personalizzato, colore professionale e piega finale per un risultato luminoso e armonioso."
+        "descrizione": "Servizio acconciatura su richiesta e consigli professionali su armonia del viso."
       },
       {
         "servizio": "Colore classico o fast (base radice)",
         "prezzo": 27,
         "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+        "descrizione": "Servizio con colore."
       },
       {
         "servizio": "Colore senza ammoniaca (base radice)",
         "prezzo": 30,
         "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+        "descrizione": "Servizio con colore senza ammoniaca."
       },
       {
         "servizio": "Tonalizzante lunghezze",
@@ -122,21 +116,39 @@
         "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
       },
       {
-        "servizio": "Schiariture compreso montaggio",
+        "servizio": "Schiariture ",
         "prezzo": "2 € gr",
         "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+        "descrizione": "Servizio di schiaritura ."
       },
       
       {
         "servizio": "Permanente o tiraggio",
         "prezzo": "da 40",
         "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+        "descrizione": "Servizio permanente o tiraggio."
       },
       {
         "servizio": "Extension ciocche compreso montaggio",
         "prezzo": "4,50 cad.",
+        "valuta": "EUR",
+        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+      },
+      {
+        "servizio": "Ricostruzione profonda EGO BOND",
+        "prezzo": "45",
+        "valuta": "EUR",
+        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+      },
+      {
+        "servizio": "Laminazione effetto glam",
+        "prezzo": "30",
+        "valuta": "EUR",
+        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+      },
+      {
+        "servizio": "Trattamento anticrespo (durata 4/5 mesi)",
+        "prezzo": "2,50 € gr",
         "valuta": "EUR",
         "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
       }
