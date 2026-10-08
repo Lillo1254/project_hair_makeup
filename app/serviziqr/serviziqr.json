@@ -55,30 +55,19 @@
         "valuta": "EUR",
         "descrizione": "Taglio su misura per un look fresco, elegante e duraturo."
       },
-      {
-        "servizio": "Taglio Donna + Piega corta",
-        "prezzo": 41,
+            {
+        "servizio":"Trattamento lavaggio shampoo e maschera specifici",
+        "prezzo": 6,
         "valuta": "EUR",
-        "descrizione": "Taglio su misura valorizzato da una piega professionale."
-      },
-         {
-        "servizio": "Taglio Donna + Piega media (lunghezza sopra spalle)",
-        "prezzo": 43,
-        "valuta": "EUR",
-        "descrizione": "Taglio su misura valorizzato da una piega professionale."
-      },
-         {
-        "servizio": "Taglio Donna + Piega lunga (lunghezza inferiore spalle)",
-        "prezzo": 45,
-        "valuta": "EUR",
-        "descrizione": "Taglio su misura valorizzato da una piega professionale."
+        "descrizione": "Trattamento lavaggio shampoo e maschera specifici basato su tipologia capello e necessità."
       },
       {
-        "servizio": "Taglio Donna + Piega extralunga (lunghezza inferiore scapole)",
-        "prezzo": 50,
+        "servizio":"Ferro o piastra",
+        "prezzo": 6,
         "valuta": "EUR",
-        "descrizione": "Taglio su misura valorizzato da una piega professionale."
+        "descrizione": "Servizio con ferro o piastra."
       },
+
       {
         "servizio": "Frangia o ritocco profili",
         "prezzo": 5,
@@ -163,29 +152,12 @@
       }
     ],
     "Make-up": [
-      {
-        "servizio": "Make-up Classico (Giorno/Sera)",
-        "prezzo": 35,
-        "valuta": "EUR",
-        "descrizione": "Trucco professionale adatto sia per il giorno che per la sera, studiato per valorizzare i lineamenti in modo elegante e naturale."
-      },
+
       {
         "servizio": "Make-up Artist Eventi Speciali",
-        "prezzo": 60,
+        "prezzo": "da 60",
         "valuta": "EUR",
         "descrizione": "Make-up professionale per cerimonie, matrimoni ed eventi speciali, realizzato per garantire lunga durata e un risultato impeccabile."
-      },
-      {
-        "servizio": "Make-up Naturale Quotidiano",
-        "prezzo": 25,
-        "valuta": "EUR",
-        "descrizione": "Trucco leggero e fresco per tutti i giorni, che valorizza i lineamenti senza esagerare."
-      },
-      {
-        "servizio": "Make-up Serata Glam",
-        "prezzo": 45,
-        "valuta": "EUR",
-        "descrizione": "Trucco professionale per serate ed eventi speciali con effetti luminosi e dettagli glam."
       }
     ]
   }

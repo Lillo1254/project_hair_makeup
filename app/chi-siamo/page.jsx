@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import CardReview from "../components/cards/CardsReview";
+
 
 export const aboutJsonLd = {
   "@context": "https://schema.org",
