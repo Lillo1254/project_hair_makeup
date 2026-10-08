@@ -60,7 +60,7 @@ export default function ServiziSpecialiPage() {
                     </div>
 
                     {/* Box Immagine Placeholder - Sostituisci il div con <Image /> quando hai la foto */}
-                    <div className="w-full aspect-square md:aspect-[4/5] bg-neutral-400 border border-neutral-800 rounded-2xl flex flex-col items-center justify-center p-8 text-center shadow-2xl">
+                    <div className="w-full aspect-square md:aspect-4/5 bg-neutral-400 border border-neutral-800 rounded-2xl flex flex-col items-center justify-center p-8 text-center shadow-2xl">
                         <Image
                             src="/nevitaly.png"
                             alt="Laminazione Nevitaly"
@@ -74,8 +74,8 @@ export default function ServiziSpecialiPage() {
 
                 {/* RICOSTRUZIONE EGO BOND */}
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    {/* Box Immagine Placeholder - Ordine invertito su desktop */}
-                    <div className="order-2 md:order-1 w-full aspect-square md:aspect-[4/5] bg-neutral-400 border border-neutral-800 rounded-2xl flex flex-col items-center justify-center p-8 text-center shadow-2xl">
+                    
+                    <div className="order-2 md:order-1 w-full aspect-square md:aspect-4/5 bg-neutral-400 border border-neutral-800 rounded-2xl flex flex-col items-center justify-center p-8 text-center shadow-2xl">
                         <Image
                             src="/egobond.png"
                             alt="Ricostruzione Ego Bond"

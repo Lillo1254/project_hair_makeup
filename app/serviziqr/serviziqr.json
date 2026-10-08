@@ -14,7 +14,7 @@
         "servizio": "Barba",
         "prezzo": 10,
         "valuta": "EUR",
-        "descrizione": "Servizio completo uomo con taglio personalizzato, shampoo e sistemazione barba con rifinitura e modellatura."
+        "descrizione": "Servizio completo uomo con taglio barba personalizzato, sistemazione barba con rifinitura e modellatura."
       },
       {
         "servizio": "Taglio Uomo + Shampoo + Barba Express",
@@ -41,43 +41,43 @@
         "servizio": "Solo Piega Donna lunga (lunghezza oltre spalle)",
         "prezzo": 20,
         "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+        "descrizione": "Piega professionale veloce per uno styling perfetto e duraturo senza taglio."
       },
       {
         "servizio": "Solo Piega Donna extralunga (lunghezza oltre il petto)",
         "prezzo": 25,
         "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+        "descrizione": "Piega professionale veloce per uno styling perfetto e duraturo senza taglio."
       },
          {
         "servizio": "Taglio Donna",
         "prezzo": 30,
         "valuta": "EUR",
-        "descrizione": "Taglio su misura valorizzato da una piega professionale per un look fresco, elegante e duraturo."
+        "descrizione": "Taglio su misura per un look fresco, elegante e duraturo."
       },
       {
         "servizio": "Taglio Donna + Piega corta",
         "prezzo": 41,
         "valuta": "EUR",
-        "descrizione": "Taglio su misura valorizzato da una piega professionale per un look fresco, elegante e duraturo."
+        "descrizione": "Taglio su misura valorizzato da una piega professionale."
       },
          {
         "servizio": "Taglio Donna + Piega media (lunghezza sopra spalle)",
         "prezzo": 43,
         "valuta": "EUR",
-        "descrizione": "Taglio su misura valorizzato da una piega professionale per un look fresco, elegante e duraturo."
+        "descrizione": "Taglio su misura valorizzato da una piega professionale."
       },
          {
         "servizio": "Taglio Donna + Piega lunga (lunghezza inferiore spalle)",
         "prezzo": 45,
         "valuta": "EUR",
-        "descrizione": "Taglio su misura valorizzato da una piega professionale per un look fresco, elegante e duraturo."
+        "descrizione": "Taglio su misura valorizzato da una piega professionale."
       },
       {
         "servizio": "Taglio Donna + Piega extralunga (lunghezza inferiore scapole)",
         "prezzo": 50,
         "valuta": "EUR",
-        "descrizione": "Servizio completo donna con taglio personalizzato, colore professionale e piega finale per un risultato luminoso e armonioso."
+        "descrizione": "Taglio su misura valorizzato da una piega professionale."
       },
       {
         "servizio": "Frangia o ritocco profili",
@@ -89,7 +89,7 @@
         "servizio": "Taglio macchinetta UNIFORME",
         "prezzo": 10,
         "valuta": "EUR",
-        "descrizione": "Servizio completo donna con taglio personalizzato, colore professionale e piega finale per un risultato luminoso e armonioso."
+        "descrizione": "Taglio su misura per rifinitura con solo macchinetta ."
       },
       {
         "servizio": "Trecce, semiraccolti, acconciature",
@@ -113,7 +113,7 @@
         "servizio": "Tonalizzante lunghezze",
         "prezzo": 25,
         "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+        "descrizione": "Trattamento nutriente e piega finale per capelli morbidi e lucenti."
       },
       {
         "servizio": "Schiariture ",
@@ -132,25 +132,25 @@
         "servizio": "Extension ciocche compreso montaggio",
         "prezzo": "4,50 cad.",
         "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+        "descrizione": "Montaggio extension con ciocche incluse, per un look più lungo e voluminoso."
       },
       {
         "servizio": "Ricostruzione profonda EGO BOND",
         "prezzo": "45",
         "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+        "descrizione": "Ricostruzione fibre del capello per rinforzare e proteggere i capelli danneggiati, con trattamento nutriente."
       },
       {
         "servizio": "Laminazione effetto glam",
         "prezzo": "30",
         "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+        "descrizione": "Servizio laminazione per capelli lucidi e setosi, con effetto glamour e protezione della fibra capillare."
       },
       {
         "servizio": "Trattamento anticrespo (durata 4/5 mesi)",
         "prezzo": "2,50 € gr",
         "valuta": "EUR",
-        "descrizione": "Servizio con taglio personalizzato, trattamento nutriente e piega finale per capelli morbidi e lucenti."
+        "descrizione": "Trattamento anticrespo per capelli crespi e indisciplinati, con effetto liscio e duraturo."
       }
       
     ],
